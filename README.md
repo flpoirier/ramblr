@@ -95,3 +95,11 @@ The Ramblr <strong>routes</strong> will be as follows:
 (Will routes for deleting, following, and liking be necessary?)
 
 <hr>
+
+Ramblr <strong>Development timeline:</strong>
+
+Phase 1: Create new Rails project. Complete project mapping. Implement user authentication. Push to Heroku.
+
+Phase 2: Create posts model, routes, and controller. Make feed that displays conditional on user being logged in.
+
+Phase 3: Make follows model, etc. Make the posts that display conditional on whether the signed-in user follows the user who made the posts.
