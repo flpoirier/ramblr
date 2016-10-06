@@ -80,6 +80,36 @@ input {
   /*border: 3px solid purple;*/
 }
 
+.dashboard {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 1000px;
+  margin: 0 auto;
+  font-weight: normal;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  height: 100%;
+}
+
+.header {
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom: 5px solid black;
+  border-top: 5px solid black;
+}
+
+.post {
+  padding: 20px;
+}
+
+.header-name {
+  float: left;
+}
+
+.header-button {
+  float: right;
+}
+
 /*Note -- the height thing below is a hack!! Need to figure out how to make it
 fill the page height automatically!*/
 
@@ -97,7 +127,7 @@ fill the page height automatically!*/
   background: rgba(0, 0, 0, 0.6);
 };
 
-#session-submit {
+.login-input {
   padding: 30px;
   border: 2px solid red;
 }

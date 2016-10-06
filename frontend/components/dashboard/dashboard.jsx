@@ -1,16 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
-import PostsContainer from '../posts/posts_container';
+import HeaderContainer from './header/header_container';
+import PostsContainer from './posts/posts_container';
 
 const Dashboard = ({ currentUser, logout, children }) => (
-  <div>
-    <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.username}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
-    </hgroup>
-    <header>
+  <div className="dashboard">
+      <HeaderContainer />
       <PostsContainer />
-    </header>
     {children}
   </div>
 );
