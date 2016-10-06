@@ -31,13 +31,6 @@
    background: transparent;
  }
 
- /*@font-face {
-
-   src: url('../fonts/ALBA___.ttf');
- }*/
-html {
-
-}
 
 body {
   background: url("https://static.pexels.com/photos/3247/nature-forest-industry-rails.jpg") no-repeat center center fixed;
@@ -55,14 +48,38 @@ input {
   color: #000;
 }
 
+.session-form h1 {
+  font-size: 26px;
+}
+
 .header-link h1 {
-  /*font-family: 'Bookman Old Style Bold';*/
   font-size: 85px;
   font-weight: bold;
-  padding: 350px 0px 10px 0px;
   text-align: center;
+  margin: 40px 40px 20px 40px;
+  /*border: 3px solid red;*/
 }
 
 .login-signup {
   text-align: center;
+  font-size: 20px;
+  margin: 0 0 40px 0;
+  /*border: 3px solid purple;*/
 }
+
+/*Note -- the height thing below is a hack!! Need to figure out how to make it
+fill the page height automatically!*/
+
+.splash-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  /*border: 3px solid green;*/
+}
+
+.splash-pane {
+  flex: none;
+  border: 5px solid black;
+  background: rgba(0, 0, 0, 0.6);
+};
