@@ -33,14 +33,6 @@ class SessionForm extends React.Component {
 		this.props.processForm({user});
 	}
 
-	navLink() {
-		if (this.props.formType === "login") {
-			return <Link to="/signup">sign up instead</Link>;
-		} else {
-			return <Link to="/login">log in instead</Link>;
-		}
-	}
-
 	renderErrors() {
 		return(
 			<ul>
@@ -55,34 +47,36 @@ class SessionForm extends React.Component {
 
 	render() {
 		return (
-			<div className="login-form-container">
-				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to <Link to="/">Ramblr</Link>!
-					<br/>
-					Please {this.props.formType} or {this.navLink()}
-					{ this.renderErrors() }
-					<div className="login-form">
-						<br/>
-						<label> Username:
-							<input type="text"
-								value={this.state.username}
-								onChange={this.update("username")}
-								className="login-input" />
-						</label>
+      <span className="login-form-parent">
+  			<div className="login-form-container">
+  				<form onSubmit={this.handleSubmit} className="login-form-box">
+  					<h1><Link to="/">{this.props.formType}</Link></h1>
+  					{ this.renderErrors() }
+  					<div className="login-form">
+  						<br/>
+  						<label> Username:
+                <br></br>
+                <input type="text"
+  								value={this.state.username}
+  								onChange={this.update("username")}
+  								className="login-input" />
+  						</label>
+              <br />
+  						<br/>
+  						<label> Password:
+                <br></br>
+                <input type="password"
+  								value={this.state.password}
+  								onChange={this.update("password")}
+  								className="login-input" />
+  						</label>
 
-						<br/>
-						<label> Password:
-							<input type="password"
-								value={this.state.password}
-								onChange={this.update("password")}
-								className="login-input" />
-						</label>
-
-						<br/>
-						<input type="submit" value="Submit" />
-					</div>
-				</form>
-			</div>
+  						<br/><br/>
+  						<input id="session-submit" type="submit" value="Submit" />
+  					</div>
+  				</form>
+  			</div>
+      </span>
 		);
 	}
 

@@ -31,9 +31,13 @@
    background: transparent;
  }
 
+/*https://static.pexels.com/photos/3853/sunny-sand-desert-hiking.jpeg
+https://static.pexels.com/photos/3247/nature-forest-industry-rails.jpg
+https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg
+https://upload.wikimedia.org/wikipedia/commons/2/2a/Mission_Mountains_National_Bison_Range_Montana.jpg*/
 
 body {
-  background: url("https://static.pexels.com/photos/3247/nature-forest-industry-rails.jpg") no-repeat center center fixed;
+  background: url("https://static.pexels.com/photos/3853/sunny-sand-desert-hiking.jpeg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -59,13 +63,6 @@ input {
   color: black;
   /*border: 1px solid red;*/
   text-align: center;
-}
-
-#session-submit {
-  background: #aaa;
-  padding: 10px 25px;
-  color: white;
-  border: 2px solid #ccc;
 }
 
 .header-link h1 {
@@ -99,3 +96,26 @@ fill the page height automatically!*/
   border: 5px solid black;
   background: rgba(0, 0, 0, 0.6);
 };
+
+#session-submit {
+  padding: 30px;
+  border: 2px solid red;
+}
+
+.login-form-parent {
+  /*why does having this make everything work even though I'm not doing anything with it????*/
+}
+
+.login-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+}
+
+.login-form-box {
+  flex: none;
+  border: 5px solid black;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 50px;
+}

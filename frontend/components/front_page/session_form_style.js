@@ -7,7 +7,7 @@ const FormStyle = {
     left            : 0,
     right           : 0,
     bottom          : 0,
-    backgroundColor : 'rgba(255, 255, 255, 0.75)'
+    backgroundColor : 'rgba(255, 255, 255, 0.50)'
   },
 
   content : {
@@ -20,7 +20,7 @@ const FormStyle = {
     left            : '50%',
     transform       : 'translate(-50%, -50%)',
     border          : '5px solid #000',
-    background      : '#eee',
+    backgroundColor : 'rgba(255, 255, 255, 0.80)',
     width           : '350px',
     maxwidth        : '100%',
     height          : '300px',
