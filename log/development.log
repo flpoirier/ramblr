@@ -25373,3 +25373,46 @@ Processing by Api::SessionsController#create as JSON
   Rendered api/users/_user.json.jbuilder (0.0ms)
   Rendered api/users/show.json.jbuilder (0.7ms)
 Completed 200 OK in 82ms (Views: 2.5ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 19:23:57 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "QamHoUmuSS73DsoVgEqVzQ=="]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "W5W/ORw7Oug4bmoI0u8mlw=="]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "W5W/ORw7Oug4bmoI0u8mlw=="]]
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "W5W/ORw7Oug4bmoI0u8mlw=="], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (33.5ms)
+Completed 200 OK in 97ms (Views: 71.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 19:23:58 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "QamHoUmuSS73DsoVgEqVzQ=="]]
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 180ms (Views: 179.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 19:25:52 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "QamHoUmuSS73DsoVgEqVzQ=="]]
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 135ms (Views: 133.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 19:25:53 -0400
+
+
+Started GET "/assets/application.self-b7577373306e9b6260817d118c99ad6b6633ae72712b9c617a24710c23f88706.css?body=1" for ::1 at 2016-10-06 19:25:53 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 19:25:53 -0400
+
+
+Started GET "/assets/bundle.self-5d0b76e27f15235cf08d62cb30a3346f18e5dbe79db74f0699506a601ef7d1d8.js?body=1" for ::1 at 2016-10-06 19:25:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 19:25:53 -0400
