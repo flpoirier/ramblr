@@ -41,8 +41,15 @@ class FrontPage extends React.Component {
   loginForm() {
     return (
       <Modal className="login-form" style={FormStyle} isOpen={this.state.loginOpen}>
-        <button onClick={this.closeLogin}>close</button>
-        <h1>LOGGING IN</h1>
+        <button id="session-close" onClick={this.closeLogin}>close</button>
+          <br></br>
+          <br></br>
+          <br></br>
+        <h1 id="session-header">login</h1>
+          Username: <input type="text" />
+          <br></br><br></br>
+          Password: <input type="password" />
+        <button id="session-submit">let's go</button>
       </Modal>
     );
   }
@@ -50,8 +57,17 @@ class FrontPage extends React.Component {
   signupForm() {
     return (
       <Modal className="signup-form" style={FormStyle} isOpen={this.state.signupOpen}>
-        <button onClick={this.closeSignup}>close</button>
-        <h1>SIGNING IN</h1>
+        <button id="session-close" onClick={this.closeSignup}>close</button>
+        <br></br>
+        <br></br>
+        <br></br>
+        <h1 id="session-header">sign up</h1>
+        <br></br>
+        Username: <br></br><input type="text" />
+        <br></br><br></br>
+        Password: <br></br><input type="password" />
+      <br></br>
+        <button id="session-submit">let's go</button>
       </Modal>
     );
   }

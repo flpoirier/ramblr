@@ -13,16 +13,17 @@ const FormStyle = {
   content : {
 
     position        : 'fixed',
+    margin          : '0 auto',
+    textalign       : 'center',
     color           : '#aaa',
     top             : '40%',
     left            : '50%',
     transform       : 'translate(-50%, -50%)',
     border          : '5px solid #000',
-    padding         : '20px',
     background      : '#eee',
-    width           : '500px',
+    width           : '350px',
     maxwidth        : '100%',
-    height          : '250px',
+    height          : '300px',
     maxheight       : '100%',
   }
 

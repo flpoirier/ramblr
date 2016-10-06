@@ -48,8 +48,24 @@ input {
   color: #000;
 }
 
-.session-form h1 {
+#session-close {
+  /*border: 1px solid blue;*/
+  float: right;
+  margin: 10px;
+}
+
+#session-header {
   font-size: 26px;
+  color: black;
+  /*border: 1px solid red;*/
+  text-align: center;
+}
+
+#session-submit {
+  background: #aaa;
+  padding: 10px 25px;
+  color: white;
+  border: 2px solid #ccc;
 }
 
 .header-link h1 {
