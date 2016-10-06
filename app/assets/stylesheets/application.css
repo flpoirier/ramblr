@@ -14,7 +14,7 @@
  *= require_self
  */
 
- /*html, body, header, nav, h1, a, ul, li,
+ html, body, header, nav, h1, a, ul, li,
  strong, main, section, img, div, h2, p,
  form, fieldset, label, input, textarea,
  button, article, footer, small {
@@ -31,10 +31,23 @@
    background: transparent;
  }
 
+ /*@font-face {
+
+   src: url('../fonts/ALBA___.ttf');
+ }*/
+html {
+
+}
+
 body {
-  background: #36465d;
+  background: url("https://static.pexels.com/photos/3247/nature-forest-industry-rails.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: #fff;
   font-family: sans-serif;
+  font-weight: bold;
 }
 
 input {
@@ -43,7 +56,9 @@ input {
 }
 
 .header-link h1 {
-  font-size: 65px;
+  /*font-family: 'Bookman Old Style Bold';*/
+  font-size: 85px;
+  font-weight: bold;
   padding: 350px 0px 10px 0px;
   text-align: center;
 }
@@ -51,8 +66,3 @@ input {
 .login-signup {
   text-align: center;
 }
-
-@font-face {
-  font-family: 'Alba';
-  src: url('../fonts/ALBA___.ttf');
-}*/
