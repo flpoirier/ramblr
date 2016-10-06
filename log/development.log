@@ -6047,3 +6047,2854 @@ Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8
 
 
 Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:23:36 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:31:04 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 393ms (Views: 393.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.self-5be3a91870e68390ec58d9202086488d2e60039d652f6afd1be47e6f79d3ee95.js?body=1" for ::1 at 2016-10-06 11:31:05 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:31:05 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:31:05 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:31:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:31:05 -0400
+
+
+Started POST "/api/session" for ::1 at 2016-10-06 11:31:28 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"feather", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "feather"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="], ["id", 1]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 135ms (Views: 49.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 11:35:32 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (19.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 473ms (Views: 453.7ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:35:32 -0400
+
+
+Started GET "/assets/bundle.self-cccac13adf8c5f34d3dc113e27e75bc7d08af7c62bdf775e4aa0b5881565adef.js?body=1" for ::1 at 2016-10-06 11:35:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:35:32 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:35:32 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:35:32 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:35:39 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 81ms (Views: 80.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 11:37:36 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 608ms (Views: 605.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bundle.self-76c8fa97bd2afac71786a8a0b8a614d40fa7dce03c147b7a2ed6194ed867226f.js?body=1" for ::1 at 2016-10-06 11:37:36 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:37:36 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:37:36 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:37:36 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:37:36 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:38:17 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 48ms (Views: 47.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:38:17 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:38:17 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:38:17 -0400
+
+
+Started GET "/assets/bundle.self-76c8fa97bd2afac71786a8a0b8a614d40fa7dce03c147b7a2ed6194ed867226f.js?body=1" for ::1 at 2016-10-06 11:38:17 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:38:17 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:38:26 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 635ms (Views: 634.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.self-538a6578419b66dd9cf3ff4376bf34f299d71c7934111166c8096d17b9c7b41d.js?body=1" for ::1 at 2016-10-06 11:38:26 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:38:26 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:38:26 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:38:26 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:38:26 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:38:31 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:39:44 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 706ms (Views: 703.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:39:45 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:39:45 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:39:45 -0400
+
+
+Started GET "/assets/bundle.self-1520884c2ab9199379e7aed31a444d7611864417c81b898a1f814c5c0f090ac1.js?body=1" for ::1 at 2016-10-06 11:39:45 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:39:45 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:39:45 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:40:35 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:40:35 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:40:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:40:35 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:40:35 -0400
+
+
+Started GET "/assets/bundle.self-1520884c2ab9199379e7aed31a444d7611864417c81b898a1f814c5c0f090ac1.js?body=1" for ::1 at 2016-10-06 11:40:35 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:40:35 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:41:15 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:41:15 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:41:15 -0400
+
+
+Started GET "/assets/bundle.self-1520884c2ab9199379e7aed31a444d7611864417c81b898a1f814c5c0f090ac1.js?body=1" for ::1 at 2016-10-06 11:41:15 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:41:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:41:15 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:41:15 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:42:59 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 89ms (Views: 88.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:43:00 -0400
+
+
+Started GET "/dashboard" for ::1 at 2016-10-06 11:43:04 -0400
+
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (458.1ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (513.1ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (97.8ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (137.5ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 11:43:23 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:43:23 -0400
+
+
+Started GET "/login" for ::1 at 2016-10-06 11:43:27 -0400
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.1ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (65.6ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:43:29 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:45:58 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:45:58 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:45:58 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:45:58 -0400
+
+
+Started GET "/assets/bundle.self-1520884c2ab9199379e7aed31a444d7611864417c81b898a1f814c5c0f090ac1.js?body=1" for ::1 at 2016-10-06 11:45:58 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:45:58 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:45:58 -0400
+
+
+Started GET "/logout" for ::1 at 2016-10-06 11:46:01 -0400
+
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.2ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.2ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (54.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 11:46:05 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:46:05 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:46:43 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:46:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:46:43 -0400
+
+
+Started GET "/assets/bundle.self-1520884c2ab9199379e7aed31a444d7611864417c81b898a1f814c5c0f090ac1.js?body=1" for ::1 at 2016-10-06 11:46:43 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:46:43 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:46:43 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:46:43 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:46:46 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (1.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 716ms (Views: 713.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:46:46 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:46:46 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:46:46 -0400
+
+
+Started GET "/assets/bundle.self-e4b22a3c643feb1d8d0e013badb93bd056a4a111b9c60cd241c9073d80481bf2.js?body=1" for ::1 at 2016-10-06 11:46:46 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:46:46 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:46:47 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:47:28 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 86ms (Views: 85.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:47:28 -0400
+
+
+Started GET "/assets/bundle.self-e4b22a3c643feb1d8d0e013badb93bd056a4a111b9c60cd241c9073d80481bf2.js?body=1" for ::1 at 2016-10-06 11:47:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:47:28 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:47:28 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:47:28 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:47:28 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:47:58 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (1.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 780ms (Views: 776.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:47:59 -0400
+
+
+Started GET "/assets/bundle.self-d1ee1d387f4333268510cbc8a6879f9ed8877e93cea874d9f024e66abd63eaaf.js?body=1" for ::1 at 2016-10-06 11:47:59 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:47:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:47:59 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:47:59 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:47:59 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:48:25 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 240ms (Views: 239.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bundle.self-ef62e7946a67610653a1df00d5b1f343938e80b94c4f796f8836a52aeaf728fc.js?body=1" for ::1 at 2016-10-06 11:48:25 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:48:25 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:48:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:48:25 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:48:26 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:48:34 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 364ms (Views: 363.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:48:34 -0400
+
+
+Started GET "/assets/bundle.self-f18cc0721bf0ab7c90e4c40b1cc919236d8fb55b07fb6ed9d05dde4dbf56876a.js?body=1" for ::1 at 2016-10-06 11:48:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:48:34 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:48:34 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:48:34 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:48:34 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:48:42 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:48:42 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:48:42 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:48:42 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:48:42 -0400
+
+
+Started GET "/assets/bundle.self-f18cc0721bf0ab7c90e4c40b1cc919236d8fb55b07fb6ed9d05dde4dbf56876a.js?body=1" for ::1 at 2016-10-06 11:48:42 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:48:42 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:48:50 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 384ms (Views: 383.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.self-d6acbd0b5e1d2b33be48958a0a6910212b2ebac6d2cdfc140618332d516b7628.js?body=1" for ::1 at 2016-10-06 11:48:50 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:48:51 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:49:09 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 435ms (Views: 434.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:49:09 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:49:10 -0400
+
+
+Started GET "/assets/bundle.self-9602e8c771eb61ce82492ff1354648f86caf960a765df9a8541af4c1391b0b2b.js?body=1" for ::1 at 2016-10-06 11:49:10 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:49:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:49:10 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:49:10 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:49:32 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (1.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:49:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:49:32 -0400
+
+
+Started GET "/assets/bundle.self-9602e8c771eb61ce82492ff1354648f86caf960a765df9a8541af4c1391b0b2b.js?body=1" for ::1 at 2016-10-06 11:49:32 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:49:32 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:49:32 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:49:32 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:49:38 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 153ms (Views: 152.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:49:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:49:38 -0400
+
+
+Started GET "/assets/bundle.self-e4b22a3c643feb1d8d0e013badb93bd056a4a111b9c60cd241c9073d80481bf2.js?body=1" for ::1 at 2016-10-06 11:49:38 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:49:38 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:49:38 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:49:38 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 11:57:05 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 76ms (Views: 73.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 11:57:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 11:57:05 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 11:57:05 -0400
+
+
+Started GET "/assets/bundle.self-e4b22a3c643feb1d8d0e013badb93bd056a4a111b9c60cd241c9073d80481bf2.js?body=1" for ::1 at 2016-10-06 11:57:05 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 11:57:05 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 11:57:05 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:02:27 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 805ms (Views: 804.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:02:28 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:02:28 -0400
+
+
+Started GET "/assets/bundle.self-3c43f73e9d24d2836a849b6ba3afdaf698bcc473d05123f2f5facfd804f84973.js?body=1" for ::1 at 2016-10-06 12:02:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:02:28 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:02:28 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:02:28 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:03:14 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:03:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:03:14 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:03:14 -0400
+
+
+Started GET "/assets/bundle.self-3c43f73e9d24d2836a849b6ba3afdaf698bcc473d05123f2f5facfd804f84973.js?body=1" for ::1 at 2016-10-06 12:03:14 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:03:14 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:03:14 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:04:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (34.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (87.6ms)
+Completed 200 OK in 992ms (Views: 986.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/bundle.self-bd6bf1acdbac355194b4669e37f019da2a9135acbabc1f9a0b9cf6c2ea600bd2.js?body=1" for ::1 at 2016-10-06 12:04:11 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:04:19 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:04:19 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:04:19 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:04:19 -0400
+
+
+Started GET "/assets/bundle.self-bd6bf1acdbac355194b4669e37f019da2a9135acbabc1f9a0b9cf6c2ea600bd2.js?body=1" for ::1 at 2016-10-06 12:04:19 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:04:19 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:04:22 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:05:27 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:05:27 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:05:27 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:05:27 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:05:27 -0400
+
+
+Started GET "/assets/bundle.self-bd6bf1acdbac355194b4669e37f019da2a9135acbabc1f9a0b9cf6c2ea600bd2.js?body=1" for ::1 at 2016-10-06 12:05:27 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:05:30 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 445ms (Views: 444.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bundle.self-68033376410aa23b93444166700e89fb1e73e0fdd522f73066c121a40d1eed64.js?body=1" for ::1 at 2016-10-06 12:05:30 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:05:30 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:05:30 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:05:30 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:05:30 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:05:50 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 339ms (Views: 338.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:05:50 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:05:50 -0400
+
+
+Started GET "/assets/bundle.self-5efb5299f20154f39a7b6469b432b64b5456975e696324a138aa647f27848ba3.js?body=1" for ::1 at 2016-10-06 12:05:50 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:05:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:05:50 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:05:53 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:05:53 -0400
+
+
+Started GET "/assets/bundle.self-5efb5299f20154f39a7b6469b432b64b5456975e696324a138aa647f27848ba3.js?body=1" for ::1 at 2016-10-06 12:05:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:05:53 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:05:53 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:05:53 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:06:35 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 151ms (Views: 150.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:06:35 -0400
+
+
+Started GET "/assets/bundle.self-5efb5299f20154f39a7b6469b432b64b5456975e696324a138aa647f27848ba3.js?body=1" for ::1 at 2016-10-06 12:06:35 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:06:35 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:06:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:06:35 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:06:39 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:06:39 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:06:39 -0400
+
+
+Started GET "/assets/bundle.self-5efb5299f20154f39a7b6469b432b64b5456975e696324a138aa647f27848ba3.js?body=1" for ::1 at 2016-10-06 12:06:39 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:06:39 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:06:39 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:06:41 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:06:42 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:06:42 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:06:42 -0400
+
+
+Started GET "/assets/bundle.self-5efb5299f20154f39a7b6469b432b64b5456975e696324a138aa647f27848ba3.js?body=1" for ::1 at 2016-10-06 12:06:42 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:06:42 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:06:43 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:06:43 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:06:43 -0400
+
+
+Started GET "/assets/bundle.self-5efb5299f20154f39a7b6469b432b64b5456975e696324a138aa647f27848ba3.js?body=1" for ::1 at 2016-10-06 12:06:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:06:43 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:06:43 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:07:05 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 350ms (Views: 349.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.self-92ce1f701229ae9f968c31216e9ea0c39234abf8430ff3ea7bd88119150e3aee.js?body=1" for ::1 at 2016-10-06 12:07:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:07:05 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:07:05 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:07:05 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:07:05 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:07:12 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 205ms (Views: 204.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:07:12 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:07:12 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:07:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:07:12 -0400
+
+
+Started GET "/assets/bundle.self-92ce1f701229ae9f968c31216e9ea0c39234abf8430ff3ea7bd88119150e3aee.js?body=1" for ::1 at 2016-10-06 12:07:12 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:07:40 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 106ms (Views: 105.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:07:40 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:07:40 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:07:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:07:40 -0400
+
+
+Started GET "/assets/bundle.self-92ce1f701229ae9f968c31216e9ea0c39234abf8430ff3ea7bd88119150e3aee.js?body=1" for ::1 at 2016-10-06 12:07:40 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:08:52 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:08:52 -0400
+
+
+Started GET "/assets/bundle.self-92ce1f701229ae9f968c31216e9ea0c39234abf8430ff3ea7bd88119150e3aee.js?body=1" for ::1 at 2016-10-06 12:08:52 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:08:52 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:08:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:08:52 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:09:17 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:09:53 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:09:53 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:09:53 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:09:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:09:53 -0400
+
+
+Started GET "/assets/bundle.self-92ce1f701229ae9f968c31216e9ea0c39234abf8430ff3ea7bd88119150e3aee.js?body=1" for ::1 at 2016-10-06 12:09:53 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:09:53 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:11:25 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:11:28 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:11:31 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:11:50 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:11:50 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:11:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:11:50 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:11:50 -0400
+
+
+Started GET "/assets/bundle.self-92ce1f701229ae9f968c31216e9ea0c39234abf8430ff3ea7bd88119150e3aee.js?body=1" for ::1 at 2016-10-06 12:11:50 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:11:58 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 333ms (Views: 332.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bundle.self-ae93f375580144de282b94d55e1f76f7458cfbf40d988f90067fd2d1d4602886.js?body=1" for ::1 at 2016-10-06 12:11:58 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:11:58 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:11:58 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:11:58 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:11:58 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:12:05 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:13:44 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (1.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 263ms (Views: 261.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:13:45 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:13:45 -0400
+
+
+Started GET "/assets/bundle.self-ae93f375580144de282b94d55e1f76f7458cfbf40d988f90067fd2d1d4602886.js?body=1" for ::1 at 2016-10-06 12:13:45 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:13:45 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:13:45 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:13:46 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:14:31 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 536ms (Views: 535.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:14:32 -0400
+
+
+Started GET "/assets/bundle.self-2c6fb9cb37a3d79f2feedc85c9dd1f82fa191ad1911d1cc3a22c6bc9e7de1ed1.js?body=1" for ::1 at 2016-10-06 12:14:32 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:14:32 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:14:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:14:32 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:14:32 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:17:15 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 341ms (Views: 340.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.self-ca9ff2b712f95c0d04505cd9c33f4d576cde983e419dd0389b0e8c2f00b066de.js?body=1" for ::1 at 2016-10-06 12:17:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:17:16 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:17:16 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:17:16 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:17:16 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:17:16 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:17:31 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 346ms (Views: 344.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bundle.self-6ec3b4a951f3d989e893590ecd9c3d9b7d45dc7afc2cd6cf8af759cc2338edcf.js?body=1" for ::1 at 2016-10-06 12:17:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:17:32 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:17:32 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:17:32 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:17:32 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:17:32 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:17:35 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 174ms (Views: 172.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:17:35 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:17:35 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:17:35 -0400
+
+
+Started GET "/assets/bundle.self-f9b5efd14e5b38d00cf48d16f60b782da6256234d88731d1c49b48ffe8ce8e24.js?body=1" for ::1 at 2016-10-06 12:17:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:17:35 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:17:35 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:18:09 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:18:09 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:19:59 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 701ms (Views: 700.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.self-828e259eae3a8c5c0a5bb7d24f63497d0d68f342fb4871dc79a3cb205f6093ca.js?body=1" for ::1 at 2016-10-06 12:20:00 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:20:00 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:20:00 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:20:00 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:20:00 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:20:00 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:20:19 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 319ms (Views: 318.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.self-a71e984dab8c4ff4dd21e5062e290bf10efef2e797cd132bd39ab98c063ee067.js?body=1" for ::1 at 2016-10-06 12:20:20 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:20:20 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:20:20 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:20:20 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:20:20 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:20:20 -0400
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:20:24 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "smyvKtbw7/b5KS+AunzCXQ=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "t4srzhTGxR8ms8HVBpbbvg=="]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "t4srzhTGxR8ms8HVBpbbvg=="]]
+  [1m[36mUser Exists (1.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "t4srzhTGxR8ms8HVBpbbvg=="], ["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.4ms)
+Completed 200 OK in 409ms (Views: 24.8ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:20:24 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 404 Not Found in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:20:25 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:20:31 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:20:40 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 12:20:42 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:20:43 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:20:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:20:47 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:20:47 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:20:47 -0400
+
+
+Started GET "/assets/bundle.self-a71e984dab8c4ff4dd21e5062e290bf10efef2e797cd132bd39ab98c063ee067.js?body=1" for ::1 at 2016-10-06 12:20:47 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:20:47 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:20:47 -0400
+
+
+Started POST "/api/session" for ::1 at 2016-10-06 12:20:54 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"feather", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "feather"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "Wzgg7gIoekoyOCUp0Sw6fg=="]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "Wzgg7gIoekoyOCUp0Sw6fg=="]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "Wzgg7gIoekoyOCUp0Sw6fg=="], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 98ms (Views: 16.2ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:20:56 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "Wzgg7gIoekoyOCUp0Sw6fg=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "6iFxQolMiqMhclc/gqmoEw=="]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "6iFxQolMiqMhclc/gqmoEw=="]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "6iFxQolMiqMhclc/gqmoEw=="], ["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:20:57 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 12:21:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:21:13 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:21:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:21:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:21:18 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:21:18 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:21:18 -0400
+
+
+Started GET "/assets/bundle.self-a71e984dab8c4ff4dd21e5062e290bf10efef2e797cd132bd39ab98c063ee067.js?body=1" for ::1 at 2016-10-06 12:21:18 -0400
+
+
+Started POST "/api/session" for ::1 at 2016-10-06 12:21:37 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"elizahamilton", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "elizahamilton"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OBPw0jAu0OCoO3hZgWdhqQ=="]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OBPw0jAu0OCoO3hZgWdhqQ=="]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'elizahamilton' AND "users"."id" != 2) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "OBPw0jAu0OCoO3hZgWdhqQ=="], ["id", 2]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 134ms (Views: 55.5ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:21:39 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OBPw0jAu0OCoO3hZgWdhqQ=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "a9ggOzZmmIstHXRMdV2W+A=="]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "a9ggOzZmmIstHXRMdV2W+A=="]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'elizahamilton' AND "users"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "a9ggOzZmmIstHXRMdV2W+A=="], ["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:21:43 -0400
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:24:35 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 12:24:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 200ms (Views: 199.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:24:38 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:24:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:24:55 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:24:55 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:24:55 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:24:55 -0400
+
+
+Started GET "/assets/bundle.self-a71e984dab8c4ff4dd21e5062e290bf10efef2e797cd132bd39ab98c063ee067.js?body=1" for ::1 at 2016-10-06 12:24:55 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:25:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 493ms (Views: 493.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 12:25:29 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:25:29 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:25:29 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:25:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:25:29 -0400
+
+
+Started POST "/api/session" for ::1 at 2016-10-06 12:25:36 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"feather", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "feather"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "vBXazGyr5VSxhrUZcsl5tw=="]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "vBXazGyr5VSxhrUZcsl5tw=="]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "vBXazGyr5VSxhrUZcsl5tw=="], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/show.json.jbuilder (1.3ms)
+Completed 200 OK in 130ms (Views: 48.4ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:25:38 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "vBXazGyr5VSxhrUZcsl5tw=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "5IiTQc3tfYqk7q0LvfCrmQ=="]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "5IiTQc3tfYqk7q0LvfCrmQ=="]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "5IiTQc3tfYqk7q0LvfCrmQ=="], ["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  Rendered api/users/_user.json.jbuilder (0.0ms)
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:25:43 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:28:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 374ms (Views: 373.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.self-ba657185510c110d0f5a7e6a644674103404798f0ff1f0e943df984be2119713.js?body=1" for ::1 at 2016-10-06 12:28:54 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:28:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:28:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:28:56 -0400
+
+
+Started GET "/assets/bundle.self-ba657185510c110d0f5a7e6a644674103404798f0ff1f0e943df984be2119713.js?body=1" for ::1 at 2016-10-06 12:28:56 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:28:56 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:28:56 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:28:59 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:29:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:29:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:29:13 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:29:13 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:29:13 -0400
+
+
+Started GET "/assets/bundle.self-ba657185510c110d0f5a7e6a644674103404798f0ff1f0e943df984be2119713.js?body=1" for ::1 at 2016-10-06 12:29:13 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:29:13 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:29:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:29:18 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:29:18 -0400
+
+
+Started GET "/assets/bundle.self-ba657185510c110d0f5a7e6a644674103404798f0ff1f0e943df984be2119713.js?body=1" for ::1 at 2016-10-06 12:29:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:29:18 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:29:18 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:29:18 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:29:20 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:29:20 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:29:20 -0400
+
+
+Started GET "/assets/bundle.self-ba657185510c110d0f5a7e6a644674103404798f0ff1f0e943df984be2119713.js?body=1" for ::1 at 2016-10-06 12:29:20 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:29:20 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:29:20 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:29:20 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:29:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:29:40 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:29:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:29:40 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:29:40 -0400
+
+
+Started GET "/assets/bundle.self-ba657185510c110d0f5a7e6a644674103404798f0ff1f0e943df984be2119713.js?body=1" for ::1 at 2016-10-06 12:29:40 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:29:40 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:30:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 56ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 12:30:05 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 12:30:05 -0400
+
+
+Started POST "/api/session" for ::1 at 2016-10-06 12:30:14 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"feather", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "feather"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1/rZgAIKuR/hz5HCrpO6vw=="]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1/rZgAIKuR/hz5HCrpO6vw=="]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "1/rZgAIKuR/hz5HCrpO6vw=="], ["id", 1]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (10.0ms)
+Completed 200 OK in 161ms (Views: 78.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 12:30:16 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1/rZgAIKuR/hz5HCrpO6vw=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:30:16 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 12:30:16 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:30:16 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:30:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:30:16 -0400
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:30:18 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1/rZgAIKuR/hz5HCrpO6vw=="]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "e82IKx6AQ/aDpS2XHeTN2g=="]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "e82IKx6AQ/aDpS2XHeTN2g=="]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "e82IKx6AQ/aDpS2XHeTN2g=="], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered api/users/_user.json.jbuilder (0.0ms)
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dashboard" for ::1 at 2016-10-06 12:30:23 -0400
+
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (463.9ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (505.8ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (74.0ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (111.8ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:30:35 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:30:36 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:30:37 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 12:30:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:30:38 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 12:30:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:30:38 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:30:38 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:30:38 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:30:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:30:40 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:30:40 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 12:30:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:30:40 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:30:40 -0400
+
+
+Started POST "/api/session" for ::1 at 2016-10-06 12:30:46 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"feather", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "feather"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "zWGfLQBa/dzbQzjdaI5q9Q=="]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "zWGfLQBa/dzbQzjdaI5q9Q=="]]
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "zWGfLQBa/dzbQzjdaI5q9Q=="], ["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 106ms (Views: 25.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 12:30:48 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "zWGfLQBa/dzbQzjdaI5q9Q=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:30:48 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:30:48 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:30:48 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 12:30:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:30:48 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:30:50 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "zWGfLQBa/dzbQzjdaI5q9Q=="]]
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:30:50 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:30:50 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 12:30:50 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:30:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:30:50 -0400
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:30:51 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "zWGfLQBa/dzbQzjdaI5q9Q=="]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "0fTO1/U7a5Xo1c1pY2UwlQ=="]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "0fTO1/U7a5Xo1c1pY2UwlQ=="]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "0fTO1/U7a5Xo1c1pY2UwlQ=="], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered api/users/_user.json.jbuilder (0.0ms)
+  Rendered api/users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 12:30:53 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:30:53 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:30:53 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 12:30:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:30:53 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:30:53 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:30:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:30:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:30:56 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:30:56 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 12:30:56 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:30:56 -0400
+
+
+Started POST "/api/session" for ::1 at 2016-10-06 12:31:03 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"feather", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "feather"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "mceg4M2ocCC8UYKGosFP8w=="]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "mceg4M2ocCC8UYKGosFP8w=="]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "mceg4M2ocCC8UYKGosFP8w=="], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered api/users/_user.json.jbuilder (0.0ms)
+  Rendered api/users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 83ms (Views: 2.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 12:31:04 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "mceg4M2ocCC8UYKGosFP8w=="]]
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:31:04 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:31:04 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:31:04 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 12:31:04 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:31:04 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 12:31:06 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "mceg4M2ocCC8UYKGosFP8w=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:31:06 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:31:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:31:06 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:31:06 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 12:31:06 -0400
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 12:31:08 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "mceg4M2ocCC8UYKGosFP8w=="]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "EzeLZNlsiq8N5JlK70K5yg=="]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "EzeLZNlsiq8N5JlK70K5yg=="]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "EzeLZNlsiq8N5JlK70K5yg=="], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered api/users/_user.json.jbuilder (0.0ms)
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 12:31:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 83ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 12:31:09 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 12:31:09 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 12:31:09 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 12:31:09 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 12:31:09 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:23:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 187ms (Views: 185.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:23:13 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:23:13 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 13:23:13 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:23:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:23:13 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:30:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 66ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:30:43 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:30:43 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 13:30:43 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:30:43 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:30:43 -0400
+
+
+Started POST "/api/session" for ::1 at 2016-10-06 13:31:14 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"feather", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "feather"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OQRCNo6wZO3IILktBHbP4g=="]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OQRCNo6wZO3IILktBHbP4g=="]]
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "OQRCNo6wZO3IILktBHbP4g=="], ["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (3.3ms)
+Completed 200 OK in 145ms (Views: 54.0ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 13:31:16 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OQRCNo6wZO3IILktBHbP4g=="]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "fPMJUhqrVIqYZ84kCF/lVw=="]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "fPMJUhqrVIqYZ84kCF/lVw=="]]
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "fPMJUhqrVIqYZ84kCF/lVw=="], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered api/users/_user.json.jbuilder (0.0ms)
+  Rendered api/users/show.json.jbuilder (0.8ms)
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 13:31:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 13:32:24 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:32:24 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 13:32:24 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:32:24 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:32:24 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:32:24 -0400
+
+
+Started POST "/api/session" for ::1 at 2016-10-06 13:32:27 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", ""]]
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 13:32:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 71ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 13:33:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:33:26 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:33:26 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:33:26 -0400
+
+
+Started GET "/assets/bundle.self-6c605aa644825404ec92d506d53af6868e0964cef5ab80f5de91650be9884347.js?body=1" for ::1 at 2016-10-06 13:33:26 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:33:26 -0400
+
+
+Started POST "/api/session" for ::1 at 2016-10-06 13:33:37 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"feather", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "feather"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "4JKiEHRTWb6QYhNgucRJiA=="]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "4JKiEHRTWb6QYhNgucRJiA=="]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "4JKiEHRTWb6QYhNgucRJiA=="], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 103ms (Views: 22.3ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/api/session" for ::1 at 2016-10-06 13:33:39 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "4JKiEHRTWb6QYhNgucRJiA=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "Db9hQGpXBzQKrhpJvHOo3w=="]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "Db9hQGpXBzQKrhpJvHOo3w=="]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'feather' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "Db9hQGpXBzQKrhpJvHOo3w=="], ["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 8ms (Views: 2.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 13:33:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 583ms (Views: 582.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.self-2fb906ec43d1711ddc9b90448f13b7f99f9cf5c957a9dac3b87e0fdac8061edc.js?body=1" for ::1 at 2016-10-06 13:33:43 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:35:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 428ms (Views: 427.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:35:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:35:40 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:35:40 -0400
+
+
+Started GET "/assets/bundle.self-38bdcadfa60573562f4b06fdf632087a0400dee87fc19017b34b720ef9829aee.js?body=1" for ::1 at 2016-10-06 13:35:40 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:35:40 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:35:45 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:35:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 71ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:35:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:35:59 -0400
+
+
+Started GET "/assets/bundle.self-38bdcadfa60573562f4b06fdf632087a0400dee87fc19017b34b720ef9829aee.js?body=1" for ::1 at 2016-10-06 13:35:59 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:35:59 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:35:59 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:35:59 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:36:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 395ms (Views: 394.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:36:15 -0400
+
+
+Started GET "/assets/bundle.self-8b4ffc82925a5481d552efee178aa8d368c67df3a2752326eea34eac9ce3df76.js?body=1" for ::1 at 2016-10-06 13:36:15 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:36:15 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:36:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:36:15 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:36:16 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:36:37 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 300ms (Views: 299.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:36:37 -0400
+
+
+Started GET "/assets/bundle.self-840ecf82d94fcb78e059cf37d4898c199327739e10bce9b9e82ebec17a1d0b15.js?body=1" for ::1 at 2016-10-06 13:36:37 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:36:37 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:36:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:36:37 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:36:37 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:36:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 422ms (Views: 422.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.self-eb204e4269b1b6c2689ecf05fdfe91ea51dc214fe1af89d85bbc4b7fae399d65.js?body=1" for ::1 at 2016-10-06 13:36:52 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:36:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:36:52 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:36:52 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:36:52 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:36:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 287ms (Views: 287.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:36:56 -0400
+
+
+Started GET "/assets/bundle.self-6a3c9c8136c3da31bf9f2aa6430651805edc13807df4a6fe6c14d2b2b20868f5.js?body=1" for ::1 at 2016-10-06 13:36:56 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:36:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:36:56 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:36:56 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:37:02 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:37:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:37:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:37:15 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:37:15 -0400
+
+
+Started GET "/assets/bundle.self-6a3c9c8136c3da31bf9f2aa6430651805edc13807df4a6fe6c14d2b2b20868f5.js?body=1" for ::1 at 2016-10-06 13:37:15 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:37:15 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:37:16 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:37:22 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:37:22 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:37:22 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:37:22 -0400
+
+
+Started GET "/assets/bundle.self-6a3c9c8136c3da31bf9f2aa6430651805edc13807df4a6fe6c14d2b2b20868f5.js?body=1" for ::1 at 2016-10-06 13:37:22 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:37:22 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:37:22 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:41:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 343ms (Views: 342.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.self-8aee527d87a07166d87602a219d07ef5a286e7787c694255aab3bfe6d28a6afe.js?body=1" for ::1 at 2016-10-06 13:41:06 -0400
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:41:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:41:06 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:41:06 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:41:06 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:41:07 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:41:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:41:29 -0400
+
+
+Started GET "/assets/bundle.self-8aee527d87a07166d87602a219d07ef5a286e7787c694255aab3bfe6d28a6afe.js?body=1" for ::1 at 2016-10-06 13:41:29 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:41:29 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:41:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:41:29 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:41:29 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:42:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:42:13 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:42:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:42:13 -0400
+
+
+Started GET "/assets/bundle.self-8aee527d87a07166d87602a219d07ef5a286e7787c694255aab3bfe6d28a6afe.js?body=1" for ::1 at 2016-10-06 13:42:13 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:42:13 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:42:14 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:42:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:42:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:42:38 -0400
+
+
+Started GET "/assets/bundle.self-8aee527d87a07166d87602a219d07ef5a286e7787c694255aab3bfe6d28a6afe.js?body=1" for ::1 at 2016-10-06 13:42:38 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:42:38 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:42:38 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:42:39 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:43:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:43:38 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:43:38 -0400
+
+
+Started GET "/assets/bundle.self-8aee527d87a07166d87602a219d07ef5a286e7787c694255aab3bfe6d28a6afe.js?body=1" for ::1 at 2016-10-06 13:43:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:43:38 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:43:38 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:43:38 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:43:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:43:48 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:44:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:44:28 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:44:28 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:44:28 -0400
+
+
+Started GET "/assets/bundle.self-8aee527d87a07166d87602a219d07ef5a286e7787c694255aab3bfe6d28a6afe.js?body=1" for ::1 at 2016-10-06 13:44:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:44:28 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:44:28 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:44:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:44:34 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:44:34 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:44:34 -0400
+
+
+Started GET "/assets/bundle.self-8aee527d87a07166d87602a219d07ef5a286e7787c694255aab3bfe6d28a6afe.js?body=1" for ::1 at 2016-10-06 13:44:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:44:34 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:44:35 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:45:42 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:45:42 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:45:42 -0400
+
+
+Started GET "/assets/bundle.self-8aee527d87a07166d87602a219d07ef5a286e7787c694255aab3bfe6d28a6afe.js?body=1" for ::1 at 2016-10-06 13:45:42 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:45:42 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:45:42 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:45:42 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:46:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 17ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:46:06 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:46:06 -0400
+
+
+Started GET "/assets/bundle.self-8aee527d87a07166d87602a219d07ef5a286e7787c694255aab3bfe6d28a6afe.js?body=1" for ::1 at 2016-10-06 13:46:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:46:06 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:46:06 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:46:07 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:48:22 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 559ms (Views: 558.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:48:22 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:48:22 -0400
+
+
+Started GET "/assets/bundle.self-c484439e30091c119e7ce9ad099c3897e4e306cf38e0fc329e312cfc8bbf73ad.js?body=1" for ::1 at 2016-10-06 13:48:22 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:48:22 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:48:22 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:48:23 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:48:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:48:32 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:48:32 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:48:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:48:32 -0400
+
+
+Started GET "/assets/bundle.self-c484439e30091c119e7ce9ad099c3897e4e306cf38e0fc329e312cfc8bbf73ad.js?body=1" for ::1 at 2016-10-06 13:48:32 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:48:32 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:48:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:48:52 -0400
+
+
+Started GET "/assets/bundle.self-8aee527d87a07166d87602a219d07ef5a286e7787c694255aab3bfe6d28a6afe.js?body=1" for ::1 at 2016-10-06 13:48:52 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:48:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:48:53 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:48:53 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:48:57 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:49:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:49:07 -0400
+
+
+Started GET "/assets/bundle.self-8aee527d87a07166d87602a219d07ef5a286e7787c694255aab3bfe6d28a6afe.js?body=1" for ::1 at 2016-10-06 13:49:07 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:49:07 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:49:07 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:49:07 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:49:07 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:49:14 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 357ms (Views: 356.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:49:15 -0400
+
+
+Started GET "/assets/bundle.self-162fed3dfdb79898d899a60c86bd9bfe0ac786044c985b91768750418d7b8a71.js?body=1" for ::1 at 2016-10-06 13:49:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:49:15 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:49:15 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:49:15 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:49:15 -0400
+
+
+Started GET "/" for ::1 at 2016-10-06 13:49:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f044e327028d9511660c9c36bd4d1579eecd0dd08fe8cd5ee01e807ffac30f77.css?body=1" for ::1 at 2016-10-06 13:49:18 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 13:49:18 -0400
+
+
+Started GET "/assets/bundle.self-162fed3dfdb79898d899a60c86bd9bfe0ac786044c985b91768750418d7b8a71.js?body=1" for ::1 at 2016-10-06 13:49:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 13:49:18 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-06 13:49:18 -0400
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-10-06 13:49:18 -0400
