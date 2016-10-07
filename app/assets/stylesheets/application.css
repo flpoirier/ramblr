@@ -31,6 +31,12 @@
    background: transparent;
  }
 
+ .group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
 /*https://static.pexels.com/photos/3853/sunny-sand-desert-hiking.jpeg
 https://static.pexels.com/photos/3247/nature-forest-industry-rails.jpg
 https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg
@@ -101,16 +107,25 @@ input {
   border-bottom: 2px solid black;
 }
 
+.author-image {
+  float: left;
+  height: 58px;
+  width: 58px;
+  margin: 20px 0 20px 20px;
+  border: 2px solid black;
+}
+
 .post {
+  clear: both;
+}
+
+.post-body {
+  float: left;
   margin: 20px;
   padding: 20px;
   width: 500px;
   border: 2px solid black;
   background: rgba(255, 255, 255, 0.85);
-}
-
-.post-header {
-
 }
 
 .post-author {
@@ -119,22 +134,18 @@ input {
   padding: 0 0 10px 0;
 }
 
-.author-image {
-  float: left;
-}
-
-.post h1 {
+.post-body h1 {
   /*border: 1px solid blue;*/
   font-size: 28px;
   font-weight: bold;
 }
 
-.post p {
+.post-body p {
   margin: 10px 0px;
   /*border: 1px solid red;*/
 }
 
-.post img {
+.post-body img {
   border: 1px solid black;
 }
 

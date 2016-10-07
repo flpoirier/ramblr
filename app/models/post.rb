@@ -22,4 +22,8 @@ class Post < ActiveRecord::Base
     self.user.username
   end
 
+  def thumbnail
+    self.user.avatar
+  end
+
 end

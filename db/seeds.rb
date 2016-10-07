@@ -20,9 +20,9 @@
 #
 # add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
-User.create(username: "dfwquotes", password: "password")
-User.create(username: "icelandwantstobeyourfriend", password: "password")
-User.create(username: "dril", password: "password")
+User.create(username: "dfwquotes", password: "password", avatar: "http://66.media.tumblr.com/tumblr_kofjefKx031qzyafoo1_500.png")
+User.create(username: "icelandwantstobeyourfriend", password: "password", avatar: "http://www.takktakk.com/presents/icelandwantstobeyourfriend/i/iceland-icon.jpg")
+User.create(username: "dril", password: "password", avatar: "https://pbs.twimg.com/profile_images/707320204280373248/3PJZnNgG_400x400.jpg")
 
 dfw = User.find_by(username: "dfwquotes").id
 iceland = User.find_by(username: "icelandwantstobeyourfriend").id
