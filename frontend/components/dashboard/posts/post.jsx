@@ -32,7 +32,7 @@ class Post extends React.Component {
   quote() {
     return (
       <div className="post">
-        <h1>'"'{this.props.post.quote}'"'</h1>
+        <h1>"{this.props.post.quote}"</h1>
         <p className="post-commentary">-- {this.props.post.commentary}</p>
         <div className="post-notes">Posted by: {this.props.post.author}</div>
         <div className="post-notes">Posted at: {this.props.post.created_at}</div>
