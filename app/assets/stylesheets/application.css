@@ -83,7 +83,6 @@ input {
 
 .dashboard {
   position: absolute;
-  background: rgba(255, 255, 255, 0.85);
   font-family: serif;
   font-size: 18px;
   color: #000;
@@ -103,8 +102,28 @@ input {
   border-bottom: 2px solid black;
 }
 
-.posts {
+.post {
+  margin: 20px;
   padding: 20px;
+  width: 450px;
+  border: 2px solid black;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.post h1 {
+  /*border: 1px solid blue;*/
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.post p {
+  margin: 10px 0px;
+  /*border: 1px solid red;*/
+}
+
+.post-notes {
+  /*border: 1px solid green;*/
+  font-size: 14px;
 }
 
 .header-name {
