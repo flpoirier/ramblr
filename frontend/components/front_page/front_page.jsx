@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Modal from 'react-modal';
-import FormStyle from './session_form_style';
-import SessionFormContainer from './session_form/session_form_container';
 
 class FrontPage extends React.Component {
 

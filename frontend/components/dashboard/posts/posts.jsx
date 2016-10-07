@@ -1,20 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const TempComponent = () => (
-  <div className="post">My posts will go here!</div>
-);
+class Posts extends React.Component {
 
-const filler = () => (
-  <div></div>
-);
-
-const Posts = ({ currentUser, posts }) => {
-  if (currentUser) {
-    return TempComponent();
-  } else {
-    return filler();
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentUser: this.props.currentUser,
+      posts: this.props.posts
+    };
   }
-}
 
+  tempComponent() {
+    return (
+      <div className="posts">My posts will go here!</div>
+    );
+  }
+
+  filler() {
+    return (
+      <div></div>
+    );
+  }
+
+  render() {
+    if (this.props.currentUser) {
+      return this.tempComponent();
+    } else {
+      return this.filler();
+    }
+  }
+
+}
 export default Posts;
