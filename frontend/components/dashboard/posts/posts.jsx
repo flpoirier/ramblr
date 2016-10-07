@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Post from './post';
 
 class Posts extends React.Component {
 
@@ -14,7 +15,7 @@ class Posts extends React.Component {
   posts() {
     return (
       <div className="posts">
-        {this.props.posts.map((post) => <div key={post.id}>{post.title}<br />{post.body}<hr/></div>)}
+        {this.props.posts.map((post) => <Post key={post.id} post={post} />)}
       </div>
     );
   }
