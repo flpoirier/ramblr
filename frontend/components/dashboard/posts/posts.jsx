@@ -11,10 +11,10 @@ class Posts extends React.Component {
     this.props.requestPosts();
   }
 
-  tempComponent() {
+  posts() {
     return (
       <div className="posts">
-        My posts: {this.props.posts[0].title}
+        {this.props.posts.map((post) => <div key={post.id}>{post.title}<br />{post.body}<hr/></div>)}
       </div>
     );
   }
@@ -27,7 +27,7 @@ class Posts extends React.Component {
 
   render() {
     if (this.props.posts[0]) {
-      return this.tempComponent();
+      return this.posts();
     } else {
       return this.filler();
     }
