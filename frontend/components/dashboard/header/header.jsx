@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { withRouter, Link } from 'react-router';
  //currentUser, logoout
 class Header extends React.Component {
 
@@ -10,15 +10,24 @@ class Header extends React.Component {
 
   __handleClick() {
     this.props.logout();
-    window.location = '/';
+    // this.props.router.push("/");
+    // window.location = "/";
     // this is HACKY but it works, sigh
+  }
+
+  greeting() {
+    if (this.props.currentUser) {
+      return (<h2 className="header-name">Hi, {this.props.currentUser.username}!</h2>);
+    } else {
+      return (<div></div>);
+    }
   }
 
   render() {
     return (
       <div className="header">
         <hgroup className="header-group">
-          <h2 className="header-name">Hi, {this.props.currentUser.username}!</h2>
+          {this.greeting()}
           <button className="header-button" onClick={this.__handleClick}>Log Out</button>
         </hgroup>
       </div>
@@ -26,4 +35,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);
