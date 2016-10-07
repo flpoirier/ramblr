@@ -9,6 +9,9 @@
 #  body       :string
 #  created_at :datetime
 #  updated_at :datetime
+#  image      :string
+#  quote      :string
+#  commentary :string
 #
 
 class Post < ActiveRecord::Base
