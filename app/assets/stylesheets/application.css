@@ -109,6 +109,20 @@ input {
   background: rgba(255, 255, 255, 0.85);
 }
 
+.post-header {
+
+}
+
+.post-author {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 0 10px 0;
+}
+
+.author-image {
+  float: left;
+}
+
 .post h1 {
   /*border: 1px solid blue;*/
   font-size: 28px;
