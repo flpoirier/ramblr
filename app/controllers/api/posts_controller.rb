@@ -2,7 +2,6 @@ class Api::PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    debugger
     render "api/posts/all"
   end
 

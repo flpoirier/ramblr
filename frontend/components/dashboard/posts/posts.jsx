@@ -5,15 +5,17 @@ class Posts extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      currentUser: this.props.currentUser,
-      posts: this.props.posts
-    };
+  }
+
+  componentDidMount() {
+    this.props.requestPosts();
   }
 
   tempComponent() {
     return (
-      <div className="posts">My posts will go here!</div>
+      <div className="posts">
+        My posts: {this.props.posts[0].title}
+      </div>
     );
   }
 
@@ -24,7 +26,7 @@ class Posts extends React.Component {
   }
 
   render() {
-    if (this.props.currentUser) {
+    if (this.props.posts[0]) {
       return this.tempComponent();
     } else {
       return this.filler();
