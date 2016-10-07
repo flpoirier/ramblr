@@ -39436,3 +39436,309 @@ Processing by Api::PostsController#index as JSON
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
   Rendered api/posts/all.json.jbuilder (15.2ms)
 Completed 200 OK in 34ms (Views: 28.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-07 16:08:19 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "wGE1SDlHL9uop9/gD7y+2g=="]]
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 79ms (Views: 78.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-6b946699fce53206a20afd59e60bfe87d3f01846ced7c0d6b281cfa3e6260e07.css?body=1" for ::1 at 2016-10-07 16:08:20 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-07 16:08:20 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-07 16:08:20 -0400
+
+
+Started GET "/assets/bundle.self-e2493d74377e1e48562477c14b88f450c55e7a4adbfe8a47828b6179cba4e2e9.js?body=1" for ::1 at 2016-10-07 16:08:20 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-07 16:08:20 -0400
+
+
+Started GET "/api/posts" for ::1 at 2016-10-07 16:08:20 -0400
+Processing by Api::PostsController#index as JSON
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered api/posts/all.json.jbuilder (21.0ms)
+Completed 200 OK in 87ms (Views: 81.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2016-10-07 16:09:00 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "wGE1SDlHL9uop9/gD7y+2g=="]]
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-07 16:09:00 -0400
+
+
+Started GET "/assets/application.self-6b946699fce53206a20afd59e60bfe87d3f01846ced7c0d6b281cfa3e6260e07.css?body=1" for ::1 at 2016-10-07 16:09:00 -0400
+
+
+Started GET "/assets/bundle.self-e2493d74377e1e48562477c14b88f450c55e7a4adbfe8a47828b6179cba4e2e9.js?body=1" for ::1 at 2016-10-07 16:09:00 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-07 16:09:00 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-07 16:09:00 -0400
+
+
+Started GET "/api/posts" for ::1 at 2016-10-07 16:09:00 -0400
+Processing by Api::PostsController#index as JSON
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered api/posts/all.json.jbuilder (11.7ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-10-07 16:09:16 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "wGE1SDlHL9uop9/gD7y+2g=="]]
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-6b946699fce53206a20afd59e60bfe87d3f01846ced7c0d6b281cfa3e6260e07.css?body=1" for ::1 at 2016-10-07 16:09:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-07 16:09:16 -0400
+
+
+Started GET "/assets/bundle.self-e2493d74377e1e48562477c14b88f450c55e7a4adbfe8a47828b6179cba4e2e9.js?body=1" for ::1 at 2016-10-07 16:09:16 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-07 16:09:16 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-07 16:09:16 -0400
+
+
+Started GET "/api/posts" for ::1 at 2016-10-07 16:09:16 -0400
+Processing by Api::PostsController#index as JSON
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered api/posts/all.json.jbuilder (7.1ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 1.3ms)
+  [1m[36m (5084.6ms)[0m  [1mDROP DATABASE IF EXISTS "ramblr_development"[0m
+  [1m[35m (182.7ms)[0m  DROP DATABASE IF EXISTS "ramblr_test"
+  [1m[36m (1.0ms)[0m  [1mCREATE DATABASE "ramblr_development" ENCODING = 'unicode'[0m
+  [1m[35m (410.0ms)[0m  CREATE DATABASE "ramblr_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (36.5ms)[0m  DROP TABLE "posts" CASCADE
+  [1m[36m (8.2ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "user_id" integer NOT NULL, "post_type" character varying NOT NULL, "title" character varying, "body" character varying, "created_at" timestamp, "updated_at" timestamp, "image" character varying, "quote" character varying, "commentary" character varying) [0m
+  [1m[35m (1.5ms)[0m  CREATE  INDEX  "index_posts_on_user_id" ON "posts" USING btree ("user_id")
+  [1m[36m (2.5ms)[0m  [1mDROP TABLE "users" CASCADE[0m
+  [1m[35m (28.2ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL) 
+  [1m[36m (2.6ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_username" ON "users" USING btree ("username")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.6ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "user_id" integer NOT NULL, "post_type" character varying NOT NULL, "title" character varying, "body" character varying, "created_at" timestamp, "updated_at" timestamp, "image" character varying, "quote" character varying, "commentary" character varying) 
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX  "index_posts_on_user_id" ON "posts" USING btree ("user_id")[0m
+  [1m[35m (41.0ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL) 
+  [1m[36m (11.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_username" ON "users" USING btree ("username")[0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161007193734')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161004145306')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161007131023')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "MCKNO0b3kZasqt9jdxRSzw=="]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'quoteoftheday' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token") VALUES ($1, $2, $3) RETURNING "id"  [["username", "quoteoftheday"], ["password_digest", "$2a$10$TJRodMk3c/XIwpOo2fDTO.wTggAHpEyiUvLrxQOHc9e9w5VZXMCB."], ["session_token", "MCKNO0b3kZasqt9jdxRSzw=="]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "qk1SztPqtBA6rL1OFleB0A=="]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'icelandwantstobeyourfriend' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "icelandwantstobeyourfriend"], ["password_digest", "$2a$10$snbSpNwJMakiOKL3X4qom.Z/kBLR97nikHJoDeTz5eEsCol9nCkL."], ["session_token", "qk1SztPqtBA6rL1OFleB0A=="]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "Nw6+e+Ev+vTUwkmdIz4/5Q=="]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'dril' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token") VALUES ($1, $2, $3) RETURNING "id"  [["username", "dril"], ["password_digest", "$2a$10$j28t0Uxs0z02MeFl879Wh.F/cUB6kYbuwsXDsnzZC8cPt9JWzLz5q"], ["session_token", "Nw6+e+Ev+vTUwkmdIz4/5Q=="]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("user_id", "post_type", "quote", "commentary", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["post_type", "quote"], ["quote", "Fiction is one of the few experiences where loneliness can be both confronted and relieved. Drugs, movies where stuff blows up, loud parties -- all these chase away loneliness by making me forget my name's Dave and I live in a one-by-one box of bone no other party can penetrate or know. Fiction, poetry, music, really deep serious sex, and, in various ways, religion -- these are the places (for me) where loneliness is countenanced, stared down, transfigured, treated."], ["commentary", "David Foster Wallace"], ["created_at", "2016-10-07 20:14:19.959403"], ["updated_at", "2016-10-07 20:14:19.959403"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("user_id", "post_type", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 3], ["post_type", "text"], ["body", "the way i see it, people who come on here and submit content that is not up to par, could possibly be considered the \"Villains\" of this site"], ["created_at", "2016-10-07 20:14:19.962737"], ["updated_at", "2016-10-07 20:14:19.962737"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("user_id", "post_type", "image", "commentary", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["post_type", "image"], ["image", "http://68.media.tumblr.com/71bbc4c5ae10103922b531add84dd809/tumblr_n5up0iNJDh1qc8mzro1_500.png"], ["commentary", "Here is a photo-graph of one of my mountains. If you would like to know more about my mountains, you can always watch this moving picture with me in it."], ["created_at", "2016-10-07 20:14:19.965186"], ["updated_at", "2016-10-07 20:14:19.965186"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("user_id", "post_type", "quote", "commentary", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 1], ["post_type", "quote"], ["quote", "Because here's something else that's weird but true: in the day-to day trenches of adult life, there is actually no such thing as atheism. There is no such thing as not worshipping. Everybody worships. The only choice we get is what to worship. And the compelling reason for maybe choosing some sort of god or spiritual-type thing to worship—be it JC or Allah, be it YHWH or the Wiccan Mother Goddess, or the Four Noble Truths, or some inviolable set of ethical principles—is that pretty much anything else you worship will eat you alive. If you worship money and things, if they are where you tap real meaning in life, then you will never have enough, never feel you have enough. It's the truth. Worship your body and beauty and sexual allure and you will always feel ugly. And when time and age start showing, you will die a million deaths before they finally grieve you. On one level, we all know this stuff already. It's been codified as myths, proverbs, clichés, epigrams, parables; the skeleton of every great story. The whole trick is keeping the truth up front in daily consciousness."], ["commentary", "David Foster Wallace"], ["created_at", "2016-10-07 20:14:19.967460"], ["updated_at", "2016-10-07 20:14:19.967460"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("user_id", "post_type", "image", "commentary", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["post_type", "image"], ["image", "http://66.media.tumblr.com/8ae0dd7dfe9bf004d2209bb818439abf/tumblr_mxd5udQFoR1qc91i1o1_500.jpg"], ["commentary", "Humans like to stand on me and stare dramatically into the distance. Or sometimes the fog."], ["created_at", "2016-10-07 20:14:19.969765"], ["updated_at", "2016-10-07 20:14:19.969765"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("user_id", "post_type", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 3], ["post_type", "text"], ["body", "(insufferably) It's pronounced. \"Bloomin Onion.\" The 'g' is silent."], ["created_at", "2016-10-07 20:14:19.971995"], ["updated_at", "2016-10-07 20:14:19.971995"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("user_id", "post_type", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["post_type", "text"], ["body", "(me dming) i am merely a vessel through which the posts flow. i accept no rewards.. for i have no name, and no face. Do u like wearing bras,"], ["created_at", "2016-10-07 20:14:19.974436"], ["updated_at", "2016-10-07 20:14:19.974436"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("user_id", "post_type", "image", "commentary", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 2], ["post_type", "image"], ["image", "http://66.media.tumblr.com/4e866cc707ff46b4f4b7ff6f417b56ee/tumblr_my2qg8OIvc1sa7hqoo1_500.jpg"], ["commentary", "Here is a photo of my friend the Moon and I."], ["created_at", "2016-10-07 20:14:19.976656"], ["updated_at", "2016-10-07 20:14:19.976656"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("user_id", "post_type", "quote", "commentary", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["post_type", "quote"], ["quote", "There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says \"Morning, boys. How's the water?\" And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes \"What the hell is water?\""], ["commentary", "David Foster Wallace"], ["created_at", "2016-10-07 20:14:19.978771"], ["updated_at", "2016-10-07 20:14:19.978771"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-10-07 16:14:21 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "wGE1SDlHL9uop9/gD7y+2g=="]]
+  Rendered static_pages/root.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 312ms (Views: 308.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bundle.self-e2493d74377e1e48562477c14b88f450c55e7a4adbfe8a47828b6179cba4e2e9.js?body=1" for ::1 at 2016-10-07 16:14:21 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-07 16:14:21 -0400
+
+
+Started GET "/assets/application.self-6b946699fce53206a20afd59e60bfe87d3f01846ced7c0d6b281cfa3e6260e07.css?body=1" for ::1 at 2016-10-07 16:14:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-07 16:14:21 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-07 16:14:21 -0400
+
+
+Started POST "/api/session" for ::1 at 2016-10-07 16:14:29 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"queen_jackleen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "queen_jackleen"]]
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-07 16:14:31 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "wGE1SDlHL9uop9/gD7y+2g=="]]
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 102ms (Views: 99.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-07 16:14:32 -0400
+
+
+Started GET "/assets/application.self-6b946699fce53206a20afd59e60bfe87d3f01846ced7c0d6b281cfa3e6260e07.css?body=1" for ::1 at 2016-10-07 16:14:32 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-07 16:14:32 -0400
+
+
+Started GET "/assets/bundle.self-e2493d74377e1e48562477c14b88f450c55e7a4adbfe8a47828b6179cba4e2e9.js?body=1" for ::1 at 2016-10-07 16:14:32 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-07 16:14:32 -0400
+
+
+Started POST "/api/user" for ::1 at 2016-10-07 16:14:41 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"queen_jackleen", "password"=>"[FILTERED]"}}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "kvxQ/BJ+Txffsgm5Y7q9aA=="]]
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'queen_jackleen' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Completed 422 Unprocessable Entity in 173ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/user" for ::1 at 2016-10-07 16:14:46 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"queen_jackleen", "password"=>"[FILTERED]"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "cQN9Cbfwlax2TYrjZH2bGQ=="]]
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'queen_jackleen' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token") VALUES ($1, $2, $3) RETURNING "id"  [["username", "queen_jackleen"], ["password_digest", "$2a$10$7k7UDQS8GH6T7WOuZFaRHeTQ6z2m/rZY68e0x7HiqFQ/zB9QOXFEO"], ["session_token", "cQN9Cbfwlax2TYrjZH2bGQ=="]]
+  [1m[36m (4.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "yXAJOcKV3UmqzEJbO26pSw=="]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "yXAJOcKV3UmqzEJbO26pSw=="]]
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'queen_jackleen' AND "users"."id" != 4) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "yXAJOcKV3UmqzEJbO26pSw=="], ["id", 4]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (11.8ms)
+Completed 200 OK in 153ms (Views: 49.5ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/api/posts" for ::1 at 2016-10-07 16:14:46 -0400
+Processing by Api::PostsController#index as JSON
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered api/posts/all.json.jbuilder (19.7ms)
+Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-07 16:15:54 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "yXAJOcKV3UmqzEJbO26pSw=="]]
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 89ms (Views: 88.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-31a30cfc1e8f183514c8bc1ce34f5d38d45bfc5aebeecc272b3683fea52074d5.css?body=1" for ::1 at 2016-10-07 16:15:54 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-07 16:15:54 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-07 16:15:54 -0400
+
+
+Started GET "/assets/bundle.self-e2493d74377e1e48562477c14b88f450c55e7a4adbfe8a47828b6179cba4e2e9.js?body=1" for ::1 at 2016-10-07 16:15:54 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-10-07 16:15:54 -0400
+
+
+Started GET "/api/posts" for ::1 at 2016-10-07 16:15:55 -0400
+Processing by Api::PostsController#index as JSON
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered api/posts/all.json.jbuilder (14.6ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 2.2ms)
