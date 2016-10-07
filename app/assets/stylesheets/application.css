@@ -37,7 +37,8 @@ https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg
 https://upload.wikimedia.org/wikipedia/commons/2/2a/Mission_Mountains_National_Bison_Range_Montana.jpg*/
 
 body {
-  background: url("https://static.pexels.com/photos/3853/sunny-sand-desert-hiking.jpeg") no-repeat center center fixed;
+  box-sizing: content-box;
+  background: url("https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -81,21 +82,25 @@ input {
 }
 
 .dashboard {
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  width: 1000px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.85);
+  font-family: serif;
+  font-size: 18px;
+  color: #000;
+  width: 800px;
   margin: 0 auto;
   font-weight: normal;
-  border-left: 5px solid black;
-  border-right: 5px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
   height: 100%;
+  left: 7%;
+  right: 7%;
 }
 
 .header {
   margin: 0 auto;
   padding: 20px;
-  border-bottom: 5px solid black;
-  border-top: 5px solid black;
+  border-bottom: 2px solid black;
 }
 
 .post {
