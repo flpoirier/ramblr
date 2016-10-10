@@ -13,6 +13,7 @@ class PostForm extends React.Component {
       quote: "",
       commentary: ""
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
@@ -21,8 +22,10 @@ class PostForm extends React.Component {
     });
   }
 
-  handleSubmit() {
-    console.log("THIS BUTTON DOESN'T DO ANYTHING");
+  handleSubmit(e) {
+    e.preventDefault();
+    const post = this.state;
+    this.props.createPost({post});
   }
 
   render() {

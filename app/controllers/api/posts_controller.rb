@@ -1,7 +1,7 @@
 class Api::PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    @posts = Post.all.reverse
     render "api/posts/all"
   end
 
@@ -16,8 +16,8 @@ class Api::PostsController < ApplicationController
 	end
 
 	private
-	def user_params
-		params.require(:post).permit(:post_type, :title, :body)
+	def post_params
+		params.require(:post).permit(:post_type, :title, :body, :image, :quote, :commentary)
 	end
 
 end
