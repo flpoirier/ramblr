@@ -44,7 +44,7 @@ https://upload.wikimedia.org/wikipedia/commons/2/2a/Mission_Mountains_National_B
 
 body {
   box-sizing: content-box;
-  background: url("https://upload.wikimedia.org/wikipedia/commons/2/2a/Mission_Mountains_National_Bison_Range_Montana.jpg") no-repeat center center fixed;
+  background: url("https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -204,4 +204,18 @@ fill the page height automatically!*/
   border: 5px solid black;
   background: rgba(0, 0, 0, 0.6);
   padding: 50px;
+}
+
+.post-form {
+  float: left;
+  margin: 20px 10px 20px 102px;
+  padding: 5px 10px;
+  border: 2px solid black;
+  /*background: rgba(255, 255, 255, 0.45);*/
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.post-form-link {
+  float: left;
+  padding: 5px 10px;
 }
