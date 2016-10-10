@@ -9,7 +9,7 @@ class PostForm extends React.Component {
       post_type: this.props.params.post_type,
       title: "",
       body: "",
-      image: "",
+      image: undefined,
       quote: "",
       commentary: ""
     };
@@ -48,7 +48,7 @@ class PostForm extends React.Component {
     } else if (type === "image") {
       return (
         <div>
-        URL: <input type="text" value={this.state.quote} onChange={this.update("image")}/>
+          Photo: <input type="file" value={this.state.image} onChange={this.update("image")} />
         Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
