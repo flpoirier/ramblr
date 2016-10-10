@@ -6,6 +6,7 @@
 #  username        :string           not null
 #  password_digest :string           not null
 #  session_token   :string           not null
+#  avatar          :string
 #
 
 class User < ActiveRecord::Base

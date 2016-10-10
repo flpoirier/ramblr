@@ -11,21 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161007211334) do
+ActiveRecord::Schema.define(version: 20161010222156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "posts", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.string   "post_type",  null: false
+    t.integer  "user_id",            null: false
+    t.string   "post_type",          null: false
     t.string   "title"
     t.string   "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image"
     t.string   "quote"
     t.string   "commentary"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
