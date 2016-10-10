@@ -11,6 +11,8 @@ class NewPostNav extends React.Component {
     return ["text", "photo", "audio", "video", "link", "quote"];
   }
 
+  // refactor render method later to iterate over the post types
+
   render() {
     return (
       <div className="post-form group">
