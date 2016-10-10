@@ -15,11 +15,11 @@
 #  image_content_type :string
 #  image_file_size    :integer
 #  image_updated_at   :datetime
-#
+# change this back later :   has_attached_file :image, default_url: "missing.png"
 
 class Post < ActiveRecord::Base
-  
-  has_attached_file :image, default_url: "missing.png"
+
+  has_attached_file :image
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   belongs_to :user
