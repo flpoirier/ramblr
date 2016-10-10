@@ -3,7 +3,13 @@ import { REQUEST_POSTS, CREATE_POST, requestPosts, receivePosts } from '../actio
 
 export default ({ getState, dispatch }) => next => action => {
 
-  const postsSuccess = data => dispatch(receivePosts(data));
+  const postsSuccess = (data) => {
+    dispatch(receivePosts(data));
+    if (action.success) {
+      action.success()
+    }
+  };
+
   const result = next(action);
 
   switch(action.type) {

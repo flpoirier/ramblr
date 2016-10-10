@@ -11,7 +11,8 @@ export const requestPosts = () => ({
   type: REQUEST_POSTS
 });
 
-export const createPost = post => ({
+export const createPost = (post, success) => ({
   type: CREATE_POST,
-  post
+  post,
+  success
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
 class PostForm extends React.Component {
 
@@ -25,8 +25,11 @@ class PostForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const post = this.state;
-    this.props.createPost({post});
+    const success = () => { hashHistory.push("/"); };
+    this.props.createPost({post}, success);
   }
+
+
 
   render() {
     return (
