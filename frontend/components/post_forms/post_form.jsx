@@ -29,15 +29,38 @@ class PostForm extends React.Component {
     this.props.createPost({post}, success);
   }
 
-
+  postType() {
+    const type = this.state.post_type;
+    if (type === "text") {
+      return (
+        <div>
+        Title: <input type="text" value={this.state.title} onChange={this.update("title")}/>
+        Body: <input type="text" value={this.state.body} onChange={this.update("body")}/>
+        </div>
+      );
+    } else if (type === "quote") {
+      return (
+        <div>
+        Quote: <input type="text" value={this.state.quote} onChange={this.update("quote")}/>
+        Attribution: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+        </div>
+      );
+    } else if (type === "image") {
+      return (
+        <div>
+        URL: <input type="text" value={this.state.quote} onChange={this.update("image")}/>
+        Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+        </div>
+      );
+    }
+  }
 
   render() {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <Link to="/dashboard"><h1>{this.props.params.post_type}</h1></Link><br />
-          Title: <input type="text" value={this.state.title} onChange={this.update("title")}/><br /><br />
-          Body: <input type="text" value={this.state.body} onChange={this.update("body")}/><br />
+          {this.postType()}
           <br /><input type="submit" value="Post" />
         </form>
       </div>

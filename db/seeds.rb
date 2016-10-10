@@ -45,3 +45,9 @@ Post.create(user_id: dril, post_type: "text", body: "(me dming) i am merely a ve
 Post.create(user_id: iceland, post_type: "image", image: "http://66.media.tumblr.com/4e866cc707ff46b4f4b7ff6f417b56ee/tumblr_my2qg8OIvc1sa7hqoo1_500.jpg", commentary: "Here is a photo of my friend the Moon and I.")
 
 Post.create(user_id: dfw, post_type: "quote", quote: "There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says \"Morning, boys. How's the water?\" And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes \"What the hell is water?\"", commentary: "David Foster Wallace")
+
+Post.create(user_id: dril, post_type: "text", body: "one of the things you realize when becoming a genius in many aspects of life is that the world wide web. and the computer, is the same thing")
+
+Post.create(user_id: iceland, post_type: "image", image: "http://66.media.tumblr.com/7524be20e7bbdbb3bdc639761324c0fd/tumblr_n744x4bRbZ1tabg50o1_500.jpg", commentary: "I am like a swiss cheese. Full of holes.")
+
+Post.create(user_id: dfw, post_type: "quote", quote: "What if sometimes there is no choice about what to love? What if the temple comes to Mohammed? What if you just love? without deciding? You just do: you see her and in that instant are lost to sober account-keeping and cannot choose but to love?", commentary: "David Foster Wallace")
