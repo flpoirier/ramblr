@@ -38,6 +38,7 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :video, content_type: /\Avideo\/.*\Z/
 
   belongs_to :user
+  has_many :likes
 
   def author
     self.user.username

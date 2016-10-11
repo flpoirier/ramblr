@@ -11,6 +11,9 @@
 
 class User < ActiveRecord::Base
 
+  has_many :likes
+  has_many :posts
+
   attr_reader :password
 
   validates :username, :password_digest, :session_token, presence: true

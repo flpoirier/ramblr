@@ -114,6 +114,7 @@ class Post extends React.Component {
         <div>
           <button className="fa-button" onClick={this.delete}><i className="fa fa-trash" aria-hidden="true" /></button>
           <button className="fa-button"><i className="fa fa-heart-o" aria-hidden="true" /></button>
+          <div className="fa-button">{this.props.post.likes.length} likes</div>
         </div>
       );
     } else {
@@ -121,6 +122,7 @@ class Post extends React.Component {
         <div>
           <button className="fa-button"><i className="fa fa-plus" aria-hidden="true" /></button>
           <button className="fa-button"><i className="fa fa-heart-o" aria-hidden="true" /></button>
+          <div className="fa-button">{this.props.post.likes.length} likes</div>
         </div>
       );
     }
