@@ -9,11 +9,13 @@ class PostForm extends React.Component {
       post_type: this.props.params.post_type,
       title: "",
       body: "",
-      image: undefined,
+      imageUrl: "",
+      imageFile: undefined,
       quote: "",
       commentary: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.updatePic = this.updatePic.bind(this);
   }
 
   update(field) {
@@ -22,11 +24,34 @@ class PostForm extends React.Component {
     });
   }
 
+  updatePic(e) {
+    var reader = new FileReader();
+    var file = e.currentTarget.files[0];
+    reader.onloadend = () => {
+      this.setState({ imageUrl: reader.result, imageFile: file});
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      this.setState({ imageUrl: "", imageFile: null });
+    }
+
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    const post = this.state;
+    const formData = new FormData();
+    formData.append("post[post_type]", this.state.post_type);
+    formData.append("post[title]", this.state.title);
+    formData.append("post[body]", this.state.body);
+    if (this.state.imageFile) {
+      formData.append("post[image]", this.state.imageFile);
+    }
+    formData.append("post[quote]", this.state.quote);
+    formData.append("post[commentary]", this.state.commentary);
     const success = () => { hashHistory.push("/"); };
-    this.props.createPost({post}, success);
+    this.props.createPost(formData, success);
   }
 
   postType() {
@@ -48,7 +73,8 @@ class PostForm extends React.Component {
     } else if (type === "image") {
       return (
         <div>
-          Photo: <input type="file" value={this.state.image} onChange={this.update("image")} />
+          <img src={this.state.imageUrl}/><br />
+          Photo: <input type="file" onChange={this.updatePic} /><br /><br />
         Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );

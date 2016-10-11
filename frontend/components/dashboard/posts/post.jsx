@@ -27,7 +27,7 @@ class Post extends React.Component {
         <img className="author-image" src={this.props.post.thumbnail} />
         <div className="post-body">
           <div className="post-author">{this.props.post.author}</div>
-          <img src={this.props.post.image.url} />
+          <img src={this.props.post.image} />
           <p className="post-commentary">-- {this.props.post.commentary}</p>
           <div className="post-notes">Posted at: {this.props.post.created_at}</div>
         </div>

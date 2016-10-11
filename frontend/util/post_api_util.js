@@ -9,11 +9,14 @@ export const fetchPosts = (success) => {
 // note -- when I eventually want to filter this by only followed users
 // I'm going to have to add filters (like data: filters)
 
-export const createPost = (post, success) => {
+export const createPost = (formData, success) => {
 	$.ajax({
+    url: '/api/posts',
 		method: 'POST',
-		url: 'api/posts',
-		data: post,
+    dataType: "json",
+    contentType: false,
+    processData: false,
+		data: formData,
 		success
 	});
 };
