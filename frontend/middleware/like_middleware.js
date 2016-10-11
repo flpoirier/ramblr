@@ -15,10 +15,10 @@ export default ({ getState, dispatch }) => next => action => {
 
   switch(action.type) {
     case LIKE_POST:
-      likePost(action.like, likeSuccess);
+      like(action.like, likeSuccess);
       break;
     case DISLIKE_POST:
-      dislikePost(action.like, dislikeSuccess);
+      dislike(action.like, dislikeSuccess);
       break;
     default:
       break;

@@ -7,7 +7,7 @@ export const like = (like, success) => {
 	});
 };
 
-export const dislike = (success) => {
+export const dislike = (like, success) => {
   const id = like.id;
 	$.ajax({
 		method: 'DELETE',
