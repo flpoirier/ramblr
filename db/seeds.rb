@@ -46,6 +46,8 @@ Post.create(user_id: iceland, post_type: "image", image: "http://66.media.tumblr
 
 Post.create(user_id: dril, post_type: "text", body: '(insufferably) It\'s pronounced. "Bloomin Onion." The \'g\' is silent.')
 
+Post.create(user_id: ao3, post_type: "image", image: "https://s-media-cache-ak0.pinimg.com/originals/b1/a5/6e/b1a56ebdaa4bfd6298379837a214bc8b.png", commentary: "Steven Universe fanart")
+
 Post.create(user_id: dril, post_type: "text", body: "(me dming) i am merely a vessel through which the posts flow. i accept no rewards.. for i have no name, and no face. Do u like wearing bras,")
 
 Post.create(user_id: iceland, post_type: "image", image: "http://66.media.tumblr.com/4e866cc707ff46b4f4b7ff6f417b56ee/tumblr_my2qg8OIvc1sa7hqoo1_500.jpg", commentary: "Here is a photo of my friend the Moon and I.")

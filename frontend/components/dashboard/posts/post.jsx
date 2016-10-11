@@ -6,6 +6,7 @@ class Post extends React.Component {
   constructor(props) {
     super(props);
     this.delete = this.delete.bind(this);
+    this.like = this.like.bind(this);
   }
 
   text() {
@@ -126,6 +127,10 @@ class Post extends React.Component {
         </div>
       );
     }
+  }
+
+  like() {
+
   }
 
   delete() {
