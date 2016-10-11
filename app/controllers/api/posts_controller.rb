@@ -15,9 +15,14 @@ class Api::PostsController < ApplicationController
 		end
 	end
 
-  def delete
-    debugger
-    @post = Post.find_by(id: params)
+  def destroy
+    @post = Post.find_by(id: params["id"]);
+    if @post
+      @post.delete
+      render "api/posts/show"
+    else
+      render json: @post.errors.full_messages, status: 422
+    end
   end
 
 	private

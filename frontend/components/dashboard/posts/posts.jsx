@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import Post from './post';
+import PostContainer from './post_container';
 
 class Posts extends React.Component {
 
@@ -15,7 +15,7 @@ class Posts extends React.Component {
   posts() {
     return (
       <div className="posts">
-        {this.props.posts.map((post) => <Post key={post.id} post={post} />)}
+        {this.props.posts.map((post) => <PostContainer key={post.id} post={post} />)}
       </div>
     );
   }

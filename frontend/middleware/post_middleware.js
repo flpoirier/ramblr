@@ -1,5 +1,5 @@
 import { fetchPosts, createPost, deletePost } from '../util/post_api_util';
-import { REQUEST_POSTS, CREATE_POST, requestPosts, receivePosts } from '../actions/post_actions';
+import { REQUEST_POSTS, CREATE_POST, DELETE_POST, REMOVE_POST, requestPosts, receivePosts, removePost } from '../actions/post_actions';
 
 export default ({ getState, dispatch }) => next => action => {
 
@@ -8,6 +8,10 @@ export default ({ getState, dispatch }) => next => action => {
     if (action.success) {
       action.success()
     }
+  };
+
+  const deleteSuccess = (data) => {
+    dispatch(removePost(data.id));
   };
 
   const result = next(action);
@@ -20,7 +24,7 @@ export default ({ getState, dispatch }) => next => action => {
       createPost(action.post, postsSuccess)
       break;
     case DELETE_POST:
-      deletePost(action.id, postsSuccess)
+      deletePost(action.post, deleteSuccess)
       break;
     default:
       break;

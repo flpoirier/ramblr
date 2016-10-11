@@ -5,6 +5,7 @@ class Post extends React.Component {
 
   constructor(props) {
     super(props);
+    this.delete = this.delete.bind(this);
   }
 
   text() {
@@ -61,7 +62,7 @@ class Post extends React.Component {
         <div className="post-body">
           <div className="post-author">{this.props.post.author}</div>
 
-          <video controls height="30px" width="400px" >
+          <video controls height="30px" width="500px" >
             <source src={this.props.post.audio} type="audio/mpeg"></source>
           </video>
 
@@ -108,13 +109,25 @@ class Post extends React.Component {
   }
 
   icons() {
-    return (
-      <div>
-        <button className="fa-button" onClick={this.deleteMe}><i className="fa fa-trash" aria-hidden="true" /></button>
-        <button className="fa-button" onClick={this.deleteMe}><i className="fa fa-plus" aria-hidden="true" /></button>
-        <button className="fa-button" onClick={this.deleteMe}><i className="fa fa-heart-o" aria-hidden="true" /></button>
-      </div>
-    );
+    if (this.props.currentUser.id === this.props.post.user_id) {
+      return (
+        <div>
+          <button className="fa-button" onClick={this.delete}><i className="fa fa-trash" aria-hidden="true" /></button>
+          <button className="fa-button"><i className="fa fa-heart-o" aria-hidden="true" /></button>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <button className="fa-button"><i className="fa fa-plus" aria-hidden="true" /></button>
+          <button className="fa-button"><i className="fa fa-heart-o" aria-hidden="true" /></button>
+        </div>
+      );
+    }
+  }
+
+  delete() {
+    this.props.deletePost(this.props.post);
   }
 
   render() {
