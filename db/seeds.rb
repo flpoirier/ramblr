@@ -24,11 +24,13 @@ User.create(username: "dfwquotes", password: "password", avatar: "http://66.medi
 User.create(username: "icelandwantstobeyourfriend", password: "password", avatar: "http://www.takktakk.com/presents/icelandwantstobeyourfriend/i/iceland-icon.jpg")
 User.create(username: "dril", password: "password", avatar: "https://pbs.twimg.com/profile_images/707320204280373248/3PJZnNgG_400x400.jpg")
 User.create(username: "lemondemon", password: "password", avatar: "http://lemonkle.com/store/img/BG169.jpg")
+User.create(username: "archiveofourown", password: "password", avatar: "https://pbs.twimg.com/profile_images/958203064/AO3logo3-02.png")
 
 dfw = User.find_by(username: "dfwquotes").id
 iceland = User.find_by(username: "icelandwantstobeyourfriend").id
 dril = User.find_by(username: "dril").id
 lemon = User.find_by(username: "lemondemon").id
+ao3 = User.find_by(username: "archiveofourown").id
 
 Post.create(user_id: dfw, post_type: "quote", quote: "Fiction is one of the few experiences where loneliness can be both confronted and relieved. Drugs, movies where stuff blows up, loud parties -- all these chase away loneliness by making me forget my name's Dave and I live in a one-by-one box of bone no other party can penetrate or know. Fiction, poetry, music, really deep serious sex, and, in various ways, religion -- these are the places (for me) where loneliness is countenanced, stared down, transfigured, treated.", commentary: "David Foster Wallace")
 
@@ -53,6 +55,8 @@ Post.create(user_id: dfw, post_type: "quote", quote: "There are these two young 
 Post.create(user_id: dril, post_type: "text", body: "one of the things you realize when becoming a genius in many aspects of life is that the world wide web. and the computer, is the same thing")
 
 Post.create(user_id: lemon, post_type: "audio", audio: "http://www.lemondemon.com/Lemon%20Demon%20-%20First%20four%20albums/Damn%20Skippy%20(2005)/17%20-%20Word%20Disassociation.mp3", commentary: "Word Disassociation -- Damn Skippy (2005)")
+
+Post.create(user_id: ao3, post_type: "video", video: "", commentary: "Starships! -- multifandom fanvid by bironic")
 
 Post.create(user_id: iceland, post_type: "image", image: "http://66.media.tumblr.com/7524be20e7bbdbb3bdc639761324c0fd/tumblr_n744x4bRbZ1tabg50o1_500.jpg", commentary: "I am like a swiss cheese. Full of holes.")
 

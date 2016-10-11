@@ -78,6 +78,30 @@ class PostForm extends React.Component {
         Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
+    } else if (type === "audio") {
+      return (
+        <div>
+          <img src={this.state.imageUrl}/><br />
+          Photo: <input type="file" onChange={this.updatePic} /><br /><br />
+        Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+        </div>
+      );
+    } else if (type === "video") {
+      return (
+        <div>
+          <img src={this.state.imageUrl}/><br />
+          Photo: <input type="file" onChange={this.updatePic} /><br /><br />
+        Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+        </div>
+      );
+    } else if (type === "link") {
+      return (
+        <div>
+          <img src={this.state.imageUrl}/><br />
+          Photo: <input type="file" onChange={this.updatePic} /><br /><br />
+        Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+        </div>
+      );
     }
   }
 
