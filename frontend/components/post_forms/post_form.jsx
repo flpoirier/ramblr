@@ -11,7 +11,10 @@ class PostForm extends React.Component {
       body: "",
       imageUrl: "",
       imageFile: undefined,
+      audioFile: undefined,
+      videoFile: undefined,
       quote: "",
+      link: "",
       commentary: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,8 +28,8 @@ class PostForm extends React.Component {
   }
 
   updatePic(e) {
-    var reader = new FileReader();
-    var file = e.currentTarget.files[0];
+    let reader = new FileReader();
+    let file = e.currentTarget.files[0];
     reader.onloadend = () => {
       this.setState({ imageUrl: reader.result, imageFile: file});
     };
@@ -36,7 +39,34 @@ class PostForm extends React.Component {
     } else {
       this.setState({ imageUrl: "", imageFile: null });
     }
+  }
 
+  updateAudio(e) {
+    let reader = new FileReader();
+    let file = e.currentTarget.files[0];
+    reader.onloadend = () => {
+      this.setState({ audioFile: file});
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      this.setState({ audioFile: null });
+    }
+  }
+
+  updateVideo(e) {
+    let reader = new FileReader();
+    let file = e.currentTarget.files[0];
+    reader.onloadend = () => {
+      this.setState({ videoFile: file});
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      this.setState({ videoFile: null });
+    }
   }
 
   handleSubmit(e) {
@@ -45,11 +75,17 @@ class PostForm extends React.Component {
     formData.append("post[post_type]", this.state.post_type);
     formData.append("post[title]", this.state.title);
     formData.append("post[body]", this.state.body);
+    formData.append("post[quote]", this.state.quote);
+    formData.append("post[commentary]", this.state.commentary);
     if (this.state.imageFile) {
       formData.append("post[image]", this.state.imageFile);
     }
-    formData.append("post[quote]", this.state.quote);
-    formData.append("post[commentary]", this.state.commentary);
+    if (this.state.audioFile) {
+      formData.append("post[audio]", this.state.audioFile);
+    }
+    if (this.state.videoFile) {
+      formData.append("post[video]", this.state.videoFile);
+    }
     const success = () => { hashHistory.push("/"); };
     this.props.createPost(formData, success);
   }
@@ -75,31 +111,28 @@ class PostForm extends React.Component {
         <div>
           <img src={this.state.imageUrl}/><br />
           Photo: <input type="file" onChange={this.updatePic} /><br /><br />
-        Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+          Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
     } else if (type === "audio") {
       return (
         <div>
-          <img src={this.state.imageUrl}/><br />
-          Photo: <input type="file" onChange={this.updatePic} /><br /><br />
-        Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+          Audio: <input type="file" onChange={this.updateAudio} /><br /><br />
+          Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
     } else if (type === "video") {
       return (
         <div>
-          <img src={this.state.imageUrl}/><br />
-          Photo: <input type="file" onChange={this.updatePic} /><br /><br />
-        Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+          Video: <input type="file" onChange={this.updateVideo} /><br /><br />
+          Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
     } else if (type === "link") {
       return (
         <div>
-          <img src={this.state.imageUrl}/><br />
-          Photo: <input type="file" onChange={this.updatePic} /><br /><br />
-        Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+          Link URL: <input type="text" value={this.state.link} onChange={this.update("link")}/><br /><br />
+          Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
     }
