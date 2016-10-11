@@ -21,7 +21,7 @@
 # add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 User.create(username: "dfwquotes", password: "password", avatar: "http://66.media.tumblr.com/tumblr_kofjefKx031qzyafoo1_500.png")
-User.create(username: "icelandwantstobeyourfriend", password: "password", avatar: "http://www.takktakk.com/presents/icelandwantstobeyourfriend/i/iceland-icon.jpg")
+User.create(username: "icelandwantstobeyourfriend", password: "password", avatar: "https://media1.britannica.com/eb-media/23/138923-004-AD1DF3AE.jpg")
 User.create(username: "dril", password: "password", avatar: "https://pbs.twimg.com/profile_images/707320204280373248/3PJZnNgG_400x400.jpg")
 User.create(username: "lemondemon", password: "password", avatar: "http://lemonkle.com/store/img/BG169.jpg")
 User.create(username: "archiveofourown", password: "password", avatar: "https://pbs.twimg.com/profile_images/958203064/AO3logo3-02.png")
@@ -55,8 +55,6 @@ Post.create(user_id: dfw, post_type: "quote", quote: "There are these two young 
 Post.create(user_id: dril, post_type: "text", body: "one of the things you realize when becoming a genius in many aspects of life is that the world wide web. and the computer, is the same thing")
 
 Post.create(user_id: lemon, post_type: "audio", audio: "http://www.lemondemon.com/Lemon%20Demon%20-%20First%20four%20albums/Damn%20Skippy%20(2005)/17%20-%20Word%20Disassociation.mp3", commentary: "Word Disassociation -- Damn Skippy (2005)")
-
-Post.create(user_id: ao3, post_type: "video", video: "", commentary: "Starships! -- multifandom fanvid by bironic")
 
 Post.create(user_id: iceland, post_type: "image", image: "http://66.media.tumblr.com/7524be20e7bbdbb3bdc639761324c0fd/tumblr_n744x4bRbZ1tabg50o1_500.jpg", commentary: "I am like a swiss cheese. Full of holes.")
 

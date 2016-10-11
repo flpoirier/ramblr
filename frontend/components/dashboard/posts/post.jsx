@@ -16,6 +16,7 @@ class Post extends React.Component {
           <h1>{this.props.post.title}</h1>
           <p>{this.props.post.body}</p>
           <div className="post-notes">Posted at: {this.props.post.created_at}</div>
+          {this.icons()}
         </div>
       </div>
     );
@@ -32,6 +33,7 @@ class Post extends React.Component {
           <h1><a href={this.props.post.link}>{this.props.post.link}</a></h1>
           <p className="post-commentary">-- {this.props.post.commentary}</p>
           <div className="post-notes">Posted at: {this.props.post.created_at}</div>
+          {this.icons()}
         </div>
       </div>
     );
@@ -46,6 +48,7 @@ class Post extends React.Component {
           <img src={this.props.post.image} />
           <p className="post-commentary">-- {this.props.post.commentary}</p>
           <div className="post-notes">Posted at: {this.props.post.created_at}</div>
+          {this.icons()}
         </div>
       </div>
     );
@@ -64,6 +67,7 @@ class Post extends React.Component {
 
           <p className="post-commentary">-- {this.props.post.commentary}</p>
           <div className="post-notes">Posted at: {this.props.post.created_at}</div>
+          {this.icons()}
         </div>
       </div>
     );
@@ -76,12 +80,13 @@ class Post extends React.Component {
         <div className="post-body">
           <div className="post-author">{this.props.post.author}</div>
 
-          <video controls width="400px" >
+          <video controls width="500px" >
             <source src={this.props.post.video} type="audio/mpeg"></source>
           </video>
 
           <p className="post-commentary">-- {this.props.post.commentary}</p>
           <div className="post-notes">Posted at: {this.props.post.created_at}</div>
+          {this.icons()}
         </div>
       </div>
     );
@@ -96,7 +101,18 @@ class Post extends React.Component {
           <h1>"{this.props.post.quote}"</h1>
           <p className="post-commentary">-- {this.props.post.commentary}</p>
           <div className="post-notes">Posted at: {this.props.post.created_at}</div>
+          {this.icons()}
         </div>
+      </div>
+    );
+  }
+
+  icons() {
+    return (
+      <div>
+        <button className="fa-button" onClick={this.deleteMe}><i className="fa fa-trash" aria-hidden="true" /></button>
+        <button className="fa-button" onClick={this.deleteMe}><i className="fa fa-plus" aria-hidden="true" /></button>
+        <button className="fa-button" onClick={this.deleteMe}><i className="fa fa-heart-o" aria-hidden="true" /></button>
       </div>
     );
   }

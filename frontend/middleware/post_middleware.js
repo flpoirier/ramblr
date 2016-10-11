@@ -1,4 +1,4 @@
-import { fetchPosts, createPost } from '../util/post_api_util';
+import { fetchPosts, createPost, deletePost } from '../util/post_api_util';
 import { REQUEST_POSTS, CREATE_POST, requestPosts, receivePosts } from '../actions/post_actions';
 
 export default ({ getState, dispatch }) => next => action => {
@@ -18,6 +18,9 @@ export default ({ getState, dispatch }) => next => action => {
       break;
     case CREATE_POST:
       createPost(action.post, postsSuccess)
+      break;
+    case DELETE_POST:
+      deletePost(action.id, postsSuccess)
       break;
     default:
       break;

@@ -15,6 +15,11 @@ class Api::PostsController < ApplicationController
 		end
 	end
 
+  def delete
+    debugger
+    @post = Post.find_by(id: params)
+  end
+
 	private
 	def post_params
 		params.require(:post).permit(:post_type, :title, :body, :image, :quote, :commentary, :link, :audio, :video)

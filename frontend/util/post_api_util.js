@@ -20,3 +20,11 @@ export const createPost = (formData, success) => {
 		success
 	});
 };
+
+export const deletePost = (id, success) => {
+  $.ajax({
+    method: 'DELETE',
+    url: `api/posts/${id}`,
+    success
+  });
+};

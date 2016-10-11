@@ -19,6 +19,8 @@ class PostForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updatePic = this.updatePic.bind(this);
+    this.updateAudio = this.updateAudio.bind(this);
+    this.updateVideo = this.updateVideo.bind(this);
   }
 
   update(field) {
@@ -95,14 +97,14 @@ class PostForm extends React.Component {
     if (type === "text") {
       return (
         <div>
-        Title: <input type="text" value={this.state.title} onChange={this.update("title")}/>
+        Title: <input type="text" value={this.state.title} onChange={this.update("title")}/><br /><br />
         Body: <input type="text" value={this.state.body} onChange={this.update("body")}/>
         </div>
       );
     } else if (type === "quote") {
       return (
         <div>
-        Quote: <input type="text" value={this.state.quote} onChange={this.update("quote")}/>
+        Quote: <input type="text" value={this.state.quote} onChange={this.update("quote")}/><br /><br />
         Attribution: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );

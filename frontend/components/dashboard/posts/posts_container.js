@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestPosts } from '../../../actions/post_actions';
+import { deletePost, requestPosts } from '../../../actions/post_actions';
 import Posts from './posts';
 
 const mapStateToProps = state => ({
@@ -7,8 +7,11 @@ const mapStateToProps = state => ({
   posts: state.posts,
 });
 
+const success = () => { hashHistory.push("/"); };
+
 const mapDispatchToProps = dispatch => ({
-  requestPosts: () => dispatch(requestPosts())
+  requestPosts: () => dispatch(requestPosts()),
+  deletePost: (post) => dispatch(deletePost(post, success))
 });
 
 export default connect(

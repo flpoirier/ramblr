@@ -1,5 +1,4 @@
 node_modules/
-app/assets/videos/
 bundle.js
 bundle.js.map
 .DS_Store
