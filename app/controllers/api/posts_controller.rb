@@ -33,8 +33,12 @@ class Api::PostsController < ApplicationController
 
   def dislike
     @like = current_user.likes.find_by(post_id: params[:id])
-    @like.destroy
-    render "api/posts/show"
+    if @like.destroy
+      @post = Post.find(params[:id])
+      render "api/posts/show"
+    else
+      render json: @like.errors.full_messages, status: 422
+    end
   end
 
 	private

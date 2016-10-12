@@ -48,4 +48,12 @@ class Post < ActiveRecord::Base
     self.user.avatar
   end
 
+  def liked_by?(user)
+    self.likes.each do |like|
+      return true if like.user_id == user.id
+    end
+
+    return false
+  end
+
 end

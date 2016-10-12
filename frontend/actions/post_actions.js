@@ -3,6 +3,7 @@ export const REQUEST_POSTS = "REQUEST_POSTS";
 export const CREATE_POST = "CREATE_POST";
 export const DELETE_POST = "DELETE_POST";
 export const REMOVE_POST = "REMOVE_POST";
+export const RECEIVE_POST = "RECEIVE_POST";
 
 export const receivePosts = posts => ({
   type: RECEIVE_POSTS,
@@ -28,4 +29,9 @@ export const deletePost = (post, success) => ({
 export const removePost = (postId) => ({
   type: REMOVE_POST,
   postId
+});
+
+export const receivePost = (post) => ({
+  type: RECEIVE_POST,
+  post
 });

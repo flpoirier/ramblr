@@ -9,15 +9,6 @@ class Post extends React.Component {
     this.like = this.like.bind(this);
     this.dislike = this.dislike.bind(this);
     this.likeIcon = this.likeIcon.bind(this);
-
-    this.liked = false;
-
-    this.props.post.likes.forEach((like) => {
-      if (like.user_id === this.props.currentUser.id) {
-        this.liked = true;
-      }
-    });
-
   }
 
   text() {
@@ -141,7 +132,7 @@ class Post extends React.Component {
   }
 
   likeIcon() {
-    if (this.liked) {
+    if (this.props.post.liked) {
       return (
         <button className="fa-button" onClick={this.dislike}><i className="fa fa-heart" aria-hidden="true" /></button>
       );
