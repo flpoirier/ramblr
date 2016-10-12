@@ -13,14 +13,20 @@ class Api::UsersController < ApplicationController
 
   def follow
     @follow = current_user.out_follows.new(followed_user_id: params[:id])
-    unless @follow.save
+    if @follow.save
+      @posts = Post.all.reverse
+      render "api/posts/all"
+    else
       render json: @follow.errors.full_messages, status: 422
     end
   end
 
   def unfollow
     @follow = current_user.out_follows.find_by(followed_user_id: params[:id])
-    unless @follow.destroy
+    if @follow.destroy
+      @posts = Post.all.reverse
+      render "api/posts/all"
+    else
       render json: @follow.errors.full_messages, status: 422
     end
   end
