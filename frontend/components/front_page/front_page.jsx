@@ -6,14 +6,20 @@ class FrontPage extends React.Component {
 
   constructor(props) {
     super(props);
+    this.guestLogin = this.guestLogin.bind(this);
+  }
+
+  guestLogin() {
+    this.props.login({user: {username: "guest", password: "password"}});
   }
 
   sessionLinks() {
     return (
       <nav className="login-signup">
-        <Link to="/login">login</Link>
-        &nbsp;or&nbsp;
-        <Link to="/signup">sign up</Link>
+        <Link to="/login">login</Link>,&nbsp;
+        <Link to="/signup">sign up</Link>,
+        or&nbsp;
+        <button onClick={this.guestLogin}>sign in as guest</button>
       </nav>
     );
   }

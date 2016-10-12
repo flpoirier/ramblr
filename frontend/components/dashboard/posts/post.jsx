@@ -112,6 +112,9 @@ class Post extends React.Component {
   }
 
   icons() {
+    if (!this.props.currentUser) {
+      return;
+    }
     if (this.props.currentUser.id === this.props.post.user_id) {
       return (
         <div>
