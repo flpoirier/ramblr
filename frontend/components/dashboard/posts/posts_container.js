@@ -11,7 +11,6 @@ const success = () => { hashHistory.push("/"); };
 
 const mapDispatchToProps = dispatch => ({
   requestPosts: () => dispatch(requestPosts()),
-  deletePost: (post) => dispatch(deletePost(post, success))
 });
 
 export default connect(

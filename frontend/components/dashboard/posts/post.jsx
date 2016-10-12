@@ -7,6 +7,17 @@ class Post extends React.Component {
     super(props);
     this.delete = this.delete.bind(this);
     this.like = this.like.bind(this);
+    this.dislike = this.dislike.bind(this);
+    this.likeIcon = this.likeIcon.bind(this);
+
+    this.liked = false;
+
+    this.props.post.likes.forEach((like) => {
+      if (like.user_id === this.props.currentUser.id) {
+        this.liked = true;
+      }
+    });
+
   }
 
   text() {
@@ -114,7 +125,7 @@ class Post extends React.Component {
       return (
         <div>
           <button className="fa-button" onClick={this.delete}><i className="fa fa-trash" aria-hidden="true" /></button>
-          <button className="fa-button" onClick={this.like}><i className="fa fa-heart-o" aria-hidden="true" /></button>
+          {this.likeIcon()}
           <div className="fa-button">{this.props.post.likes.length} likes</div>
         </div>
       );
@@ -122,15 +133,31 @@ class Post extends React.Component {
       return (
         <div>
           <button className="fa-button"><i className="fa fa-plus" aria-hidden="true" /></button>
-          <button className="fa-button" onClick={this.like}><i className="fa fa-heart-o" aria-hidden="true" /></button>
+          {this.likeIcon()}
           <div className="fa-button">{this.props.post.likes.length} likes</div>
         </div>
       );
     }
   }
 
+  likeIcon() {
+    if (this.liked) {
+      return (
+        <button className="fa-button" onClick={this.dislike}><i className="fa fa-heart" aria-hidden="true" /></button>
+      );
+    } else {
+      return (
+        <button className="fa-button" onClick={this.like}><i className="fa fa-heart-o" aria-hidden="true" /></button>
+      );
+    }
+  }
+
   like() {
     this.props.likePost({post_id: this.props.post.id});
+  }
+
+  dislike() {
+    this.props.dislikePost({post_id: this.props.post.id});
   }
 
   delete() {
