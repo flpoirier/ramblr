@@ -52,7 +52,6 @@ class Post < ActiveRecord::Base
     self.likes.each do |like|
       return true if like.user_id == user.id
     end
-
     return false
   end
 
