@@ -1,6 +1,12 @@
+
 Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
-    resource :user, only: [:create]
+    resources :users, only: [:create] do
+      member do
+        post 'follow', to: 'users#follow'
+        delete 'follow', to: 'users#unfollow'
+      end
+    end
     resource :session, only: [:create, :destroy]
     resources :posts, only: [:index, :create, :destroy] do
       member do
@@ -12,5 +18,3 @@ Rails.application.routes.draw do
 
   root "static_pages#root"
 end
-
-# I deleted "show" from the session controller -- do we need it??

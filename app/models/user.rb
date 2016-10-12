@@ -13,6 +13,24 @@ class User < ActiveRecord::Base
 
   has_many :likes
   has_many :posts
+  has_many :follows
+
+  has_many(
+    :out_follows,
+    :class_name => "Follow",
+    :foreign_key => :follower_id,
+    :primary_key => :id
+  )
+
+  has_many(
+    :in_follows,
+    :class_name => "Follow",
+    :foreign_key => :followed_user_id,
+    :primary_key => :id
+  )
+
+  has_many :followers, :through => :in_follows, :source => :follower
+  has_many :followed_users, :through => :out_follows, :source => :followed_user
 
   attr_reader :password
 

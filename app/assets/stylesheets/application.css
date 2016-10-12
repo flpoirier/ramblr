@@ -45,8 +45,8 @@ https://upload.wikimedia.org/wikipedia/commons/2/2a/Mission_Mountains_National_B
 
 body {
   box-sizing: content-box;
-  /*background: #36465d;*/
   background: url("https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg") no-repeat center center fixed;
+  /*background: #36465d;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -157,6 +157,7 @@ button {
 
 .post-body img {
   border: 1px solid black;
+  width: 500px;
 }
 
 .post-notes {
@@ -180,6 +181,9 @@ button {
 /*Note -- the height thing below is a hack!! Need to figure out how to make it
 fill the page height automatically!*/
 
+.front-page {
+  background: url("https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg") no-repeat center center fixed;
+}
 
 .splash-parent {
   display: flex;
@@ -229,8 +233,16 @@ fill the page height automatically!*/
 
 .post-form-link {
   float: left;
-  margin: 0px 12px;
-  padding: 5px 10px;
+  border-left: 1px solid black;
+  padding: 5px 12px;
+}
+
+.post-form-link:first-child {
+  border-left: 0px solid black;
+}
+
+.post-form-link:last-child {
+  padding-right: 0px;
 }
 
 .fa-button {
