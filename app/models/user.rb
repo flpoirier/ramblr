@@ -13,7 +13,6 @@ class User < ActiveRecord::Base
 
   has_many :likes
   has_many :posts
-  has_many :follows
 
   has_many(
     :out_follows,
