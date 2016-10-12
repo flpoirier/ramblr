@@ -1,17 +1,15 @@
 export const like = (like, success) => {
 	$.ajax({
 		method: 'POST',
-		url: '/api/likes',
-		data: like,
+		url: `/api/posts/${like.post_id}/like`,
 		success
 	});
 };
 
 export const dislike = (like, success) => {
-  const id = like.id;
 	$.ajax({
 		method: 'DELETE',
-		url: `/api/likes/${id}`,
+		url: `/api/posts/${like.post_id}/like`,
 		success
 	});
 };

@@ -16,13 +16,25 @@ class Api::PostsController < ApplicationController
 	end
 
   def destroy
-    @post = Post.find_by(id: params["id"]);
-    if @post
-      @post.delete
+    @post = Post.find(params[:id])
+    @post.destroy
+    render "api/posts/show"
+  end
+
+  def like
+    @like = current_user.likes.new(post_id: params[:id])
+    if @like.save
+      @post = Post.find(params[:id])
       render "api/posts/show"
     else
-      render json: @post.errors.full_messages, status: 422
+      render json: @like.errors.full_messages, status: 422
     end
+  end
+
+  def dislike
+    @like = current_user.likes.find_by(post_id: params[:id])
+    @like.destroy
+    render "api/posts/show"
   end
 
 	private

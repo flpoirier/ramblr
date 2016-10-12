@@ -38,7 +38,7 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :video, content_type: /\Avideo\/.*\Z/
 
   belongs_to :user
-  has_many :likes
+  has_many :likes, dependent: :destroy
 
   def author
     self.user.username
