@@ -194,6 +194,11 @@ button {
   float: right;
 }
 
+.header-button:hover {
+  font-weight: bold;
+  /*color: blue;*/
+}
+
 /*Note -- the height thing below is a hack!! Need to figure out how to make it
 fill the page height automatically!*/
 
@@ -243,6 +248,7 @@ fill the page height automatically!*/
   margin: 20px 20px 20px 102px;
   padding: 15px 15px;
   width: 510px;
+  height: 80px;
   border: 2px solid black;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.4);
@@ -287,9 +293,18 @@ fill the page height automatically!*/
   padding-right: 0px;
 }
 
+.num-likes {
+  float: right;
+  padding: 0 0 0 15px;
+}
+
 .fa-button {
   float: right;
   padding: 0 0 0 15px;
+}
+
+.fa-button:hover {
+  color: red;
 }
 
 .sidebar-all {
@@ -351,6 +366,11 @@ fill the page height automatically!*/
   float: right;
   /*background: rgba(255, 255, 255, 0.85);
   padding: 0 2px;*/
+}
+
+.follow-button:hover {
+  color: blue;
+  font-size: 15px;
 }
 
 .sidebar-username {
@@ -427,7 +447,9 @@ fill the page height automatically!*/
   /*font-weight: bold;*/
   color: #777;
   /*border: 1px solid purple;*/
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
+  padding: 0 0 5px 0;
+  border-bottom: 2px solid #ccc;
 }
 
 .new-post-input-text {

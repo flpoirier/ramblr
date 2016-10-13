@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 //Router
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 //Components
 import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
@@ -28,7 +28,7 @@ const Root = ({ store }) => {
 
   return (
     <Provider store={store}>
-      <Router history={hashHistory}>
+      <Router history={browserHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={FrontPageContainer} onEnter={_redirectIfLoggedIn}/>
           <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn}/>

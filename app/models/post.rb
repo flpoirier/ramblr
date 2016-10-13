@@ -40,6 +40,8 @@ class Post < ActiveRecord::Base
   belongs_to :user
   has_many :likes, dependent: :destroy
 
+  attr_reader :date_display
+
   def author
     self.user.username
   end
@@ -53,6 +55,10 @@ class Post < ActiveRecord::Base
       return true if like.user_id == user.id
     end
     return false
+  end
+
+  def date_display
+    self.created_at.strftime("posted on %A, %B %d, %Y, at %I:%M %p")
   end
 
 end
