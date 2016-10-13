@@ -30,6 +30,7 @@ class User < ActiveRecord::Base
 
   has_many :followers, :through => :in_follows, :source => :follower
   has_many :followed_users, :through => :out_follows, :source => :followed_user
+  has_many :followed_posts, :through => :followed_users, :source => :posts
 
   attr_reader :password
 

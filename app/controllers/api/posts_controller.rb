@@ -1,7 +1,8 @@
 class Api::PostsController < ApplicationController
 
   def index
-    @posts = Post.all.reverse
+    @posts = (current_user.followed_posts + current_user.posts)
+    @posts.sort_by! { |post| post.created_at }.reverse!
     render "api/posts/all"
   end
 

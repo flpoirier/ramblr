@@ -79,6 +79,7 @@ class PostForm extends React.Component {
     formData.append("post[body]", this.state.body);
     formData.append("post[quote]", this.state.quote);
     formData.append("post[commentary]", this.state.commentary);
+    formData.append("post[link]", this.state.link);
     if (this.state.imageFile) {
       formData.append("post[image]", this.state.imageFile);
     }
