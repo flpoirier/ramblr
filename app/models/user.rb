@@ -63,6 +63,9 @@ class User < ActiveRecord::Base
 		self.session_token
 	end
 
+  def followed?(user)
+  end
+
 	private
 
 	def ensure_session_token

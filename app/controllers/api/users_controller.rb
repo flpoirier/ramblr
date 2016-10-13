@@ -1,13 +1,17 @@
 class Api::UsersController < ApplicationController
 
   def index
-    @users = User.all
+    @users = []
+    User.all.each do |user|
+      @users << user if user.seed == "true"
+    end
     render "api/users/all"
   end
 
   def create
 		@user = User.new(user_params)
     @user.avatar ||= "http://unblurapp.com/profs/images/default.jpg"
+    @user.seed ||= false
 		if @user.save
 			login(@user)
 			render "api/users/show"

@@ -20,11 +20,11 @@
 #
 # add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
-User.create(username: "dfwquotes", password: "password", avatar: "http://66.media.tumblr.com/tumblr_kofjefKx031qzyafoo1_500.png")
-User.create(username: "icelandwantstobeyourfriend", password: "password", avatar: "https://media1.britannica.com/eb-media/23/138923-004-AD1DF3AE.jpg")
-User.create(username: "dril", password: "password", avatar: "https://pbs.twimg.com/profile_images/707320204280373248/3PJZnNgG_400x400.jpg")
-User.create(username: "lemondemon", password: "password", avatar: "http://lemonkle.com/store/img/BG169.jpg")
-User.create(username: "archiveofourown", password: "password", avatar: "https://pbs.twimg.com/profile_images/958203064/AO3logo3-02.png")
+User.create(username: "dfwquotes", seed: "true", password: "password", avatar: "http://66.media.tumblr.com/tumblr_kofjefKx031qzyafoo1_500.png")
+User.create(username: "icelandwantstobeyourfriend", seed: "true", password: "password", avatar: "https://media1.britannica.com/eb-media/23/138923-004-AD1DF3AE.jpg")
+User.create(username: "dril", password: "password", seed: "true", avatar: "https://pbs.twimg.com/profile_images/707320204280373248/3PJZnNgG_400x400.jpg")
+User.create(username: "lemondemon", password: "password", seed: "true", avatar: "http://lemonkle.com/store/img/BG169.jpg")
+User.create(username: "archiveofourown", password: "password", seed: "true", avatar: "https://pbs.twimg.com/profile_images/958203064/AO3logo3-02.png")
 User.create(username: "guest", password: "password")
 
 dfw = User.find_by(username: "dfwquotes").id
