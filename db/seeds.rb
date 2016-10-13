@@ -55,7 +55,7 @@ Post.create(user_id: iceland, post_type: "image", image: "http://66.media.tumblr
 
 Post.create(user_id: dril, post_type: "text", body: '(insufferably) It\'s pronounced. "Bloomin Onion." The \'g\' is silent.')
 
-Post.create(user_id: beauty, post_type: "image", image: "http://mstecker.com/images/antarctica/antphotos1/i2lc1b.jpg", commentary: "The Lemaire Channel is flanked by the Antarctic Peninsula on one side and Booth Island on the other. So photogenic is the channel that it is sometimes called "Kodak Gap". At the northern end of the Lemaire Channel are a pair of tall, rounded snow-capped peaks known as Una's Tits. The channel was first navigated by Belgian explorer de Gerlach during his 1898 expedition aboard Belgica. It was somehow named after another Belgian explorer -- Charles Lemaire, who explored parts of the Congo.")
+Post.create(user_id: beauty, post_type: "image", image: "http://mstecker.com/images/antarctica/antphotos1/i2lc1b.jpg", commentary: "The Lemaire Channel is flanked by the Antarctic Peninsula on one side and Booth Island on the other. So photogenic is the channel that it is sometimes called \"Kodak Gap\". At the northern end of the Lemaire Channel are a pair of tall, rounded snow-capped peaks known as Una's Tits. The channel was first navigated by Belgian explorer de Gerlach during his 1898 expedition aboard Belgica. It was somehow named after another Belgian explorer -- Charles Lemaire, who explored parts of the Congo.")
 
 Post.create(user_id: ao3, post_type: "image", image: "https://s-media-cache-ak0.pinimg.com/originals/b1/a5/6e/b1a56ebdaa4bfd6298379837a214bc8b.png", commentary: "Steven Universe fanart")
 

@@ -17,6 +17,7 @@ class NewPostNav extends React.Component {
   render() {
     return (
       <div className="post-form group">
+        <Link to="/dashboard" className="post-form-link"><p><i className="fa fa-home" aria-hidden="true" /></p></Link>
         <Link to="/new/text" className="post-form-link"><p><i className="fa fa-pencil red" aria-hidden="true" /></p></Link>
         <Link to="/new/image" className="post-form-link"><p><i className="fa fa-camera orange" aria-hidden="true" /></p></Link>
         <Link to="/new/audio" className="post-form-link"><p><i className="fa fa-headphones yellow" aria-hidden="true" /></p></Link>
