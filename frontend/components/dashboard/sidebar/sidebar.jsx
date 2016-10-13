@@ -14,8 +14,13 @@ class Sidebar extends React.Component {
 
   users() {
     return (
-      <div className="sidebar">
-        {this.props.users.map((user) => <UserContainer key={user.id} user={user} />)}
+      <div className="sidebar-all">
+        <h1>Recommended Users</h1><br />
+        <div className="sidebar">
+          <div className="sidebar-all-users">
+            {this.props.users.map((user) => <UserContainer key={user.id} user={user} />)}
+          </div>
+        </div>
       </div>
     );
   }

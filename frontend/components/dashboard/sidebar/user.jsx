@@ -20,10 +20,10 @@ class User extends React.Component {
   render() {
     return (
       <div className="sidebar-users">
-        <img className="author-image" src={this.props.user.avatar} />
-        {this.props.user.username}<br />
-        <button className="follow-button" onClick={this.follow}>Follow</button>
-        <button className="follow-button" onClick={this.unfollow}>Unfollow</button>
+        <img className="sidebar-pic" src={this.props.user.avatar} />
+        <div className="sidebar-username">{this.props.user.username}</div>
+        <button className="follow-button" onClick={this.follow}><i className="fa fa-plus" aria-hidden="true" /></button>
+        <button className="follow-button" onClick={this.unfollow}><i className="fa fa-minus" aria-hidden="true" /></button>
       </div>
     );
   }
