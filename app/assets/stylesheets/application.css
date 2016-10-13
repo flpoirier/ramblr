@@ -99,7 +99,7 @@ button {
   font-family: sans-serif;
   font-size: 18px;
   color: #000;
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
   font-weight: normal;
   border-left: 2px solid black;
@@ -248,4 +248,16 @@ fill the page height automatically!*/
 .fa-button {
   float: right;
   padding: 0 0 0 15px;
+}
+
+.sidebar {
+  border: 2px solid black;
+  float: right;
+  width: 300px;
+}
+
+.sidebar-users {
+  border: 1px solid red;
+  clear: left;
+  float: right;
 }

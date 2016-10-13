@@ -9,8 +9,8 @@ const Dashboard = ({ currentUser, logout, children }) => (
   <div className="dashboard">
       <HeaderContainer />
       <NewPostNav />
-      <SidebarContainer />
       <PostsContainer />
+      <SidebarContainer />
     {children}
   </div>
 );
