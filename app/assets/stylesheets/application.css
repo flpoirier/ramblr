@@ -45,8 +45,8 @@ https://upload.wikimedia.org/wikipedia/commons/2/2a/Mission_Mountains_National_B
 
 body {
   box-sizing: content-box;
-  /*background: url("https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg") no-repeat center center fixed;*/
-  background: #36465d;
+  background: url("https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg") no-repeat center center fixed;
+  /*background: #36465d;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -235,6 +235,7 @@ fill the page height automatically!*/
 }
 
 .post-form-link {
+  font-size: 65px;
   float: left;
   border-left: 1px solid black;
   padding: 5px 12px;
