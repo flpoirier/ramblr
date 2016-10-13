@@ -62,3 +62,5 @@ Post.create(user_id: lemon, post_type: "audio", audio: "http://www.lemondemon.co
 Post.create(user_id: iceland, post_type: "image", image: "http://66.media.tumblr.com/7524be20e7bbdbb3bdc639761324c0fd/tumblr_n744x4bRbZ1tabg50o1_500.jpg", commentary: "I am like a swiss cheese. Full of holes.")
 
 Post.create(user_id: dfw, post_type: "quote", quote: "What if sometimes there is no choice about what to love? What if the temple comes to Mohammed? What if you just love? without deciding? You just do: you see her and in that instant are lost to sober account-keeping and cannot choose but to love?", commentary: "David Foster Wallace")
+
+Post.create(user_id: iceland, post_type: "image", image: "http://67.media.tumblr.com/0923db71070bb287213c05440af4c095/tumblr_my2qfiSoQN1rqs0pwo1_1280.jpg", commentary: "Hello, this is Iceland. Humans from all over the world like to come and dive into me. This human is diving between my two continents. My left side is in North America, and my right side is in Europe.")

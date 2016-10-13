@@ -1,6 +1,11 @@
 class Api::UsersController < ApplicationController
 
-	def create
+  def index
+    @users = User.all
+    render "api/users/all"
+  end
+
+  def create
 		@user = User.new(user_params)
     @user.avatar ||= "http://unblurapp.com/profs/images/default.jpg"
 		if @user.save
