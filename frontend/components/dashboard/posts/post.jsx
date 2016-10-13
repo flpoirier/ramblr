@@ -126,7 +126,6 @@ class Post extends React.Component {
     } else {
       return (
         <div>
-          <button className="fa-button"><i className="fa fa-plus" aria-hidden="true" /></button>
           {this.likeIcon()}
           <div className="fa-button">{this.props.post.likes.length} likes</div>
         </div>

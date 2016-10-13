@@ -45,8 +45,8 @@ https://upload.wikimedia.org/wikipedia/commons/2/2a/Mission_Mountains_National_B
 
 body {
   box-sizing: content-box;
-  background: url("https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg") no-repeat center center fixed;
-  /*background: #36465d;*/
+  /*background: url("https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg") no-repeat center center fixed;*/
+  background: #36465d;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -123,6 +123,7 @@ button {
   width: 58px;
   margin: 20px 0 20px 20px;
   border: 2px solid black;
+  border-radius: 5px;
 }
 
 .post {
@@ -135,6 +136,7 @@ button {
   padding: 15px 20px 20px 20px;
   width: 500px;
   border: 2px solid black;
+  border-radius: 5px;
   background: rgba(255, 255, 255, 0.85);
 }
 
@@ -228,6 +230,7 @@ fill the page height automatically!*/
   padding: 15px 15px;
   width: 510px;
   border: 2px solid black;
+  border-radius: 5px;
   background: rgba(255, 255, 255, 0.4);
 }
 
@@ -263,6 +266,7 @@ fill the page height automatically!*/
   background: rgba(255, 255, 255, 0.4);
   width: 285px;
   border: 1px solid black;
+  border-radius: 5px;
 }
 
 .sidebar {
@@ -279,8 +283,15 @@ fill the page height automatically!*/
   border-bottom: 1px solid black;
 }
 
+.sidebar-users:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
 .sidebar-users:last-child {
   border-bottom: 0px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .posts {
@@ -299,6 +310,8 @@ fill the page height automatically!*/
 .follow-button {
   margin: 15px 5px;
   float: right;
+  /*background: rgba(255, 255, 255, 0.85);
+  padding: 0 2px;*/
 }
 
 .sidebar-username {
