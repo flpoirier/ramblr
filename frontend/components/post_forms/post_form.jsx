@@ -6,7 +6,7 @@ class PostForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      post_type: this.props.params.post_type,
+      post_type: this.props.posttype,
       title: "",
       body: "",
       imageUrl: "",
@@ -143,9 +143,9 @@ class PostForm extends React.Component {
 
   render() {
     return (
-      <div className="new-post-container">
+      <div className="post-body">
         <form onSubmit={this.handleSubmit} className="new-post-box">
-          <Link to="/dashboard"><h1 className="new-post-header"><i className="fa fa-pencil red" aria-hidden="true" />  new {this.props.params.post_type} post</h1></Link><br />
+          <Link to="/dashboard"><h1 className="new-post-header"><i className="fa fa-pencil red" aria-hidden="true" />  new {this.state.post_type} post</h1></Link><br />
           {this.postType()}
           <br /><input type="submit" value="create new post"/>
         </form>

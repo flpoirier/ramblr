@@ -238,7 +238,7 @@ fill the page height automatically!*/
 .post-form-link {
   font-size: 52px;
   float: left;
-  border-left: 1px solid black;
+  border-left: 1px solid #aaa;
   padding: 5px 12px;
 }
 
@@ -306,7 +306,7 @@ fill the page height automatically!*/
   float: left;
   width: 295px;
   background: rgba(255, 255, 255, 0.4);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #aaa;
 }
 
 .sidebar-users:first-child {
@@ -361,4 +361,25 @@ fill the page height automatically!*/
 
 .new-post-header {
   font-size: 25px;
+}
+
+.post-form-main {
+  /*background: #36465d;*/
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #000;
+  width: 1010px;
+  margin: 0 auto;
+  font-weight: normal;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  left: 7%;
+  right: 7%;
+}
+
+.post-form-link div {
+  font-size: 14px;
+  text-align: center;
+  color: black;
 }
