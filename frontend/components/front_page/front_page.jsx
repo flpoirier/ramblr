@@ -16,10 +16,10 @@ class FrontPage extends React.Component {
   sessionLinks() {
     return (
       <nav className="login-signup">
-        <Link to="/login">login</Link>,&nbsp;
-        <Link to="/signup">sign up</Link>,
+        <Link className="front-page-link" to="/login">login</Link>,&nbsp;
+        <Link className="front-page-link" to="/signup">sign up</Link>,
         or&nbsp;
-        <button onClick={this.guestLogin}>sign in as guest</button>
+        <button className="front-page-link" onClick={this.guestLogin}>sign in as guest</button>
       </nav>
     );
   }

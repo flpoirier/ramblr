@@ -83,15 +83,21 @@ button {
   font-size: 85px;
   font-weight: bold;
   text-align: center;
-  margin: 40px 40px 20px 40px;
+  margin: 40px 40px 5px 40px;
   /*border: 3px solid red;*/
 }
 
 .login-signup {
+  font-weight: normal;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   margin: 0 0 40px 0;
   /*border: 3px solid purple;*/
+}
+
+.front-page-link:hover {
+  cursor:pointer;
+  font-weight: bold;
 }
 
 .dashboard {
