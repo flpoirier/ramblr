@@ -19,7 +19,7 @@ class Post extends React.Component {
           <div className="post-author">{this.props.post.author}</div>
           <h1>{this.props.post.title}</h1>
           <p>{this.props.post.body}</p>
-          <div className="post-notes">Posted at: {this.props.post.created_at}</div>
+          <div className="post-notes">posted at {this.props.post.created_at}</div>
           {this.icons()}
         </div>
       </div>
@@ -36,7 +36,7 @@ class Post extends React.Component {
           <div className="post-author">{this.props.post.author}</div>
           <h1><a href={`http://${this.props.post.link}`}>{this.props.post.link}</a></h1>
           <p className="post-commentary">-- {this.props.post.commentary}</p>
-          <div className="post-notes">Posted at: {this.props.post.created_at}</div>
+          <div className="post-notes">posted at {this.props.post.created_at}</div>
           {this.icons()}
         </div>
       </div>
@@ -51,7 +51,7 @@ class Post extends React.Component {
           <div className="post-author">{this.props.post.author}</div>
           <img src={this.props.post.image} />
           <p className="post-commentary">-- {this.props.post.commentary}</p>
-          <div className="post-notes">Posted at: {this.props.post.created_at}</div>
+          <div className="post-notes">posted at {this.props.post.created_at}</div>
           {this.icons()}
         </div>
       </div>
@@ -70,7 +70,7 @@ class Post extends React.Component {
           </video>
 
           <p className="post-commentary">-- {this.props.post.commentary}</p>
-          <div className="post-notes">Posted at: {this.props.post.created_at}</div>
+          <div className="post-notes">posted at {this.props.post.created_at}</div>
           {this.icons()}
         </div>
       </div>
@@ -89,7 +89,7 @@ class Post extends React.Component {
           </video>
 
           <p className="post-commentary">-- {this.props.post.commentary}</p>
-          <div className="post-notes">Posted at: {this.props.post.created_at}</div>
+          <div className="post-notes">posted at {this.props.post.created_at}</div>
           {this.icons()}
         </div>
       </div>
@@ -104,7 +104,7 @@ class Post extends React.Component {
           <div className="post-author">{this.props.post.author}</div>
           <h1>"{this.props.post.quote}"</h1>
           <p className="post-commentary">-- {this.props.post.commentary}</p>
-          <div className="post-notes">Posted at: {this.props.post.created_at}</div>
+          <div className="post-notes">posted at {this.props.post.created_at}</div>
           {this.icons()}
         </div>
       </div>
@@ -117,7 +117,7 @@ class Post extends React.Component {
     }
     if (this.props.currentUser.id === this.props.post.user_id) {
       return (
-        <div>
+        <div className="post-footer-icons">
           <button className="fa-button" onClick={this.delete}><i className="fa fa-trash" aria-hidden="true" /></button>
           {this.likeIcon()}
           <div className="fa-button">{this.props.post.likes.length} likes</div>
@@ -125,7 +125,7 @@ class Post extends React.Component {
       );
     } else {
       return (
-        <div>
+        <div className="post-footer-icons">
           {this.likeIcon()}
           <div className="fa-button">{this.props.post.likes.length} likes</div>
         </div>

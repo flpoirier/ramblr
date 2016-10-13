@@ -107,6 +107,7 @@ button {
   font-size: 18px;
   color: #000;
   width: 1010px;
+  min-height: 1000px;
   margin: 0 auto;
   font-weight: normal;
   border-left: 2px solid black;
@@ -170,9 +171,14 @@ button {
 }
 
 .post-notes {
-  /*border: 1px solid green;*/
   font-size: 14px;
-  float: left
+  float: left;
+  color: #777;
+  margin-top: 10px;
+}
+
+.post-footer-icons {
+  margin-top: 15px;
 }
 
 .post-commentary {
@@ -374,6 +380,7 @@ fill the page height automatically!*/
   font-size: 18px;
   color: #000;
   width: 1010px;
+  min-height: 1000px;
   margin: 0 auto;
   font-weight: normal;
   border-left: 2px solid black;
