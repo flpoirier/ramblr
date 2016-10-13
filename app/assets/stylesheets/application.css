@@ -38,14 +38,15 @@
   display: block;
 }
 
-/*https://static.pexels.com/photos/3853/sunny-sand-desert-hiking.jpeg
+/*https://static.pexels.com/photos/5439/earth-space.jpg
+https://static.pexels.com/photos/3853/sunny-sand-desert-hiking.jpeg
 https://static.pexels.com/photos/3247/nature-forest-industry-rails.jpg
 https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg
 https://upload.wikimedia.org/wikipedia/commons/2/2a/Mission_Mountains_National_Bison_Range_Montana.jpg*/
 
 body {
   box-sizing: content-box;
-  background: url("https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg") no-repeat center center fixed;
+  background: url("https://static.pexels.com/photos/5439/earth-space.jpg") no-repeat center center fixed;
   /*background: #36465d;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -291,7 +292,7 @@ fill the page height automatically!*/
   padding: 5px;
   background: rgba(255, 255, 255, 0.4);
   width: 285px;
-  border: 1px solid black;
+  border: 1px solid #aaa;
   border-radius: 5px;
 }
 
