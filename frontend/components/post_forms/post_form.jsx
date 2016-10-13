@@ -98,44 +98,44 @@ class PostForm extends React.Component {
     if (type === "text") {
       return (
         <div>
-        Title: <input type="text" value={this.state.title} onChange={this.update("title")}/><br /><br />
-        Body: <input type="text" value={this.state.body} onChange={this.update("body")}/>
+        <label>Title </label><input className="new-post-input-text" type="text" value={this.state.title} onChange={this.update("title")}/><br /><br />
+        <label>Body </label><textarea className="new-post-input-textarea" value={this.state.body} onChange={this.update("body")}/>
         </div>
       );
     } else if (type === "quote") {
       return (
         <div>
-        Quote: <input type="text" value={this.state.quote} onChange={this.update("quote")}/><br /><br />
-        Attribution: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+        <label>Quote </label><textarea className="new-post-input-textarea" value={this.state.quote} onChange={this.update("quote")}/><br /><br />
+        <label>Attribution </label><input className="new-post-input-text" type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
     } else if (type === "image") {
       return (
         <div>
           <img src={this.state.imageUrl}/><br />
-          Photo: <input type="file" onChange={this.updatePic} /><br /><br />
-          Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+          <label>Photo </label><input className="new-post-input-file" type="file" onChange={this.updatePic} /><br /><br />
+          <label>Commentary </label><textarea className="new-post-input-textarea" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
     } else if (type === "audio") {
       return (
         <div>
-          Audio: <input type="file" onChange={this.updateAudio} /><br /><br />
-          Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+          <label>Audio </label><input className="new-post-input-file" type="file" onChange={this.updateAudio} /><br /><br />
+          <label>Commentary </label><textarea className="new-post-input-textarea" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
     } else if (type === "video") {
       return (
         <div>
-          Video: <input type="file" onChange={this.updateVideo} /><br /><br />
-          Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+          <label>Video </label><input className="new-post-input-file" type="file" onChange={this.updateVideo} /><br /><br />
+          <label>Commentary </label><textarea className="new-post-input-textarea" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
     } else if (type === "link") {
       return (
         <div>
-          Link URL: <input type="text" value={this.state.link} onChange={this.update("link")}/><br /><br />
-          Commentary: <input type="text" value={this.state.commentary} onChange={this.update("commentary")}/>
+          <label>Link URL </label><input className="new-post-input-text" type="text" value={this.state.link} onChange={this.update("link")}/>
+          <label>Commentary </label><textarea className="new-post-input-textarea" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
     }
@@ -143,11 +143,11 @@ class PostForm extends React.Component {
 
   render() {
     return (
-      <div className="post-body">
-        <form onSubmit={this.handleSubmit} className="new-post-box">
-          <Link to="/dashboard"><h1 className="new-post-header"><i className="fa fa-pencil red" aria-hidden="true" />  new {this.state.post_type} post</h1></Link><br />
+      <div className="post-form">
+        <form onSubmit={this.handleSubmit}>
+          <Link to="/dashboard"><h1 className="new-post-header">new {this.state.post_type} post</h1></Link>
           {this.postType()}
-          <br /><input type="submit" value="create new post"/>
+          <br /><input className="new-post-submit" type="submit" value="create new post"/>
         </form>
       </div>
     );

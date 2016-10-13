@@ -232,7 +232,7 @@ fill the page height automatically!*/
   padding: 50px;
 }
 
-.post-form {
+.post-form-nav {
   float: left;
   margin: 20px 20px 20px 102px;
   padding: 15px 15px;
@@ -367,10 +367,6 @@ fill the page height automatically!*/
   padding: 20px;
 }
 
-.new-post-header {
-  font-size: 25px;
-}
-
 .post-form-main {
   /*background: #36465d;*/
   position: absolute;
@@ -395,4 +391,77 @@ fill the page height automatically!*/
 .post-form-link .fa:hover {
 	cursor:pointer;
   margin-top: 5px;
+}
+
+.post-form {
+  float: left;
+  margin: 20px 20px 20px 102px;
+  padding: 15px 15px;
+  width: 514px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.post-form label {
+  float: left;
+  clear: right;
+  color: #777;
+  padding: 5px 0;
+  /*border: 1px solid red;*/
+}
+
+.post-form img {
+  max-width: 500px;
+}
+
+.new-post-header {
+  font-size: 25px;
+  /*font-weight: bold;*/
+  color: #777;
+  /*border: 1px solid purple;*/
+  margin: 0 0 10px 0;
+}
+
+.new-post-input-text {
+  border: 1px solid #aaa;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+  /*height: 300px;*/
+  width: 500px;
+  height: 30px;
+  padding: 5px;
+}
+
+.new-post-input-textarea {
+  border: 1px solid #aaa;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+  font-size: 14px;
+  /*height: 300px;*/
+  width: 500px;
+  height: 100px;
+  padding: 5px;
+}
+.new-post-input-file {
+  border: 1px solid #aaa;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+  font-size: 14px;
+  /*height: 300px;*/
+  width: 500px;
+  /*height: 15px;*/
+  /*padding: 5px;*/
+}
+
+.new-post-submit {
+  border: 1px solid #aaa;
+  background: #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.new-post-submit:hover {
+  cursor:pointer;
 }
