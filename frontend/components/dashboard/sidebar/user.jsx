@@ -10,11 +10,11 @@ class User extends React.Component {
   }
 
   follow() {
-    this.props.followUser({user: this.props.user});
+    this.props.followUser(this.props.user);
   }
 
   unfollow() {
-    this.props.unfollowUser({user: this.props.user});
+    this.props.unfollowUser(this.props.user);
   }
 
   render() {
