@@ -13,6 +13,9 @@ class Api::UsersController < ApplicationController
     @user.avatar ||= "http://unblurapp.com/profs/images/default.jpg"
     @user.seed ||= false
 		if @user.save
+      bwb = User.find_by(username: "beautywithoutborders")
+      follow = Follow.new(follower_id: @user.id, followed_user_id: bwb.id)
+      follow.save
 			login(@user)
 			render "api/users/show"
 		else

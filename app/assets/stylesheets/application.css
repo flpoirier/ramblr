@@ -335,13 +335,14 @@ fill the page height automatically!*/
 }
 
 .follow-button {
-  margin: 15px 5px;
+  margin: 15px 3px;
   float: right;
   /*background: rgba(255, 255, 255, 0.85);
   padding: 0 2px;*/
 }
 
 .sidebar-username {
+  font-weight: bold;
   margin: 15px 10px;
   float: left;
   display: block;
