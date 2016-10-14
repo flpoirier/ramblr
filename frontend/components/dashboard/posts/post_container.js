@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import { removePost, deletePost, receivePost } from '../../../actions/post_actions';
 import { likePost, dislikePost } from '../../../actions/like_actions';
-import { hashHistory } from 'react-router';
 import Post from './post';
 
 const mapStateToProps = state => ({

@@ -7,8 +7,6 @@ const mapStateToProps = state => ({
   posts: state.posts,
 });
 
-const success = () => { hashHistory.push("/"); };
-
 const mapDispatchToProps = dispatch => ({
   requestPosts: () => dispatch(requestPosts()),
 });

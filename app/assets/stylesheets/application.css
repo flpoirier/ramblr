@@ -494,3 +494,7 @@ fill the page height automatically!*/
 .new-post-submit:hover {
   cursor:pointer;
 }
+
+.link-post:hover {
+  color: blue;
+}

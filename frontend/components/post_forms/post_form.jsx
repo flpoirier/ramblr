@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, hashHistory } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 
 class PostForm extends React.Component {
 
@@ -94,7 +94,7 @@ class PostForm extends React.Component {
     if (this.state.videoFile) {
       formData.append("post[video]", this.state.videoFile);
     }
-    const success = () => { hashHistory.push("/"); };
+    const success = () => { browserHistory.push("/"); };
     this.props.createPost(formData, success);
   }
 
