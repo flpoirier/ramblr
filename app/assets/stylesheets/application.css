@@ -254,13 +254,6 @@ fill the page height automatically!*/
   background: rgba(255, 255, 255, 0.4);
 }
 
-.post-form-link {
-  font-size: 52px;
-  float: left;
-  border-left: 1px solid #aaa;
-  padding: 5px 12px;
-}
-
 .red {
   color: red;
 }
@@ -285,8 +278,17 @@ fill the page height automatically!*/
   color: purple;
 }
 
+.post-form-link {
+  font-size: 52px;
+  float: left;
+  border-left: 1px solid #aaa;
+  padding: 5px 13px;
+  /*border: 1px solid red;*/
+}
+
 .post-form-link:first-child {
   border-left: 0px solid black;
+  padding-left: 1px;
 }
 
 .post-form-link:last-child {
@@ -319,7 +321,7 @@ fill the page height automatically!*/
   padding: 5px;
   background: rgba(255, 255, 255, 0.4);
   width: 285px;
-  border: 1px solid #aaa;
+  /*border: 1px solid #aaa;*/
   border-radius: 5px;
 }
 
