@@ -6,12 +6,25 @@ class SessionForm extends React.Component {
 		super(props);
 		this.state = {
 			username: "",
-			password: ""
+			password: "",
 		};
+    if (this.props.formType === "login") {
+      this.state.formType = "login";
+    } else if (this.props.formType === "signup") {
+      this.state.formType = "sign up";
+    }
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
+  // componentWillReceiveProps(newProps) {
+  //   if (newProps.route.path !== this.props.route.path) {
+  //     this.props.errors = [];
+  //   }
+  // }
+
 	componentDidUpdate() {
+    this.state.username = "";
+    this.state.password = "";
 		this.redirectIfLoggedIn();
 	}
 
@@ -35,7 +48,7 @@ class SessionForm extends React.Component {
 
 	renderErrors() {
 		return(
-			<ul>
+			<ul className="login-errors">
 				{this.props.errors.map((error, i) => (
 					<li key={`error-${i}`}>
 						{error}
@@ -50,29 +63,26 @@ class SessionForm extends React.Component {
       <span className="login-form-parent">
   			<div className="login-form-container">
   				<form onSubmit={this.handleSubmit} className="login-form-box">
-  					<h1><Link to="/">{this.props.formType}</Link></h1>
+  					<h1><Link to="/">{this.state.formType}</Link></h1>
   					{ this.renderErrors() }
   					<div className="login-form">
   						<br/>
-  						<label> Username:
+  						<label className="login-label">Username</label>
                 <br></br>
                 <input type="text"
   								value={this.state.username}
   								onChange={this.update("username")}
   								className="login-input" />
-  						</label>
               <br />
   						<br/>
-  						<label> Password:
+  						<label className="login-label">Password</label>
                 <br></br>
                 <input type="password"
   								value={this.state.password}
   								onChange={this.update("password")}
   								className="login-input" />
-  						</label>
-
   						<br/><br/>
-  						<input className="login-input" type="submit" value="Submit" />
+  						<input className="login-button" type="submit" value="Submit" />
   					</div>
   				</form>
   			</div>
