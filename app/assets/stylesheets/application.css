@@ -95,9 +95,14 @@ button {
   /*border: 3px solid purple;*/
 }
 
+.front-page-link {
+  /*margin: 5px;*/
+}
+
 .front-page-link:hover {
   cursor:pointer;
-  font-weight: bold;
+  /*font-weight: bold;*/
+  color: #aaa;
 }
 
 .dashboard {
@@ -217,6 +222,7 @@ fill the page height automatically!*/
 .splash-pane {
   flex: none;
   border: 5px solid black;
+  border-radius: 5px;
   background: rgba(0, 0, 0, 0.6);
 };
 

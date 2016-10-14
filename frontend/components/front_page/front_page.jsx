@@ -32,7 +32,7 @@ class FrontPage extends React.Component {
     return (
       <span className="splash-parent">
         <div className="splash-pane">
-          <Link to="/" className="header-link"><h1>ramblr.</h1></Link>
+          <div className="header-link"><h1>ramblr.</h1></div>
           {this.sessionLinks()}
         </div>
       </span>
