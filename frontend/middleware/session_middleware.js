@@ -7,13 +7,13 @@ import { receiveCurrentUser,
 
 import { login, signup, logout } from '../util/session_api_util';
 
-import { browserHistory } from 'react-router';
+import { hashHistory } from 'react-router';
 
 export default ({getState, dispatch}) => next => action => {
 
   const successCallback = user => {
     dispatch(receiveCurrentUser(user));
-    browserHistory.push("/dashboard");
+    hashHistory.push("/dashboard");
   };
 
   const errorCallback = xhr => {
@@ -27,7 +27,7 @@ export default ({getState, dispatch}) => next => action => {
     case LOGOUT:
       logout(() => {
         next(action);
-        browserHistory.push("/");
+        hashHistory.push("/");
       });
       break;
     case SIGNUP:
