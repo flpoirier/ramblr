@@ -76,6 +76,12 @@ class PostForm extends React.Component {
     }
   }
 
+  image() {
+    if (this.state.imageUrl !== "") {
+      return (<div><img src={this.state.imageUrl}/><br /></div>);
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
@@ -117,8 +123,8 @@ class PostForm extends React.Component {
     } else if (type === "image") {
       return (
         <div>
-          <img src={this.state.imageUrl}/><br />
           <label>Photo </label><input className="new-post-input-file" type="file" onChange={this.updatePic} /><br /><br />
+          {this.image()}
           <label>Commentary </label><textarea className="new-post-input-textarea" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
@@ -150,7 +156,6 @@ class PostForm extends React.Component {
     return (
       <div className="post-form">
         <form onSubmit={this.handleSubmit}>
-          <Link to="/dashboard"><h1 className="new-post-header">new {this.props.posttype} post</h1></Link>
           {this.postType()}
           <br /><input className="new-post-submit" type="submit" value="create new post"/>
         </form>

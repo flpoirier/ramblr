@@ -17,7 +17,7 @@ class PostFormMain extends React.Component {
           <HeaderContainer />
           <NewPostNav />
           <PostFormContainer posttype={this.props.params.post_type}/>
-          <SidebarContainer />
+
       </div>
     );
   }
@@ -25,3 +25,5 @@ class PostFormMain extends React.Component {
 }
 
 export default PostFormMain;
+
+// just put sidebar container back under post form container if you want to show it again

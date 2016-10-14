@@ -336,7 +336,7 @@ fill the page height automatically!*/
   float: left;
   width: 295px;
   background: rgba(255, 255, 255, 0.4);
-  border-bottom: 1px solid #aaa;
+  /*border-bottom: 1px solid #aaa;*/
 }
 
 .sidebar-users:first-child {
@@ -430,13 +430,16 @@ fill the page height automatically!*/
   border: 2px solid black;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.85);
+  /*background: rgba(54, 70, 93, 1);*/
 }
 
 .post-form label {
   float: left;
   clear: right;
-  color: #777;
+  /*color: #777;*/
+  color: #888;
   padding: 5px 0;
+  font-size: 16px;
   /*border: 1px solid red;*/
 }
 
@@ -445,13 +448,14 @@ fill the page height automatically!*/
 }
 
 .new-post-header {
-  font-size: 25px;
+  font-size: 22px;
   /*font-weight: bold;*/
-  color: #777;
+  /*color: #777;*/
+  color: #ccc;
   /*border: 1px solid purple;*/
-  margin: 0 0 5px 0;
+  margin: 0 0 15px 0;
   padding: 0 0 5px 0;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px solid #eee;
 }
 
 .new-post-input-text {
