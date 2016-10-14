@@ -6,7 +6,6 @@ class PostForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      post_type: this.props.posttype,
       title: "",
       body: "",
       imageUrl: "",
@@ -21,6 +20,12 @@ class PostForm extends React.Component {
     this.updatePic = this.updatePic.bind(this);
     this.updateAudio = this.updateAudio.bind(this);
     this.updateVideo = this.updateVideo.bind(this);
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (newProps.posttype !== this.props.posttype) {
+      this.forceUpdate();
+    }
   }
 
   update(field) {
@@ -74,7 +79,7 @@ class PostForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("post[post_type]", this.state.post_type);
+    formData.append("post[post_type]", this.props.posttype);
     formData.append("post[title]", this.state.title);
     formData.append("post[body]", this.state.body);
     formData.append("post[quote]", this.state.quote);
@@ -94,7 +99,7 @@ class PostForm extends React.Component {
   }
 
   postType() {
-    const type = this.state.post_type;
+    const type = this.props.posttype;
     if (type === "text") {
       return (
         <div>
@@ -145,7 +150,7 @@ class PostForm extends React.Component {
     return (
       <div className="post-form">
         <form onSubmit={this.handleSubmit}>
-          <Link to="/dashboard"><h1 className="new-post-header">new {this.state.post_type} post</h1></Link>
+          <Link to="/dashboard"><h1 className="new-post-header">new {this.props.posttype} post</h1></Link>
           {this.postType()}
           <br /><input className="new-post-submit" type="submit" value="create new post"/>
         </form>
