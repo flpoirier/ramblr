@@ -26,6 +26,7 @@ User.create(username: "dril", password: "password", seed: "true", avatar: "https
 User.create(username: "lemondemon", password: "password", seed: "true", avatar: "http://lemonkle.com/store/img/BG169.jpg")
 User.create(username: "archiveofourown", password: "password", seed: "true", avatar: "https://pbs.twimg.com/profile_images/958203064/AO3logo3-02.png")
 User.create(username: "beautywithoutborders", password: "password", seed: "true", avatar: "http://apod.nasa.gov/apod/image/1309/EquinoxEarthElektroL900.jpg")
+User.create(username: "fyeahmiyazaki", password: "password", seed: "true", avatar: "https://e.thumbs.redditmedia.com/aOuSeYg5vYfCUb4p.png")
 User.create(username: "guest", password: "password")
 
 dfw = User.find_by(username: "dfwquotes").id
@@ -34,8 +35,11 @@ dril = User.find_by(username: "dril").id
 lemon = User.find_by(username: "lemondemon").id
 ao3 = User.find_by(username: "archiveofourown").id
 beauty = User.find_by(username: "beautywithoutborders").id
+miya = User.find_by(username: "fyeahmiyazaki").id
 
 Post.create(user_id: beauty, post_type: "image", image: "http://world-visits.com/wp-content/uploads/2011/08/Great-Pyramids-of-Egypt-1-830x450.jpg", commentary: "The Giza pyramid complex is an archaeological site on the Giza Plateau, on the outskirts of Cairo, Egypt. The pyramids, which have historically loomed large as emblems of ancient Egypt in the Western imagination, were popularised in Hellenistic times, when the Great Pyramid was listed by Antipater of Sidon as one of the Seven Wonders of the World. It is by far the oldest of the ancient Wonders and the only one still in existence.")
+
+Post.create(user_id: miya, post_type: "image", image: "https://img.buzzfeed.com/buzzfeed-static/static/2015-07/15/17/enhanced/webdr13/edit-31132-1436995248-5.jpg", commentary: "Howl's Moving Castle (2004)")
 
 Post.create(user_id: dfw, post_type: "quote", quote: "Fiction is one of the few experiences where loneliness can be both confronted and relieved. Drugs, movies where stuff blows up, loud parties -- all these chase away loneliness by making me forget my name's Dave and I live in a one-by-one box of bone no other party can penetrate or know. Fiction, poetry, music, really deep serious sex, and, in various ways, religion -- these are the places (for me) where loneliness is countenanced, stared down, transfigured, treated.", commentary: "David Foster Wallace")
 
@@ -44,6 +48,8 @@ Post.create(user_id: beauty, post_type: "image", image: "http://www.savilerowtra
 Post.create(user_id: dril, post_type: "text", body: 'the way i see it, people who come on here and submit content that is not up to par, could possibly be considered the "Villains" of this site')
 
 Post.create(user_id: iceland, post_type: "image", image: "http://68.media.tumblr.com/71bbc4c5ae10103922b531add84dd809/tumblr_n5up0iNJDh1qc8mzro1_500.png", commentary: "Here is a photo-graph of one of my mountains. If you would like to know more about my mountains, you can always watch this moving picture with me in it.")
+
+Post.create(user_id: miya, post_type: "image", image: "http://thereddragon.co.uk/wp-content/uploads/2013/04/Princess-Mononoke-6-1024x768-e1365549888532.jpg", commentary: "Princess Mononoke (1997)")
 
 Post.create(user_id: beauty, post_type: "image", image: "http://farm3.static.flickr.com/2409/2115782565_44842e6f30_b.jpg", commentary: "The most beautiful and impressive ancient Inca ruins in the world, Machu Pichu was rediscovered in 1911 by Hawaiian historian Hiram after it lay hidden for centuries above the Urubamba Valley. The \"Lost City of the Incas\" is invisible from below and completely self-contained, surrounded by agricultural terraces and watered by natural springs.")
 
@@ -55,9 +61,13 @@ Post.create(user_id: iceland, post_type: "image", image: "http://66.media.tumblr
 
 Post.create(user_id: dril, post_type: "text", body: '(insufferably) It\'s pronounced. "Bloomin Onion." The \'g\' is silent.')
 
+Post.create(user_id: miya, post_type: "image", image: "https://trueclassics.files.wordpress.com/2015/08/totoro.jpg", commentary: "My Neighbor Totoro (1988)")
+
 Post.create(user_id: beauty, post_type: "image", image: "http://mstecker.com/images/antarctica/antphotos1/i2lc1b.jpg", commentary: "The Lemaire Channel is flanked by the Antarctic Peninsula on one side and Booth Island on the other. So photogenic is the channel that it is sometimes called \"Kodak Gap\". At the northern end of the Lemaire Channel are a pair of tall, rounded snow-capped peaks known as Una's Tits. The channel was first navigated by Belgian explorer de Gerlach during his 1898 expedition aboard Belgica. It was somehow named after another Belgian explorer -- Charles Lemaire, who explored parts of the Congo.")
 
 Post.create(user_id: ao3, post_type: "image", image: "https://s-media-cache-ak0.pinimg.com/originals/b1/a5/6e/b1a56ebdaa4bfd6298379837a214bc8b.png", commentary: "Steven Universe fanart")
+
+Post.create(user_id: miya, post_type: "quote", quote: "I'm not going to make movies that tell children, 'You should despair and run away.'", commentary: "Hayao Miyazaki")
 
 Post.create(user_id: dril, post_type: "text", body: "(me dming) i am merely a vessel through which the posts flow. i accept no rewards.. for i have no name, and no face. Do u like wearing bras,")
 
@@ -74,6 +84,10 @@ Post.create(user_id: dril, post_type: "text", body: "one of the things you reali
 Post.create(user_id: lemon, post_type: "audio", audio: "http://www.lemondemon.com/Lemon%20Demon%20-%20First%20four%20albums/Damn%20Skippy%20(2005)/17%20-%20Word%20Disassociation.mp3", commentary: "Word Disassociation -- Damn Skippy (2005)")
 
 Post.create(user_id: iceland, post_type: "image", image: "http://66.media.tumblr.com/7524be20e7bbdbb3bdc639761324c0fd/tumblr_n744x4bRbZ1tabg50o1_500.jpg", commentary: "I am like a swiss cheese. Full of holes.")
+
+Post.create(user_id: miya, post_type: "quote", quote: "Yet, even amidst the hatred and carnage, life is still worth living.", commentary: "Hayao Miyazaki")
+
+Post.create(user_id: miya, post_type: "image", image: "https://images5.alphacoders.com/501/501188.jpg", commentary: "Spirited Away (2001)")
 
 Post.create(user_id: dfw, post_type: "quote", quote: "What if sometimes there is no choice about what to love? What if the temple comes to Mohammed? What if you just love? without deciding? You just do: you see her and in that instant are lost to sober account-keeping and cannot choose but to love?", commentary: "David Foster Wallace")
 
