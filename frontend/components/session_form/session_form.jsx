@@ -61,8 +61,9 @@ class SessionForm extends React.Component {
       <span className="login-form-parent">
   			<div className="login-form-container">
   				<form onSubmit={this.handleSubmit} className="login-form-box">
+            <Link to="/" className="login-close">X</Link>
             <div className = "login-form-header">
-  					<h1><Link to="/">{this.state.formType}</Link></h1>
+  					<h1>{this.state.formType}</h1>
   					{ this.renderErrors() }
             </div>
   					<div className="login-form">

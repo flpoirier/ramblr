@@ -65,11 +65,11 @@ Post.create(user_id: iceland, post_type: "image", image: "http://66.media.tumblr
 
 Post.create(user_id: dfw, post_type: "quote", quote: "There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says \"Morning, boys. How's the water?\" And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes \"What the hell is water?\"", commentary: "David Foster Wallace")
 
-Post.create(user_id: dril, post_type: "text", body: "one of the things you realize when becoming a genius in many aspects of life is that the world wide web. and the computer, is the same thing")
-
 Post.create(user_id: beauty, post_type: "image", image: "https://en.wikipedia.org/wiki/Times_Square#/media/File:1_times_square_night_2013.jpg", commentary: "Times Square is a major commercial intersection and neighborhood in Midtown Manhattan, New York City, at the junction of Broadway and Seventh Avenue, and stretching from West 42nd to West 47th Streets. Brightly adorned with billboards and advertisements, Times Square is sometimes referred to as The Crossroads of the World, The Center of the Universe, the heart of The Great White Way, and the \"heart of the world\".")
 
 Post.create(user_id: beauty, post_type: "image", image: "http://images.dailymaverick.co.za/images/resized_images/849x493q70rebecca-Lagos-MAIN-PHOTO.jpg", commentary: "Makoko, dubbed the Venice of Nigeria, makes for a surreal spectacle. Lagos fishing communities began living here in the 18th century.")
+
+Post.create(user_id: dril, post_type: "text", body: "one of the things you realize when becoming a genius in many aspects of life is that the world wide web. and the computer, is the same thing")
 
 Post.create(user_id: lemon, post_type: "audio", audio: "http://www.lemondemon.com/Lemon%20Demon%20-%20First%20four%20albums/Damn%20Skippy%20(2005)/17%20-%20Word%20Disassociation.mp3", commentary: "Word Disassociation -- Damn Skippy (2005)")
 
