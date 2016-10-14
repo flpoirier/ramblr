@@ -23,8 +23,6 @@ class SessionForm extends React.Component {
   // }
 
 	componentDidUpdate() {
-    this.state.username = "";
-    this.state.password = "";
 		this.redirectIfLoggedIn();
 	}
 
@@ -63,8 +61,10 @@ class SessionForm extends React.Component {
       <span className="login-form-parent">
   			<div className="login-form-container">
   				<form onSubmit={this.handleSubmit} className="login-form-box">
+            <div className = "login-form-header">
   					<h1><Link to="/">{this.state.formType}</Link></h1>
   					{ this.renderErrors() }
+            </div>
   					<div className="login-form">
   						<br/>
   						<label className="login-label">Username</label>

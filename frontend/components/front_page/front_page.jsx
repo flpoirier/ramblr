@@ -13,6 +13,10 @@ class FrontPage extends React.Component {
     this.props.login({user: {username: "guest", password: "password"}});
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
   sessionLinks() {
     return (
       <nav className="login-signup">
