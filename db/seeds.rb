@@ -30,6 +30,8 @@ User.create(username: "fyeahmiyazaki", password: "password", seed: "true", avata
 User.create(username: "schoolhouserock", password: "password", seed: "true", avatar: "https://i.ytimg.com/i/0KiZzoWB0Wdq3xiTQzmFlw/mq1.jpg?v=512c6068")
 User.create(username: "guest", password: "password")
 
+# I'm a comment
+
 dfw = User.find_by(username: "dfwquotes").id
 iceland = User.find_by(username: "icelandwantstobeyourfriend").id
 dril = User.find_by(username: "dril").id
