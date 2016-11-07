@@ -27,6 +27,7 @@ User.create(username: "lemondemon", password: "password", seed: "true", avatar: 
 User.create(username: "archiveofourown", password: "password", seed: "true", avatar: "https://pbs.twimg.com/profile_images/958203064/AO3logo3-02.png")
 User.create(username: "beautywithoutborders", password: "password", seed: "true", avatar: "http://apod.nasa.gov/apod/image/1309/EquinoxEarthElektroL900.jpg")
 User.create(username: "fyeahmiyazaki", password: "password", seed: "true", avatar: "https://e.thumbs.redditmedia.com/aOuSeYg5vYfCUb4p.png")
+User.create(username: "schoolhouserock", password: "password", seed: "true", avatar: "https://i.ytimg.com/i/0KiZzoWB0Wdq3xiTQzmFlw/mq1.jpg?v=512c6068")
 User.create(username: "guest", password: "password")
 
 dfw = User.find_by(username: "dfwquotes").id
