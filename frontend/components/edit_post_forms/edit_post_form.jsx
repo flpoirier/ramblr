@@ -22,6 +22,10 @@ class EditPostForm extends React.Component {
     this.updateVideo = this.updateVideo.bind(this);
   }
 
+  componentWillMount() {
+    this.props.getPost(this.props.postid);
+  }
+
   componentWillReceiveProps(newProps) {
     if (newProps.posttype !== this.props.posttype) {
       this.forceUpdate();
