@@ -9,6 +9,8 @@ class PostForm extends React.Component {
       title: "",
       body: "",
       imageUrl: "",
+      audioUrl: "",
+      videoUrl: "",
       imageFile: undefined,
       audioFile: undefined,
       videoFile: undefined,
@@ -52,13 +54,13 @@ class PostForm extends React.Component {
     let reader = new FileReader();
     let file = e.currentTarget.files[0];
     reader.onloadend = () => {
-      this.setState({ audioFile: file});
+      this.setState({ audioUrl: reader.result, audioFile: file});
     };
 
     if (file) {
       reader.readAsDataURL(file);
     } else {
-      this.setState({ audioFile: null });
+      this.setState({ audioUrl: "", audioFile: null });
     }
   }
 
@@ -66,19 +68,45 @@ class PostForm extends React.Component {
     let reader = new FileReader();
     let file = e.currentTarget.files[0];
     reader.onloadend = () => {
-      this.setState({ videoFile: file});
+      this.setState({ videoUrl: reader.result, videoFile: file});
     };
 
     if (file) {
       reader.readAsDataURL(file);
     } else {
-      this.setState({ videoFile: null });
+      this.setState({ videoUrl: "", videoFile: null });
     }
   }
 
   image() {
     if (this.state.imageUrl !== "") {
       return (<div><img src={this.state.imageUrl}/><br /></div>);
+    }
+  }
+
+  audio() {
+    if (this.state.audioUrl !== "") {
+      return (
+        <div>
+          <video controls height="30px" width="500px" >
+            <source src={this.state.audioUrl} type="audio/mpeg"></source>
+          </video>
+          <br />
+        </div>
+      );
+    }
+  }
+
+  video() {
+    if (this.state.videoUrl !== "") {
+      return (
+        <div>
+          <video controls width="500px" >
+            <source src={this.state.videoUrl} type="audio/mpeg"></source>
+          </video>
+          <br />
+        </div>
+      );
     }
   }
 
@@ -132,6 +160,7 @@ class PostForm extends React.Component {
       return (
         <div>
           <label>Audio </label><input className="new-post-input-file" type="file" onChange={this.updateAudio} /><br /><br />
+          {this.audio()}
           <label>Commentary </label><textarea className="new-post-input-textarea" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
@@ -139,6 +168,7 @@ class PostForm extends React.Component {
       return (
         <div>
           <label>Video </label><input className="new-post-input-file" type="file" onChange={this.updateVideo} /><br /><br />
+          {this.video()}
           <label>Commentary </label><textarea className="new-post-input-textarea" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
