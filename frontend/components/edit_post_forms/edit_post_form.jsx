@@ -5,7 +5,6 @@ class EditPostForm extends React.Component {
 
   constructor(props) {
     super(props);
-    debugger
     this.state = {
       title: "",
       body: "",

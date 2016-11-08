@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       end
     end
     resource :session, only: [:create, :destroy]
-    resources :posts, only: [:index, :create, :update, :destroy] do
+    resources :posts, only: [:index, :create, :show, :update, :destroy] do
       member do
         post 'like', to: 'posts#like'
         delete 'like', to: 'posts#dislike'

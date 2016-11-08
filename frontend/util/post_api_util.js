@@ -6,6 +6,14 @@ export const fetchPosts = (success) => {
   });
 };
 
+export const getPost = (post_id, success) => {
+  $.ajax({
+    method: 'GET',
+    url: `api/posts/${post_id}`,
+    success
+  });
+};
+
 // note -- when I eventually want to filter this by only followed users
 // I'm going to have to add filters (like data: filters)
 
