@@ -1,5 +1,5 @@
-import { fetchPosts, createPost, deletePost } from '../util/post_api_util';
-import { REQUEST_POSTS, CREATE_POST, DELETE_POST, REMOVE_POST, requestPosts, receivePosts, removePost } from '../actions/post_actions';
+import { fetchPosts, createPost, deletePost, updatePost } from '../util/post_api_util';
+import { REQUEST_POSTS, CREATE_POST, DELETE_POST, REMOVE_POST, EDIT_POST, requestPosts, receivePosts, removePost } from '../actions/post_actions';
 
 export default ({ getState, dispatch }) => next => action => {
 
@@ -23,11 +23,15 @@ export default ({ getState, dispatch }) => next => action => {
     case CREATE_POST:
       createPost(action.post, postsSuccess)
       break;
+    case EDIT_POST:
+      updatePost(action.post, postsSuccess)
+      break;
     case DELETE_POST:
       deletePost(action.post, deleteSuccess)
       break;
     default:
       break;
   }
+  
   return result;
 };

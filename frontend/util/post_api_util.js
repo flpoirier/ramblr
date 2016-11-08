@@ -21,8 +21,8 @@ export const createPost = (formData, success) => {
 	});
 };
 
-export const updatePost = (formData, success) => {
-  let id = formData.id;
+export const updatePost = (post, success) => {
+  let id = post.id;
   $.ajax({
     url: `/api/posts/${id}`,
 		method: 'PATCH',

@@ -4,6 +4,7 @@ export const CREATE_POST = "CREATE_POST";
 export const DELETE_POST = "DELETE_POST";
 export const REMOVE_POST = "REMOVE_POST";
 export const RECEIVE_POST = "RECEIVE_POST";
+export const EDIT_POST = "EDIT_POST";
 
 export const receivePosts = posts => ({
   type: RECEIVE_POSTS,
@@ -34,4 +35,10 @@ export const removePost = (postId) => ({
 export const receivePost = (post) => ({
   type: RECEIVE_POST,
   post
+});
+
+export const editPost = (post, success) => ({
+  type: EDIT_POST,
+  post,
+  success
 });
