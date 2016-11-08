@@ -21,8 +21,21 @@ export const createPost = (formData, success) => {
 	});
 };
 
+export const updatePost = (formData, success) => {
+  let id = formData.id;
+  $.ajax({
+    url: `/api/posts/${id}`,
+		method: 'PATCH',
+    dataType: "json",
+    contentType: false,
+    processData: false,
+		data: formData,
+		success
+	});
+};
+
 export const deletePost = (post, success) => {
-  const id = post.id;
+  let id = post.id;
   $.ajax({
     method: 'DELETE',
     url: `api/posts/${id}`,

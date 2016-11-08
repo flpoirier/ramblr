@@ -35,6 +35,7 @@ const Root = ({ store }) => {
           <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn}/>
           <Route path="/dashboard" component={DashboardContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/new/:post_type" component={PostFormMain} onEnter={_ensureLoggedIn}/>
+          <Route path="/edit/:post_id" component={PostFormMain} onEnter={_ensureLoggedIn}/>
         </Route>
       </Router>
     </Provider>
