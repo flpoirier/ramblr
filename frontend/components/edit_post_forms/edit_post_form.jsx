@@ -29,6 +29,7 @@ class EditPostForm extends React.Component {
 
   componentWillReceiveProps(newProps) {
     this.state = newProps.post;
+    this.setState({ imageUrl: "" });
   }
 
   update(field) {
@@ -80,7 +81,9 @@ class EditPostForm extends React.Component {
   }
 
   image() {
-    if (this.state.image !== "") {
+    if (this.state.imageUrl !== "") {
+      return (<div><img src={this.state.imageUrl}/><br /></div>);
+    } else if (this.state.image !== "") {
       return (<div><img src={this.state.image}/><br /></div>);
     }
   }
