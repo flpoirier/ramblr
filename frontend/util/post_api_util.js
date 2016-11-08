@@ -37,7 +37,7 @@ export const updatePost = (post, success) => {
     dataType: "json",
     contentType: false,
     processData: false,
-		data: formData,
+		data: post,
 		success
 	});
 };

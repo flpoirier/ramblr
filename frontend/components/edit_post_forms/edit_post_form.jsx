@@ -114,7 +114,8 @@ class EditPostForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("post[post_type]", this.props.posttype);
+    formData.append("post[id]", this.state.id);
+    formData.append("post[post_type]", this.state.post_type);
     formData.append("post[title]", this.state.title);
     formData.append("post[body]", this.state.body);
     formData.append("post[quote]", this.state.quote);
@@ -130,7 +131,7 @@ class EditPostForm extends React.Component {
       formData.append("post[video]", this.state.videoFile);
     }
     const success = () => { browserHistory.push("/"); };
-    this.props.createPost(formData, success);
+    this.props.editPost(formData, success);
   }
 
   postType() {
