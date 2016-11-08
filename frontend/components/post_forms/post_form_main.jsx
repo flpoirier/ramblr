@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import HeaderContainer from '../dashboard/header/header_container';
 import NewPostNav from '../dashboard/new_post_nav';
 import PostFormContainer from './post_form_container';
-import SidebarContainer from '../dashboard/sidebar/sidebar_container'
+import SidebarContainer from '../dashboard/sidebar/sidebar_container';
 
 class PostFormMain extends React.Component {
 

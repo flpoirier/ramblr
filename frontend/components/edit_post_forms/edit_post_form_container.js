@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
-import { createPost } from '../../actions/post_actions';
-import EditPostForm from './post_form';
+import { editPost } from '../../actions/post_actions';
+import EditPostForm from './edit_post_form';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
-  createPost: (post, success) => dispatch(createPost(post, success))
+  editPost: (post, success) => dispatch(editPost(post, success))
 });
 
 export default connect(
