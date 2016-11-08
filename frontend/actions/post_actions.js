@@ -6,6 +6,7 @@ export const REMOVE_POST = "REMOVE_POST";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const EDIT_POST = "EDIT_POST";
 export const GET_POST = "GET_POST";
+export const SHOW_POST = "SHOW_POST";
 
 export const receivePosts = posts => ({
   type: RECEIVE_POSTS,
@@ -46,5 +47,10 @@ export const editPost = (post, success) => ({
 
 export const getPost = (post) => ({
   type: GET_POST,
+  post
+});
+
+export const showPost = (post) => ({
+  type: SHOW_POST,
   post
 });

@@ -4,6 +4,7 @@ import EditPostForm from './edit_post_form';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
+  post: state.posts
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -23,7 +23,8 @@ class EditPostForm extends React.Component {
   }
 
   componentWillMount() {
-    this.props.getPost(this.props.postid);
+    this.props.getPost({id: this.props.postid});
+    this.forceUpdate();
   }
 
   componentWillReceiveProps(newProps) {
@@ -160,9 +161,9 @@ class EditPostForm extends React.Component {
     return (
       <div className="post-form">
         <form onSubmit={this.handleSubmit}>
-          <Link to="/dashboard"><h1 className="new-post-header">edit {this.props.posttype} post</h1></Link>
+          <Link to="/dashboard"><h1 className="new-post-header">edit {this.props.post.post_type} post</h1></Link>
           {this.postType()}
-          <br /><input className="new-post-submit" type="submit" value="create new post"/>
+          <br /><input className="new-post-submit" type="submit" value="update post"/>
         </form>
       </div>
     );

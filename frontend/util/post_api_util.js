@@ -9,7 +9,7 @@ export const fetchPosts = (success) => {
 export const getPost = (post_id, success) => {
   $.ajax({
     method: 'GET',
-    url: `api/posts/${post_id}`,
+    url: `/api/posts/${post_id}`,
     success
   });
 };
