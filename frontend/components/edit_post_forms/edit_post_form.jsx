@@ -30,6 +30,8 @@ class EditPostForm extends React.Component {
   componentWillReceiveProps(newProps) {
     this.state = newProps.post;
     this.setState({ imageUrl: "" });
+    this.setState({ audioUrl: "" });
+    this.setState({ videoUrl: "" });
   }
 
   update(field) {
@@ -56,13 +58,13 @@ class EditPostForm extends React.Component {
     let reader = new FileReader();
     let file = e.currentTarget.files[0];
     reader.onloadend = () => {
-      this.setState({ audioFile: file});
+      this.setState({ audioUrl: reader.result, audioFile: file});
     };
 
     if (file) {
       reader.readAsDataURL(file);
     } else {
-      this.setState({ audioFile: null });
+      this.setState({ audioUrl: "", audioFile: null });
     }
   }
 
@@ -70,13 +72,13 @@ class EditPostForm extends React.Component {
     let reader = new FileReader();
     let file = e.currentTarget.files[0];
     reader.onloadend = () => {
-      this.setState({ videoFile: file});
+      this.setState({ videoUrl: reader.result, videoFile: file});
     };
 
     if (file) {
       reader.readAsDataURL(file);
     } else {
-      this.setState({ videoFile: null });
+      this.setState({ videoUrl: "", videoFile: null });
     }
   }
 
@@ -89,7 +91,16 @@ class EditPostForm extends React.Component {
   }
 
   audio() {
-    if (this.state.audio !== "") {
+    if (this.state.audioUrl !== "") {
+      return (
+        <div>
+          <video controls height="30px" width="500px" >
+            <source src={this.state.audioUrl} type="audio/mpeg"></source>
+          </video>
+          <br />
+        </div>
+      );
+    } else if (this.state.audio !== "") {
       return (
         <div>
           <video controls height="30px" width="500px" >
@@ -102,7 +113,16 @@ class EditPostForm extends React.Component {
   }
 
   video() {
-    if (this.state.video !== "") {
+    if (this.state.videoUrl !== "") {
+      return (
+        <div>
+          <video controls width="500px" >
+            <source src={this.state.videoUrl} type="audio/mpeg"></source>
+          </video>
+          <br />
+        </div>
+      );
+    } else if (this.state.video !== "") {
       return (
         <div>
           <video controls width="500px" >
