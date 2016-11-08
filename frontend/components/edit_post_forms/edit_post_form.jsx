@@ -80,8 +80,34 @@ class EditPostForm extends React.Component {
   }
 
   image() {
-    if (this.state.imageUrl !== "") {
-      return (<div><img src={this.state.imageUrl}/><br /></div>);
+    if (this.state.image !== "") {
+      return (<div><img src={this.state.image}/><br /></div>);
+    }
+  }
+
+  audio() {
+    if (this.state.audio !== "") {
+      return (
+        <div>
+          <video controls height="30px" width="500px" >
+            <source src={this.state.audio} type="audio/mpeg"></source>
+          </video>
+          <br />
+        </div>
+      );
+    }
+  }
+
+  video() {
+    if (this.state.video !== "") {
+      return (
+        <div>
+          <video controls width="500px" >
+            <source src={this.state.video} type="audio/mpeg"></source>
+          </video>
+          <br />
+        </div>
+      );
     }
   }
 
@@ -135,6 +161,8 @@ class EditPostForm extends React.Component {
       return (
         <div>
           <label>Audio </label><input className="new-post-input-file" type="file" onChange={this.updateAudio} /><br /><br />
+          Current audio file:
+          {this.audio()}
           <label>Commentary </label><textarea className="new-post-input-textarea" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
@@ -142,6 +170,8 @@ class EditPostForm extends React.Component {
       return (
         <div>
           <label>Video </label><input className="new-post-input-file" type="file" onChange={this.updateVideo} /><br /><br />
+          Current video file:
+          {this.video()}
           <label>Commentary </label><textarea className="new-post-input-textarea" value={this.state.commentary} onChange={this.update("commentary")}/>
         </div>
       );
