@@ -28,9 +28,7 @@ class EditPostForm extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (newProps.posttype !== this.props.posttype) {
-      this.forceUpdate();
-    }
+    this.state = newProps.post;
   }
 
   update(field) {
@@ -110,7 +108,7 @@ class EditPostForm extends React.Component {
   }
 
   postType() {
-    const type = this.props.posttype;
+    const type = this.props.post.post_type;
     if (type === "text") {
       return (
         <div>
