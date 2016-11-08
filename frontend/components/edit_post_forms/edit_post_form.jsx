@@ -28,6 +28,9 @@ class EditPostForm extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
+    if (this.props.currentUser.id !== newProps.post.user_id) {
+      browserHistory.push("/");
+    }
     this.state = newProps.post;
     this.setState({ imageUrl: "" });
     this.setState({ audioUrl: "" });
