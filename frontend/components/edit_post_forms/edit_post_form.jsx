@@ -5,6 +5,7 @@ class EditPostForm extends React.Component {
 
   constructor(props) {
     super(props);
+    debugger
     this.state = {
       title: "",
       body: "",
@@ -156,7 +157,7 @@ class EditPostForm extends React.Component {
     return (
       <div className="post-form">
         <form onSubmit={this.handleSubmit}>
-          <Link to="/dashboard"><h1 className="new-post-header">new {this.props.posttype} post</h1></Link>
+          <Link to="/dashboard"><h1 className="new-post-header">edit {this.props.posttype} post</h1></Link>
           {this.postType()}
           <br /><input className="new-post-submit" type="submit" value="create new post"/>
         </form>
