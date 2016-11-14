@@ -17,7 +17,7 @@ class Header extends React.Component {
 
   greeting() {
     if (this.props.currentUser) {
-      return (<div><img className="user-avatar" src={this.props.currentUser.avatar} /> <p className="header-name">Hi, {this.props.currentUser.username}!</p></div>);
+      return (<div className="header-greeting-group"><img className="user-avatar" src={this.props.currentUser.avatar} /><p className="header-name">Hi, {this.props.currentUser.username}!</p></div>);
     } else {
       return (<div></div>);
     }
@@ -28,7 +28,7 @@ class Header extends React.Component {
       <div className="header">
         <hgroup className="header-group">
           {this.greeting()}
-          <button className="header-button" onClick={this.__handleClick} value="Log Out"><i className="fa fa-sign-out" aria-hidden="true" /> Log Out</button>
+          <button className="header-button" onClick={this.__handleClick} value="Log Out"><i className="fa fa-sign-out" aria-hidden="true" /></button>
         </hgroup>
       </div>
     );
