@@ -603,3 +603,8 @@ fill the page height automatically!*/
   border: 2px solid black;
   border-radius: 5px;
 }
+
+.user-avatar:hover {
+  cursor: pointer;
+  border: 2px solid blue;
+}

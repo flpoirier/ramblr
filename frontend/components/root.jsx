@@ -10,6 +10,7 @@ import DashboardContainer from './dashboard/dashboard_container';
 // import PostFormContainer from './post_forms/post_form_container';
 import PostFormMain from './post_forms/post_form_main';
 import EditPostFormMain from './edit_post_forms/edit_post_form_main';
+import UserPicContainer from './edit_user_form/edit_user_form_container';
 
 const Root = ({ store }) => {
 
@@ -37,6 +38,7 @@ const Root = ({ store }) => {
           <Route path="/dashboard" component={DashboardContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/new/:post_type" component={PostFormMain} onEnter={_ensureLoggedIn}/>
           <Route path="/edit/:post_id" component={EditPostFormMain} onEnter={_ensureLoggedIn}/>
+          <Route path="/settings/avatar" component={UserPicContainer} onEnter={_ensureLoggedIn}/>
         </Route>
       </Router>
     </Provider>
