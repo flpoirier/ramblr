@@ -33,8 +33,14 @@ class EditUserForm extends React.Component {
     }
   }
 
-  handleSubmit() {
-
+  handleSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("user[id]", this.state.id);
+    formData.append("user[username]", this.state.username);
+    formData.append("user[avatar]", this.state.avatar);
+    const success = () => { browserHistory.push("/"); };
+    this.props.editUser(formData, success);
   }
 
   render() {

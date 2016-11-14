@@ -1,5 +1,5 @@
-import { fetchUsers } from '../util/user_api_util';
-import { REQUEST_USERS, requestUsers, receiveUsers } from '../actions/user_actions';
+import { fetchUsers, updateUser } from '../util/user_api_util';
+import { REQUEST_USERS, EDIT_USER, requestUsers, receiveUsers, editUser } from '../actions/user_actions';
 
 export default ({ getState, dispatch }) => next => action => {
 
@@ -15,6 +15,9 @@ export default ({ getState, dispatch }) => next => action => {
   switch(action.type) {
     case REQUEST_USERS:
       fetchUsers(success);
+      break;
+    case EDIT_USER:
+      updateUser(action.user, action.success);
       break;
     default:
       break;
