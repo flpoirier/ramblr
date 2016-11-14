@@ -576,3 +576,11 @@ fill the page height automatically!*/
 .link-post:hover {
   color: blue;
 }
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  float: left;
+  border: 2px solid black;
+  border-radius: 5px;
+}

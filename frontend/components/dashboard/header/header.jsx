@@ -17,7 +17,7 @@ class Header extends React.Component {
 
   greeting() {
     if (this.props.currentUser) {
-      return (<h2 className="header-name">Hi, {this.props.currentUser.username}!</h2>);
+      return (<div><img className="user-avatar" src={this.props.currentUser.avatar} /> <p className="header-name">Hi, {this.props.currentUser.username}!</p></div>);
     } else {
       return (<div></div>);
     }
