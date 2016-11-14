@@ -2,17 +2,24 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
-#  username        :string           not null
-#  password_digest :string           not null
-#  session_token   :string           not null
-#  avatar          :string
+#  id                  :integer          not null, primary key
+#  username            :string           not null
+#  password_digest     :string           not null
+#  session_token       :string           not null
+#  seed                :string
+#  avatar_file_name    :string
+#  avatar_content_type :string
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
 #
 
 class User < ActiveRecord::Base
 
   has_many :likes
   has_many :posts
+
+  has_attached_file :avatar, default_url: "http://ashburnrobotics.com/gearedup/wp-content/uploads/sites/3/2016/10/generic-avatar.png"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   has_many(
     :out_follows,
