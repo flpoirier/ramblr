@@ -23,6 +23,15 @@ class Api::UsersController < ApplicationController
 		end
 	end
 
+  def update
+    @user = User.find(params[:user][:id])
+    if @user.update(user_params)
+      render "api/users/show"
+    else
+      render json: @user.errors.full_messages, status: 422
+    end
+  end
+
   def follow
     @follow = current_user.out_follows.new(followed_user_id: params[:id])
     if @follow.save
