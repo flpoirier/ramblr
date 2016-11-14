@@ -5,13 +5,15 @@ class EditUserForm extends React.Component {
 
   constructor(props) {
     super(props);
-    this.userpicUrl = "";
     this.state = this.props.currentUser;
+    this.state.userpicUrl = "";
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.updatePic = this.updatePic.bind(this);
   }
 
   image() {
-    if (this.userpicUrl !== "") {
-      return (<div><img src={this.userpicUrl}/><br /></div>);
+    if (this.state.userpicUrl !== "") {
+      return (<div><img src={this.state.userpicUrl}/><br /></div>);
     } else {
       return (<div><img src={this.state.avatar}/><br /></div>);
     }
@@ -21,15 +23,13 @@ class EditUserForm extends React.Component {
     let reader = new FileReader();
     let file = e.currentTarget.files[0];
     reader.onloadend = () => {
-      this.setState({avatarFile: file});
-      this.userpicUrl = reader.result;
+      this.setState({avatar: file, userpicUrl: reader.result});
     };
 
     if (file) {
       reader.readAsDataURL(file);
     } else {
-      this.setState({avatarFile: null});
-      this.userpicUrl = "";
+      this.setState({avatar: null, userpicUrl: ""});
     }
   }
 
