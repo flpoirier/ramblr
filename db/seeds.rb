@@ -28,7 +28,7 @@ User.create(username: "archiveofourown", password: "password", seed: "true", ava
 User.create(username: "beautywithoutborders", password: "password", seed: "true", avatar: "http://apod.nasa.gov/apod/image/1309/EquinoxEarthElektroL900.jpg")
 User.create(username: "fyeahmiyazaki", password: "password", seed: "true", avatar: "https://e.thumbs.redditmedia.com/aOuSeYg5vYfCUb4p.png")
 User.create(username: "schoolhouserock", password: "password", seed: "true", avatar: "https://i.ytimg.com/i/0KiZzoWB0Wdq3xiTQzmFlw/mq1.jpg?v=512c6068")
-User.create(username: "guest", password: "password")
+User.create(username: "guest", password: "password", avatar: "https://secure.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=1024&d=mm&r=g")
 
 # I'm a comment
 
