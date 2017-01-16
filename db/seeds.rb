@@ -25,7 +25,7 @@ User.create(username: "icelandwantstobeyourfriend", seed: "true", password: "pas
 User.create(username: "dril", password: "password", seed: "true", avatar: "https://pbs.twimg.com/profile_images/707320204280373248/3PJZnNgG_400x400.jpg")
 User.create(username: "lemondemon", password: "password", seed: "true", avatar: "http://lemonkle.com/store/img/BG169.jpg")
 User.create(username: "archiveofourown", password: "password", seed: "true", avatar: "https://pbs.twimg.com/profile_images/958203064/AO3logo3-02.png")
-User.create(username: "beautywithoutborders", password: "password", seed: "true", avatar: "http://apod.nasa.gov/apod/image/1309/EquinoxEarthElektroL900.jpg")
+User.create(username: "beautywithoutborders", password: "password", seed: "true", avatar: "http://s3.amazonaws.com/ramblr-pro/users/avatars/000/000/006/original/EquinoxEarthElektroL900.jpg")
 User.create(username: "fyeahmiyazaki", password: "password", seed: "true", avatar: "https://e.thumbs.redditmedia.com/aOuSeYg5vYfCUb4p.png")
 User.create(username: "schoolhouserock", password: "password", seed: "true", avatar: "https://i.ytimg.com/i/0KiZzoWB0Wdq3xiTQzmFlw/mq1.jpg?v=512c6068")
 User.create(username: "guest", password: "password", avatar: "https://secure.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=1024&d=mm&r=g")
@@ -96,4 +96,4 @@ Post.create(user_id: dfw, post_type: "quote", quote: "What if sometimes there is
 
 Post.create(user_id: beauty, post_type: "image", image: "http://i.dailymail.co.uk/i/pix/2011/04/24/article-0-0BC2A68F00000578-251_964x565.jpg", commentary: "A vast patchwork of kaleidoscopic colour, Holland's tulip fields are clearly nothing to be sneezed at. The vibrant blues, reds, pinks and yellows sprawl as far as the eye can see in Lisse, western Netherlands. More than three billion tulips are grown every year.")
 
-Post.create(user_id: iceland, post_type: "image", image: "http://67.media.tumblr.com/0923db71070bb287213c05440af4c095/tumblr_my2qfiSoQN1rqs0pwo1_1280.jpg", commentary: "Hello, this is Iceland. Humans from all over the world like to come and dive into me. This human is diving between my two continents. My left side is in North America, and my right side is in Europe.")
+Post.create(user_id: iceland, post_type: "image", image: "http://s3.amazonaws.com/ramblr-pro/posts/images/000/000/028/original/tumblr_my2qfiSoQN1rqs0pwo1_1280.jpg", commentary: "Hello, this is Iceland. Humans from all over the world like to come and dive into me. This human is diving between my two continents. My left side is in North America, and my right side is in Europe.")
