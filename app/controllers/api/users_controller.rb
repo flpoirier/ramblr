@@ -33,13 +33,17 @@ class Api::UsersController < ApplicationController
   end
 
   def follow
-    @follow = current_user.out_follows.new(followed_user_id: params[:id])
-    if @follow.save
-      @posts = (current_user.followed_posts + current_user.posts)
-      @posts.sort_by! { |post| post.created_at }.reverse!
-      render "api/posts/all"
+    if current_user.followed_users.map { |user| user.id }.include?(params[:id].to_i)
+      render json: @user.errors.full_messages, status: 422
     else
-      render json: @follow.errors.full_messages, status: 422
+      @follow = current_user.out_follows.new(followed_user_id: params[:id])
+      if @follow.save
+        @posts = (current_user.followed_posts + current_user.posts)
+        @posts.sort_by! { |post| post.created_at }.reverse!
+        render "api/posts/all"
+      else
+        render json: @follow.errors.full_messages, status: 422
+      end
     end
   end
 
