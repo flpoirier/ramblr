@@ -3,6 +3,7 @@ bundle.js
 bundle.js.map
 .DS_Store
 log/development.log
+tmp/
 
 # Ignore application configuration
 /config/application.yml
