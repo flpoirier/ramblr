@@ -2,8 +2,8 @@ node_modules/
 bundle.js
 bundle.js.map
 .DS_Store
-log/development.log
-tmp/
+/log
+/tmp
 
 # Ignore application configuration
 /config/application.yml
