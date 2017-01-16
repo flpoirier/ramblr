@@ -4,6 +4,7 @@ bundle.js.map
 .DS_Store
 /log
 /tmp
+.byebug_history
 
 # Ignore application configuration
 /config/application.yml
