@@ -131,6 +131,11 @@ button {
   border-radius: 5px;
 }
 
+.author-image:hover {
+  cursor: pointer;
+  border: 2px solid blue;
+}
+
 .post {
   clear: both;
 }
@@ -149,6 +154,11 @@ button {
   font-weight: bold;
   font-size: 20px;
   padding: 0 0 10px 0;
+}
+
+.post-author:hover {
+  cursor: pointer;
+  color: blue;
 }
 
 .post-body h1 {
