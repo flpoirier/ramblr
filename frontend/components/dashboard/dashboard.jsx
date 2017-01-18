@@ -5,11 +5,11 @@ import PostsContainer from './posts/posts_container';
 import NewPostNav from './new_post_nav';
 import SidebarContainer from './sidebar/sidebar_container'
 
-const Dashboard = ({ currentUser, logout, children }) => (
+const Dashboard = ({ currentUser, logout, children, params }) => (
   <div className="dashboard">
       <HeaderContainer />
       <NewPostNav />
-      <PostsContainer userid={this.props.params.user_id}/>
+      <PostsContainer userid={params.user_id}/>
       <SidebarContainer />
     {children}
   </div>

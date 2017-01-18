@@ -35,9 +35,8 @@ const Root = ({ store }) => {
           <IndexRoute component={FrontPageContainer} onEnter={_redirectIfLoggedIn}/>
           <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn}/>
           <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn}/>
-          <Route path="/dashboard" component={DashboardContainer} onEnter={_ensureLoggedIn}>
-            <Route path="/blog/:user_id" component={DashboardContainer} onEnter={_ensureLoggedIn}/>
-          </Route>
+          <Route path="/dashboard" component={DashboardContainer} onEnter={_ensureLoggedIn} />
+          <Route path="/blog/:user_id" component={DashboardContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/new/:post_type" component={PostFormMain} onEnter={_ensureLoggedIn}/>
           <Route path="/edit/:post_id" component={EditPostFormMain} onEnter={_ensureLoggedIn}/>
           <Route path="/settings/avatar" component={EditUserFormMain} onEnter={_ensureLoggedIn}/>
