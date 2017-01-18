@@ -10,7 +10,7 @@ const Dashboard = ({ currentUser, logout, children, params }) => (
       <HeaderContainer />
       <NewPostNav />
       <PostsContainer userid={params.user_id}/>
-      <SidebarContainer />
+      <SidebarContainer userid={params.user_id}/>
     {children}
   </div>
 );
