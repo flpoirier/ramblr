@@ -9,7 +9,11 @@ class Posts extends React.Component {
   }
 
   componentDidMount() {
-    this.props.requestPosts();
+    if (typeof this.props.userid !== 'undefined') {
+      this.props.requestPosts(this.props.userid);
+    } else {
+      this.props.requestPosts("none");
+    }
   }
 
   posts() {

@@ -13,8 +13,9 @@ export const receivePosts = posts => ({
   posts
 });
 
-export const requestPosts = () => ({
-  type: REQUEST_POSTS
+export const requestPosts = (user_id) => ({
+  type: REQUEST_POSTS,
+  user_id
 });
 
 export const createPost = (post, success) => ({

@@ -1,8 +1,12 @@
 class Api::PostsController < ApplicationController
 
   def index
-    @posts = (current_user.followed_posts + current_user.posts)
-    @posts.sort_by! { |post| post.created_at }.reverse!
+    if params[:user] == "none"
+      @posts = (current_user.followed_posts + current_user.posts)
+    else
+      @posts = Post.where(user_id: params[:user].to_i)
+    end
+    @posts = @posts.sort_by { |post| post.created_at }.reverse!
     render "api/posts/all"
   end
 

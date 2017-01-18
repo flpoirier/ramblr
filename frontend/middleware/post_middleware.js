@@ -22,7 +22,7 @@ export default ({ getState, dispatch }) => next => action => {
 
   switch(action.type) {
     case REQUEST_POSTS:
-      fetchPosts(postsSuccess);
+      fetchPosts(action.user_id, postsSuccess);
       break;
     case GET_POST:
       getPost(action.post.id, editSuccess);
