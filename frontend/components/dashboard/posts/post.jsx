@@ -14,9 +14,9 @@ class Post extends React.Component {
   text() {
     return (
       <div className="post group">
-        <img className="author-image" src={this.props.post.thumbnail} />
+        <a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}><img className="author-image" src={this.props.post.thumbnail} /></a>
         <div className="post-body">
-          <div className="post-author">{this.props.post.author}</div>
+          <div className="post-author"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
           <h1>{this.props.post.title}</h1>
           <p>{this.props.post.body}</p>
           <div className="post-notes">{this.props.post.date_display}</div>
@@ -31,9 +31,9 @@ class Post extends React.Component {
   link() {
     return (
       <div className="post group">
-        <img className="author-image" src={this.props.post.thumbnail} />
+        <a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}><img className="author-image" src={this.props.post.thumbnail} /></a>
         <div className="post-body">
-          <div className="post-author">{this.props.post.author}</div>
+          <div className="post-author"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
           <h1 className="link-post"><a href={`http://${this.props.post.link}`}>{this.props.post.link}</a></h1>
           <p className="post-commentary">-- {this.props.post.commentary}</p>
           <div className="post-notes">{this.props.post.date_display}</div>
@@ -46,9 +46,9 @@ class Post extends React.Component {
   image() {
     return (
       <div className="post group">
-        <img className="author-image" src={this.props.post.thumbnail} />
+        <a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}><img className="author-image" src={this.props.post.thumbnail} /></a>
         <div className="post-body">
-          <div className="post-author">{this.props.post.author}</div>
+          <div className="post-author"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
           <img src={this.props.post.image} />
           <p className="post-commentary">-- {this.props.post.commentary}</p>
           <div className="post-notes">{this.props.post.date_display}</div>
@@ -61,9 +61,9 @@ class Post extends React.Component {
   audio() {
     return (
       <div className="post group">
-        <img className="author-image" src={this.props.post.thumbnail} />
+        <a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}><img className="author-image" src={this.props.post.thumbnail} /></a>
         <div className="post-body">
-          <div className="post-author">{this.props.post.author}</div>
+          <div className="post-author"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
 
           <video controls height="30px" width="500px" >
             <source src={this.props.post.audio} type="audio/mpeg"></source>
@@ -80,9 +80,9 @@ class Post extends React.Component {
   video() {
     return (
       <div className="post group">
-        <img className="author-image" src={this.props.post.thumbnail} />
+        <a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}><img className="author-image" src={this.props.post.thumbnail} /></a>
         <div className="post-body">
-          <div className="post-author">{this.props.post.author}</div>
+          <div className="post-author"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
 
           <video controls width="500px" >
             <source src={this.props.post.video} type="audio/mpeg"></source>
@@ -99,9 +99,9 @@ class Post extends React.Component {
   quote() {
     return (
       <div className="post group">
-        <img className="author-image" src={this.props.post.thumbnail} />
+        <a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}><img className="author-image" src={this.props.post.thumbnail} /></a>
         <div className="post-body">
-          <div className="post-author">{this.props.post.author}</div>
+          <div className="post-author"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
           <h1>"{this.props.post.quote}"</h1>
           <p className="post-commentary">-- {this.props.post.commentary}</p>
           <div className="post-notes">{this.props.post.date_display}</div>
