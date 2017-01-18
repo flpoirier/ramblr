@@ -9,7 +9,7 @@ const Dashboard = ({ currentUser, logout, children }) => (
   <div className="dashboard">
       <HeaderContainer />
       <NewPostNav />
-      <PostsContainer />
+      <PostsContainer userid={this.props.params.user_id}/>
       <SidebarContainer />
     {children}
   </div>
