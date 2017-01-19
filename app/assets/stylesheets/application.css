@@ -431,6 +431,11 @@ fill the page height automatically!*/
   clear: right;
 }
 
+.sidebar-pic:hover {
+  cursor: pointer;
+  border: 2px solid blue;
+}
+
 .follow-button {
   margin: 15px 3px;
   float: right;
@@ -448,6 +453,11 @@ fill the page height automatically!*/
   margin: 15px 10px;
   float: left;
   display: block;
+}
+
+.sidebar-username:hover {
+  color: blue;
+  cursor: pointer;
 }
 
 .new-post-container {
