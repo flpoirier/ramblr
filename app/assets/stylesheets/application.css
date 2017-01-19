@@ -131,6 +131,11 @@ button {
   border-radius: 5px;
 }
 
+.author-image:hover {
+  cursor: pointer;
+  border: 2px solid blue;
+}
+
 .post {
   clear: both;
 }
