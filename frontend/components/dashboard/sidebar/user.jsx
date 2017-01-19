@@ -21,9 +21,11 @@ class User extends React.Component {
     return (
       <div className="sidebar-users">
         <a href={`http://www.ramblr.cc/blog/${this.props.user.id}`}><img className="sidebar-pic" src={this.props.user.avatar} /></a>
-        <div className="sidebar-username"><a href={`http://www.ramblr.cc/blog/${this.props.user.id}`}>{this.props.user.username}</a></div>
-        <button className="follow-button" onClick={this.unfollow}><i className="fa fa-minus" aria-hidden="true" /></button>
-        <button className="follow-button" onClick={this.follow}><i className="fa fa-plus" aria-hidden="true" /></button>
+        <div className="sidebar-users-2">
+          <a className="sidebar-username" href={`http://www.ramblr.cc/blog/${this.props.user.id}`}>{this.props.user.username}</a>
+          <br />
+          <button className="follow-text" onClick={this.follow}>Follow</button>
+        </div>
       </div>
     );
   }

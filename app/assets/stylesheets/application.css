@@ -448,11 +448,28 @@ fill the page height automatically!*/
   /*font-size: 15px;*/
 }
 
-.sidebar-username {
-  font-weight: bold;
+.follow-text {
+  /*display: block;*/
+  /*border: 1px solid red;*/
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.follow-text:hover {
+  cursor: pointer;
+  color: green;
+}
+
+.sidebar-users-2 {
   margin: 15px 10px;
   float: left;
   display: block;
+}
+
+.sidebar-username {
+  font-weight: bold;
+  font-size: 16px;
+  /*border: 1px solid green;*/
 }
 
 .sidebar-username:hover {
