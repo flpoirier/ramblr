@@ -121,7 +121,7 @@ class Post extends React.Component {
           <button className="fa-button" onClick={this.delete}><i className="fa fa-trash" aria-hidden="true" /></button>
           <button className="fa-button"><a href={`edit/${this.props.post.id}`}><i className="fa fa-pencil-square-o " aria-hidden="true" /></a></button>
           {this.likeIcon()}
-          <div className="fa-button">{this.props.post.likes.length} likes</div>
+          <div className="num-likes">{this.props.post.likes.length} likes</div>
         </div>
       );
     } else {
