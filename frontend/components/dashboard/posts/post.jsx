@@ -14,7 +14,7 @@ class Post extends React.Component {
   text() {
     return (
       <div className="post group">
-        <a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}><img className="author-image" src={this.props.post.thumbnail} /></a>
+        <img className="author-image" src={this.props.post.thumbnail} />
         <div className="post-body">
           <div className="post-author"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
           <h1>{this.props.post.title}</h1>
@@ -31,7 +31,7 @@ class Post extends React.Component {
   link() {
     return (
       <div className="post group">
-        <a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}><img className="author-image" src={this.props.post.thumbnail} /></a>
+        <img className="author-image" src={this.props.post.thumbnail} />
         <div className="post-body">
           <div className="post-author"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
           <h1 className="link-post"><a href={`http://${this.props.post.link}`}>{this.props.post.link}</a></h1>
@@ -46,7 +46,7 @@ class Post extends React.Component {
   image() {
     return (
       <div className="post group">
-        <a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}><img className="author-image" src={this.props.post.thumbnail} /></a>
+        <img className="author-image" src={this.props.post.thumbnail} />
         <div className="post-body">
           <div className="post-author"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
           <img src={this.props.post.image} />
@@ -61,7 +61,7 @@ class Post extends React.Component {
   audio() {
     return (
       <div className="post group">
-        <a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}><img className="author-image" src={this.props.post.thumbnail} /></a>
+        <img className="author-image" src={this.props.post.thumbnail} />
         <div className="post-body">
           <div className="post-author"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
 
@@ -80,7 +80,7 @@ class Post extends React.Component {
   video() {
     return (
       <div className="post group">
-        <a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}><img className="author-image" src={this.props.post.thumbnail} /></a>
+        <img className="author-image" src={this.props.post.thumbnail} />
         <div className="post-body">
           <div className="post-author"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
 
@@ -99,7 +99,7 @@ class Post extends React.Component {
   quote() {
     return (
       <div className="post group">
-        <a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}><img className="author-image" src={this.props.post.thumbnail} /></a>
+      <img className="author-image" src={this.props.post.thumbnail} />
         <div className="post-body">
           <div className="post-author"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
           <h1>"{this.props.post.quote}"</h1>
