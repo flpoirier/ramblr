@@ -6,6 +6,7 @@ Rails.application.routes.draw do
         delete 'follow', to: 'users#unfollow'
       end
     end
+    resources :follows, only: :index
     resource :session, only: [:create, :destroy]
     resources :posts, only: [:index, :create, :show, :update, :destroy] do
       member do

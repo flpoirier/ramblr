@@ -13,3 +13,11 @@ export const unfollow = (user, success) => {
     success
   });
 };
+
+export const fetchFollows = (success) => {
+  $.ajax({
+    method: 'GET',
+    url: 'api/follows',
+    success
+  });
+};
