@@ -7,18 +7,23 @@ class User extends React.Component {
     super(props);
     this.follow = this.follow.bind(this);
     this.unfollow = this.unfollow.bind(this);
+    this.state = {
+      following: this.props.following
+    };
   }
 
   follow() {
     this.props.followUser(this.props.user);
+    this.setState({following: true});
   }
 
   unfollow() {
     this.props.unfollowUser(this.props.user);
+    this.setState({following: false});
   }
 
   render() {
-    if (this.props.following === false) {
+    if (this.state.following === false) {
       return (
         <div className="sidebar-users">
           <a href={`http://www.ramblr.cc/blog/${this.props.user.id}`}><img className="sidebar-pic" src={this.props.user.avatar} /></a>
