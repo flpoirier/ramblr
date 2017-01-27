@@ -18,16 +18,29 @@ class User extends React.Component {
   }
 
   render() {
-    return (
-      <div className="sidebar-users">
-        <a href={`http://www.ramblr.cc/blog/${this.props.user.id}`}><img className="sidebar-pic" src={this.props.user.avatar} /></a>
-        <div className="sidebar-users-2">
-          <a className="sidebar-username" href={`http://www.ramblr.cc/blog/${this.props.user.id}`}>{this.props.user.username}</a>
-          <br />
-          <button className="follow-text" onClick={this.follow}>Follow</button>
+    if (this.props.following === false) {
+      return (
+        <div className="sidebar-users">
+          <a href={`http://www.ramblr.cc/blog/${this.props.user.id}`}><img className="sidebar-pic" src={this.props.user.avatar} /></a>
+          <div className="sidebar-users-2">
+            <a className="sidebar-username" href={`http://www.ramblr.cc/blog/${this.props.user.id}`}>{this.props.user.username}</a>
+            <br />
+            <button className="follow-text" onClick={this.follow}>Follow</button>
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div className="sidebar-users">
+          <a href={`http://www.ramblr.cc/blog/${this.props.user.id}`}><img className="sidebar-pic" src={this.props.user.avatar} /></a>
+          <div className="sidebar-users-2">
+            <a className="sidebar-username" href={`http://www.ramblr.cc/blog/${this.props.user.id}`}>{this.props.user.username}</a>
+            <br />
+            <button className="follow-text" onClick={this.unfollow}>Unfollow</button>
+          </div>
+        </div>
+      );
+    }
   }
 
 }

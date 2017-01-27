@@ -9,16 +9,18 @@ class Sidebar extends React.Component {
   }
 
   componentDidMount() {
-    this.props.requestUsers();
     this.props.getFollows();
+    this.props.requestUsers();
   }
 
-  following?(user) {
-    if (this.props.follows.includes((follow) => follow.followed_user_id === user.id)) {
-      return true;
-    } else {
-      return false;
-    }
+  following(user) {
+    let usr_following = false;
+    this.props.follows.forEach((follow) => {
+      if (follow.followed_user_id === user.id) {
+        usr_following = true;
+      }
+    });
+    return usr_following;
   }
 
   users() {
@@ -27,7 +29,7 @@ class Sidebar extends React.Component {
         <h1>Recommended Users</h1><br />
         <div className="sidebar">
           <div className="sidebar-all-users">
-            {this.props.users.map((user) => <UserContainer key={user.id} user={user} />)}
+            {this.props.users.map((user) => <UserContainer key={user.id} user={user} following={this.following(user)}/>)}
           </div>
         </div>
       </div>
