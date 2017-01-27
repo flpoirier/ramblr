@@ -150,15 +150,31 @@ button {
   background: rgba(255, 255, 255, 0.85);
 }
 
-.post-author {
+.post-author-section {
+  display: block;
+}
+
+.post-author-name {
   font-weight: bold;
   font-size: 20px;
+  float: left;
   padding: 0 0 10px 0;
 }
 
-.post-author:hover {
+.post-author-name:hover {
   cursor: pointer;
   color: blue;
+}
+
+.post-header-unfollow {
+  font-weight: lighter;
+  font-size: 20px;
+  float: right;
+}
+
+.post-header-unfollow:hover {
+  cursor: pointer;
+  color: green;
 }
 
 .post-body h1 {
