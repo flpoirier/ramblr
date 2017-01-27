@@ -29,7 +29,7 @@ class Sidebar extends React.Component {
         <h1>Recommended Users</h1><br />
         <div className="sidebar">
           <div className="sidebar-all-users">
-            {this.props.users.map((user) => <UserContainer key={user.id} user={user} following={this.following(user)}/>)}
+            {this.props.users.slice(0,4).map((user) => <UserContainer key={user.id} user={user} following={this.following(user)}/>)}
           </div>
         </div>
       </div>
