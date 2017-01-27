@@ -10,6 +10,15 @@ class Sidebar extends React.Component {
 
   componentDidMount() {
     this.props.requestUsers();
+    this.props.getFollows();
+  }
+
+  following?(user) {
+    if (this.props.follows.includes((follow) => follow.followed_user_id === user.id)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   users() {
