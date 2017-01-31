@@ -23,13 +23,23 @@ class Sidebar extends React.Component {
     return usr_following;
   }
 
+  user_selection() {
+    let users = [];
+    this.props.users.forEach((user) => {
+      if (!this.following(user)) {
+        users.push(user);
+      }
+    });
+    return users;
+  }
+
   users() {
     return (
       <div className="sidebar-all">
         <h1>Recommended Users</h1><br />
         <div className="sidebar">
           <div className="sidebar-all-users">
-            {this.props.users.slice(0,5).map((user) => <UserContainer key={user.id} user={user} following={this.following(user)}/>)}
+            {this.user_selection().slice(0,5).map((user) => <UserContainer key={user.id} user={user} following={this.following(user)}/>)}
           </div>
         </div>
       </div>
