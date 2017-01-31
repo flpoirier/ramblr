@@ -15,6 +15,7 @@ class User extends React.Component {
   follow() {
     this.props.followUser(this.props.user);
     this.setState({following: true});
+    this.props.updateSidebar(this.props.user);
   }
 
   unfollow() {

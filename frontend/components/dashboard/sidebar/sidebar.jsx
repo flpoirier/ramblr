@@ -6,11 +6,21 @@ class Sidebar extends React.Component {
 
   constructor(props) {
     super(props);
+    this.updateSidebar = this.updateSidebar.bind(this);
+    this.state = {
+      users: []
+    };
   }
 
   componentDidMount() {
     this.props.getFollows();
     this.props.requestUsers();
+  }
+
+  componentWillReceiveProps() {
+    if (this.props.users) {
+      this.setState({users: this.props.users});
+    }
   }
 
   following(user) {
@@ -25,12 +35,20 @@ class Sidebar extends React.Component {
 
   user_selection() {
     let users = [];
-    this.props.users.forEach((user) => {
+    this.state.users.forEach((user) => {
       if (!this.following(user)) {
         users.push(user);
       }
     });
     return users;
+  }
+
+  updateSidebar(user) {
+    let usrs = this.state.users;
+    let idx = usrs.indexOf(user);
+    usrs.splice(idx, 1);
+    this.setState({users: usrs});
+
   }
 
   users() {
@@ -39,7 +57,7 @@ class Sidebar extends React.Component {
         <h1>Recommended Users</h1><br />
         <div className="sidebar">
           <div className="sidebar-all-users">
-            {this.user_selection().slice(0,5).map((user) => <UserContainer key={user.id} user={user} following={this.following(user)}/>)}
+            {this.user_selection().slice(0,5).map((user) => <UserContainer key={user.id} user={user} following={this.following(user)} updateSidebar={this.updateSidebar}/>)}
           </div>
         </div>
       </div>
