@@ -152,13 +152,22 @@ button {
 
 .post-author-section {
   display: block;
+  padding: 0 0 10px 0;
+  /*border: 1px solid purple;*/
+}
+
+.post-author-section:after {
+  content: ""; /* Empty content string */
+  display: block; /* Only block elements can clear */
+  clear: both;
 }
 
 .post-author-name {
   font-weight: bold;
   font-size: 20px;
   float: left;
-  padding: 0 0 10px 0;
+  /*border: 1px solid red;*/
+  /*padding: 0 0 10px 0;*/
 }
 
 .post-author-name:hover {
@@ -168,8 +177,10 @@ button {
 
 .post-header-unfollow {
   font-weight: lighter;
-  font-size: 20px;
+  font-size: 15px;
   float: right;
+  /*border: 1px solid green;*/
+  padding: 3px 0px;
 }
 
 .post-header-unfollow:hover {
