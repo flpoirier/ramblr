@@ -27,7 +27,12 @@ class Post extends React.Component {
   }
 
   follow_text() {
-    if (this.state.following) {
+    if (this.state.following === "self") {
+      return (
+        <div className="post-header-unfollow"></div>
+      );
+    }
+    else if (this.state.following) {
       return (
         <div className="post-header-unfollow" onClick={this.unfollow}>Unfollow</div>
       );
