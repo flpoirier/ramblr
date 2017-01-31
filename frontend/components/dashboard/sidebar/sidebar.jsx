@@ -50,9 +50,14 @@ class Sidebar extends React.Component {
     let undispUsers = this.state.undisplayedUsers;
     let dispUsers = this.state.displayedUsers;
     let idx = dispUsers.indexOf(user);
-    dispUsers[idx] = undispUsers[0];
-    this.setState({displayedUsers: dispUsers});
-    this.setState({undisplayedUsers: undispUsers.slice(1)});
+    if (undispUsers.length > 0) {
+      dispUsers[idx] = undispUsers[0];
+      this.setState({displayedUsers: dispUsers});
+      this.setState({undisplayedUsers: undispUsers.slice(1)});
+    } else {
+      dispUsers.splice(idx, 1);
+      this.setState({displayedUsers: dispUsers});
+    }
   }
 
   users() {
