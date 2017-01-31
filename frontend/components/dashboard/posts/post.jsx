@@ -9,6 +9,33 @@ class Post extends React.Component {
     this.like = this.like.bind(this);
     this.dislike = this.dislike.bind(this);
     this.likeIcon = this.likeIcon.bind(this);
+    this.follow = this.follow.bind(this);
+    this.unfollow = this.unfollow.bind(this);
+    this.state = {
+      following: this.props.following
+    };
+  }
+
+  follow() {
+    this.props.followUser({id: this.props.post.user_id});
+    this.setState({following: true});
+  }
+
+  unfollow() {
+    this.props.unfollowUser({id: this.props.post.user_id});
+    this.setState({following: false});
+  }
+
+  follow_text() {
+    if (this.state.following) {
+      return (
+        <div className="post-header-unfollow" onClick={this.unfollow}>Unfollow</div>
+      );
+    } else {
+      return (
+        <div className="post-header-unfollow"  onClick={this.follow}>Follow</div>
+      );
+    }
   }
 
   text() {
@@ -18,7 +45,7 @@ class Post extends React.Component {
         <div className="post-body">
           <div className="post-author-section">
             <div className="post-author-name"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
-            <div className="post-header-unfollow">Unfollow</div>
+            {this.follow_text()}
           </div>
           <h1>{this.props.post.title}</h1>
           <p>{this.props.post.body}</p>
@@ -38,7 +65,7 @@ class Post extends React.Component {
         <div className="post-body">
           <div className="post-author-section">
             <div className="post-author-name"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
-            <div className="post-header-unfollow">Unfollow</div>
+            {this.follow_text()}
           </div>
           <h1 className="link-post"><a href={`http://${this.props.post.link}`}>{this.props.post.link}</a></h1>
           <p className="post-commentary">-- {this.props.post.commentary}</p>
@@ -56,7 +83,7 @@ class Post extends React.Component {
         <div className="post-body">
           <div className="post-author-section">
             <div className="post-author-name"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
-            <div className="post-header-unfollow">Unfollow</div>
+            {this.follow_text()}
           </div>
           <img src={this.props.post.image} />
           <p className="post-commentary">-- {this.props.post.commentary}</p>
@@ -74,7 +101,7 @@ class Post extends React.Component {
         <div className="post-body">
           <div className="post-author-section">
             <div className="post-author-name"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
-            <div className="post-header-unfollow">Unfollow</div>
+            {this.follow_text()}
           </div>
 
           <video controls height="30px" width="500px" >
@@ -96,7 +123,7 @@ class Post extends React.Component {
         <div className="post-body">
           <div className="post-author-section">
             <div className="post-author-name"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
-            <div className="post-header-unfollow">Unfollow</div>
+            {this.follow_text()}
           </div>
 
           <video controls width="500px" >
@@ -118,7 +145,7 @@ class Post extends React.Component {
         <div className="post-body">
           <div className="post-author-section">
             <div className="post-author-name"><a href={`http://www.ramblr.cc/blog/${this.props.post.user_id}`}>{this.props.post.author}</a></div>
-            <div className="post-header-unfollow">Unfollow</div>
+            {this.follow_text()}
           </div>
           <h1>"{this.props.post.quote}"</h1>
           <p className="post-commentary">-- {this.props.post.commentary}</p>

@@ -9,6 +9,7 @@ class Posts extends React.Component {
   }
 
   componentDidMount() {
+    this.props.getFollows();
     if (typeof this.props.userid !== 'undefined') {
       this.props.requestPosts(this.props.userid);
     } else {
@@ -16,10 +17,20 @@ class Posts extends React.Component {
     }
   }
 
+  following(user_id) {
+    let usr_following = false;
+    this.props.follows.forEach((follow) => {
+      if (follow.followed_user_id === user_id) {
+        usr_following = true;
+      }
+    });
+    return usr_following;
+  }
+
   posts() {
     return (
       <div className="posts">
-        {this.props.posts.map((post) => <PostContainer key={post.id} post={post} />)}
+        {this.props.posts.map((post) => <PostContainer key={post.id} post={post} following={this.following(post.user_id)}/>)}
       </div>
     );
   }
