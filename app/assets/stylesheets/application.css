@@ -111,7 +111,7 @@ button {
   font-family: sans-serif;
   font-size: 18px;
   color: #000;
-  width: 1010px;
+  width: 986px;
   min-height: 1000px;
   margin: 0 auto;
   font-weight: normal;
@@ -138,16 +138,19 @@ button {
 
 .post {
   clear: both;
+  /*border: 1px solid orange;*/
+  padding-right: 0px;
 }
 
 .post-body {
   float: left;
-  margin: 20px;
+  margin: 20px 0px 20px 20px;
   padding: 15px 20px 20px 20px;
   width: 500px;
   border: 2px solid black;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.85);
+  /*border: 1px solid green;*/
 }
 
 .post-author-section {
@@ -397,9 +400,9 @@ fill the page height automatically!*/
 }
 
 .sidebar-all {
-  float: right;
+  float: left;
   width: 300px;
-  margin: 20px;
+  margin: 20px 20px 20px 20px;
   /*border: 1px solid purple;*/
 }
 
@@ -408,7 +411,7 @@ fill the page height automatically!*/
   font-size: 18px;
   padding: 5px;
   background: rgba(255, 255, 255, 0.4);
-  width: 295px;
+  width: 285px;
   /*border: 1px solid #aaa;*/
   border: 2px solid black;
   border-radius: 5px;
@@ -424,7 +427,7 @@ fill the page height automatically!*/
 .sidebar-users {
   clear: both;
   float: left;
-  width: 295px;
+  width: 285px;
   background: rgba(255, 255, 255, 0.4);
   padding: 5px;
   border-left: 2px solid black;
@@ -446,6 +449,7 @@ fill the page height automatically!*/
 
 .posts {
   float: left;
+  /*border: 1px solid red;*/
 }
 
 .sidebar-pic {
