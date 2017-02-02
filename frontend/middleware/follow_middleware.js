@@ -5,7 +5,13 @@ import { receivePosts } from '../actions/post_actions';
 
 export default ({ getState, dispatch }) => next => action => {
 
-  const success = (posts) => { dispatch(receivePosts(posts)); };
+  const success = (posts) => {
+    debugger
+    if (action.user.dashboard !== false) {
+      dispatch(receivePosts(posts));
+    }
+  };
+
   const followSuccess = (follows) => { dispatch(receiveFollows(follows)); };
 
   const result = next(action);

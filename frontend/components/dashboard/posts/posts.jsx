@@ -17,6 +17,15 @@ class Posts extends React.Component {
     }
   }
 
+  onDashboard() {
+    if (typeof this.props.userid !== 'undefined') {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+
   following(user_id) {
     let usr_following = false;
     this.props.follows.forEach((follow) => {
@@ -32,7 +41,7 @@ class Posts extends React.Component {
   posts() {
     return (
       <div className="posts">
-        {this.props.posts.map((post) => <PostContainer key={post.id} post={post} following={this.following(post.user_id)}/>)}
+        {this.props.posts.map((post) => <PostContainer key={post.id} post={post} following={this.following(post.user_id)} dashboard={this.onDashboard()}/>)}
       </div>
     );
   }

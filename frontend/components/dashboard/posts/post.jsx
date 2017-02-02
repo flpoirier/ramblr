@@ -17,12 +17,12 @@ class Post extends React.Component {
   }
 
   follow() {
-    this.props.followUser({id: this.props.post.user_id});
+    this.props.followUser({id: this.props.post.user_id, dashboard: this.props.dashboard});
     this.setState({following: true});
   }
 
   unfollow() {
-    this.props.unfollowUser({id: this.props.post.user_id});
+    this.props.unfollowUser({id: this.props.post.user_id, dashboard: this.props.dashboard});
     this.setState({following: false});
   }
 
