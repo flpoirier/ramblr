@@ -48,8 +48,7 @@ body {
   box-sizing: content-box;
   /*background: url("https://static.pexels.com/photos/5439/earth-space.jpg") no-repeat center center fixed;*/
   /*background: #36465d;*/
-  background: image-url("earth-space.jpg") no-repeat center center fixed;
-  /*background: url(<%= asset_path 'earth-space.jpg' %>) no-repeat center center fixed;*/
+  background: url("/assets/earth-space.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
