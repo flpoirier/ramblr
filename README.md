@@ -6,7 +6,7 @@ Ramblr is a social media site inspired by <a href="http://www.tumblr.com">tumblr
 
 <hr>
 
-As of February 2017, Ramblr's features include:
+As of March 2017, Ramblr's features include:
 
 - Account creation, user authentication, and guest account login.
 
