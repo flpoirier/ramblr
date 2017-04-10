@@ -67,7 +67,7 @@ body {
 
   height: 100vh;
 
-  background: url("https://static.pexels.com/photos/3853/sunny-sand-desert-hiking.jpeg");
+  background: url("https://upload.wikimedia.org/wikipedia/commons/2/2a/Mission_Mountains_National_Bison_Range_Montana.jpg");
   background-size: cover;
 }
 
@@ -252,22 +252,24 @@ button {
 
 
 .login-form-parent {
-  /*why does having this make everything work even though I'm not doing anything with it????*/
+
+  display: flex;
+  flex-flow: column;
+
+  height: 100vh;
+
+  background: url("https://static.pexels.com/photos/3853/sunny-sand-desert-hiking.jpeg");
+  background-size: cover;
 }
 
 .login-form-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 700px;
+  height: 100vh;
+  min-width: 350px;
+  min-height: 350px;
 }
-
-/*.login-form-box {
-  flex: none;
-  border: 5px solid black;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 50px;
-}*/
 
 
 .login-form-box {
