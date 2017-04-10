@@ -46,7 +46,7 @@ Post.create(user_id: miya, post_type: "image", image: "https://img.buzzfeed.com/
 
 Post.create(user_id: dfw, post_type: "quote", quote: "Fiction is one of the few experiences where loneliness can be both confronted and relieved. Drugs, movies where stuff blows up, loud parties -- all these chase away loneliness by making me forget my name's Dave and I live in a one-by-one box of bone no other party can penetrate or know. Fiction, poetry, music, really deep serious sex, and, in various ways, religion -- these are the places (for me) where loneliness is countenanced, stared down, transfigured, treated.", commentary: "David Foster Wallace")
 
-Post.create(user_id: beauty, post_type: "image", image: "http://www.savilerowtravel.com/assets/tour/multi/large/sikh-pa-diwali-amritsar.jpg", commentary: "Diwali, the Festival of Lights, is one of India’s most famous festivals and this year it will take place between 24 October to 2 November 2016.")
+# Post.create(user_id: beauty, post_type: "image", image: "http://www.savilerowtravel.com/assets/tour/multi/large/sikh-pa-diwali-amritsar.jpg", commentary: "Diwali, the Festival of Lights, is one of India’s most famous festivals and this year it will take place between 24 October to 2 November 2016.")
 
 Post.create(user_id: dril, post_type: "text", body: 'the way i see it, people who come on here and submit content that is not up to par, could possibly be considered the "Villains" of this site')
 

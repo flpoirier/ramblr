@@ -30,12 +30,13 @@ class FrontPage extends React.Component {
 
   render() {
     return (
-      <span className="splash-parent">
-        <div className="splash-pane">
-          <div className="header-link"><h1>ramblr.</h1></div>
-          {this.sessionLinks()}
-        </div>
-      </span>
+      <div className="front-page">
+        <span className="splash-parent">
+            <div className="header-link"><h1>ramblr.</h1></div>
+            {this.sessionLinks()}
+        </span>
+      </div>
+
     );
   }
 
