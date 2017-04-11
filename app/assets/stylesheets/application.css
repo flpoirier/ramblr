@@ -77,7 +77,7 @@ body {
   height: 100vh;
 
   background: url("https://static.pexels.com/photos/5439/earth-space.jpg");
-  background-size: cover;
+  background-size: cover !important;
 }
 
 
