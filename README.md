@@ -4,6 +4,8 @@ Ramblr is a social media site inspired by <a href="http://www.tumblr.com">tumblr
 
 (<a href="http://www.ramblr.cc/">Live version</a>)
 
+All front pages images are courtesy of <a href="http://www.pexels.com/">Pexels.com</a>.
+
 <hr>
 
 As of March 2017, Ramblr's features include:
@@ -60,7 +62,7 @@ The Ramblr database currently includes 4 models:
 
 1. USERS: store a username, a password digest, a session token, and an avatar (userpic). USERS have many POSTS, FOLLOWS and LIKES.
 
-2. POSTS: store a user_id, a post type, a timestamp, and 8 (optional) content fields: 'title' and 'body' (for text posts); 'link', 'quote', 'image', 'audio', and 'video' (for posts of those types); and 'commentary' (for every type of post except text). 
+2. POSTS: store a user_id, a post type, a timestamp, and 8 (optional) content fields: 'title' and 'body' (for text posts); 'link', 'quote', 'image', 'audio', and 'video' (for posts of those types); and 'commentary' (for every type of post except text).
 
 3. LIKES: store a user_id and a post_id. LIKES will belong to POSTS and USERS.
 
