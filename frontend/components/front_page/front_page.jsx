@@ -58,8 +58,12 @@ class FrontPage extends React.Component {
 
   componentDidMount() {
     this.props.clearErrors();
-    setInterval(this.setImage, 7500);
+    this.interval = setInterval(this.setImage, 7500);
     this.loadImage();
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   sessionLinks() {
