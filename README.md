@@ -4,7 +4,7 @@ Ramblr is a social media site inspired by <a href="http://www.tumblr.com">tumblr
 
 (<a href="http://www.ramblr.cc/">Live version</a>)
 
-All front pages images are courtesy of <a href="http://www.pexels.com/">Pexels.com</a>.
+All front page images courtesy of <a href="http://www.pexels.com/">Pexels.com</a>.
 
 <hr>
 
