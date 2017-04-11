@@ -12,7 +12,20 @@ class FrontPage extends React.Component {
       "url(https://static.pexels.com/photos/3853/sunny-sand-desert-hiking.jpeg)",
       "url(https://static.pexels.com/photos/3247/nature-forest-industry-rails.jpg)",
       "url(https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg)",
-      "url(https://upload.wikimedia.org/wikipedia/commons/2/2a/Mission_Mountains_National_Bison_Range_Montana.jpg)" ]
+      "url(https://upload.wikimedia.org/wikipedia/commons/2/2a/Mission_Mountains_National_Bison_Range_Montana.jpg)",
+      "url(https://static.pexels.com/photos/158607/cairn-fog-mystical-background-158607.jpeg)",
+      "url(https://static.pexels.com/photos/39811/pexels-photo-39811.jpeg)",
+      "url(https://static.pexels.com/photos/128458/pexels-photo-128458.jpeg)",
+      "url(https://static.pexels.com/photos/66874/landscape-meadow-field-mountains-66874.jpeg)",
+      "url(https://static.pexels.com/photos/12567/photo-1444703686981-a3abbc4d4fe3.jpeg)",
+      "url(https://static.pexels.com/photos/259474/pexels-photo-259474.jpeg)",
+      "url(https://static.pexels.com/photos/207130/pexels-photo-207130.jpeg)",
+      "url(https://static.pexels.com/photos/132983/pexels-photo-132983.jpeg)",
+      "url(https://static.pexels.com/photos/29732/pexels-photo-29732.jpg)",
+      "url(https://static.pexels.com/photos/30360/pexels-photo-30360.jpg)",
+      "url(https://static.pexels.com/photos/1440/city-road-street-buildings.jpg)",
+      "url(https://static.pexels.com/photos/6870/city-dark-new-york-bridge.jpg)"
+      ]
     };
   }
 
@@ -22,7 +35,6 @@ class FrontPage extends React.Component {
 
   componentDidMount() {
     this.props.clearErrors();
-    this.getRandomBackground();
   }
 
   sessionLinks() {
