@@ -35,7 +35,7 @@ class FrontPage extends React.Component {
 
   loadImage() {
     let idx = this.state.imageIdx + 1;
-    if (idx > this.state.images.length) {
+    if (idx >= this.state.images.length) {
       idx = 0;
     }
     let image = new Image();
@@ -44,7 +44,7 @@ class FrontPage extends React.Component {
 
   setImage() {
     let idx = this.state.imageIdx + 1;
-    if (idx > this.state.images.length) {
+    if (idx >= this.state.images.length) {
       idx = 0;
     }
     this.setState({
