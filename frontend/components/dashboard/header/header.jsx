@@ -10,8 +10,8 @@ class Header extends React.Component {
 
   __handleClick() {
     this.props.logout();
-    // this.props.router.push("/");
-    // window.location = "/";
+    this.props.router.push("/");
+    window.location = "/";
     // this is HACKY but it works, sigh
   }
 
