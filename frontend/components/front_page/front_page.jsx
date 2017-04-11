@@ -22,10 +22,10 @@ class FrontPage extends React.Component {
       "https://static.pexels.com/photos/259474/pexels-photo-259474.jpeg",
       "https://static.pexels.com/photos/207130/pexels-photo-207130.jpeg",
       "https://static.pexels.com/photos/1440/city-road-street-buildings.jpg"],
-      imageIdx: 0,
-      style: {
-        background: "url(https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg)"
-      }
+      imageIdx: Math.floor(Math.random() * 12)
+    };
+    this.state.style = {
+      background: "url(" + this.state.images[this.state.imageIdx] + ")"
     };
   }
 
