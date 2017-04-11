@@ -10,10 +10,10 @@ class FrontPage extends React.Component {
     this.loadImage = this.loadImage.bind(this);
     this.setImage = this.setImage.bind(this);
     this.state = { images: [
-      "https://static.pexels.com/photos/5439/earth-space.jpg",
+      "https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg",
       "https://static.pexels.com/photos/3853/sunny-sand-desert-hiking.jpeg",
       "https://static.pexels.com/photos/3247/nature-forest-industry-rails.jpg",
-      "https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg",
+      "https://static.pexels.com/photos/5439/earth-space.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mission_Mountains_National_Bison_Range_Montana.jpg",
       "https://static.pexels.com/photos/158607/cairn-fog-mystical-background-158607.jpeg",
       "https://static.pexels.com/photos/39811/pexels-photo-39811.jpeg",
@@ -24,7 +24,7 @@ class FrontPage extends React.Component {
       "https://static.pexels.com/photos/1440/city-road-street-buildings.jpg"],
       imageIdx: 0,
       style: {
-        background: "url(https://static.pexels.com/photos/5439/earth-space.jpg)"
+        background: "url(https://static.pexels.com/photos/6778/landscape-mountains-skyline-metal.jpg)"
       }
     };
   }
@@ -40,7 +40,6 @@ class FrontPage extends React.Component {
     }
     let image = new Image();
     image.src = this.state.images[idx];
-    return image;
   }
 
   setImage() {
