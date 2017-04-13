@@ -9,11 +9,34 @@ class Post extends React.Component {
     this.like = this.like.bind(this);
     this.dislike = this.dislike.bind(this);
     this.likeIcon = this.likeIcon.bind(this);
+    this.following = this.following.bind(this);
     this.follow = this.follow.bind(this);
     this.unfollow = this.unfollow.bind(this);
     this.state = {
-      following: this.props.following
+      follows: this.props.follows,
+      rcvd_follows: "no"
     };
+  }
+
+  componentWillReceiveProps() {
+    this.following();
+    this.setState({rcvd_follows: "yes"});
+  }
+
+  following() {
+    debugger
+    let usr_id = this.props.post.user_id;
+    let usr_following = false;
+    this.props.follows.forEach((follow) => {
+      if (follow.followed_user_id === usr_id) {
+        usr_following = true;
+      } else if (this.props.currentUser.id === usr_id) {
+        usr_following = "self";
+      }
+    });
+    this.setState({
+      following: usr_following
+    });
   }
 
   follow() {
@@ -27,7 +50,7 @@ class Post extends React.Component {
   }
 
   follow_text() {
-    if (this.state.following === "self") {
+    if (this.state.following === "self" || this.state.rcvd_follows === "no") {
       return (
         <div className="post-header-unfollow"></div>
       );

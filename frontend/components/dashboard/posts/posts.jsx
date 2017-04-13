@@ -41,7 +41,7 @@ class Posts extends React.Component {
   posts() {
     return (
       <div className="posts">
-        {this.props.posts.map((post) => <PostContainer key={post.id} post={post} following={this.following(post.user_id)} dashboard={this.onDashboard()}/>)}
+        {this.props.posts.map((post) => <PostContainer key={post.id} post={post} follows={this.props.follows} dashboard={this.onDashboard()}/>)}
       </div>
     );
   }

@@ -83,7 +83,7 @@ class Sidebar extends React.Component {
     if (typeof this.props.userid !== 'undefined') {
       return this.filler();
     }
-    if (this.props.users[0]) {
+    if (this.props.users[0] !== 'undefined') {
       return this.users();
     } else {
       return this.filler();
