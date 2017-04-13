@@ -30,10 +30,11 @@ class Post extends React.Component {
     this.props.follows.forEach((follow) => {
       if (follow.followed_user_id === usr_id) {
         usr_following = true;
-      } else if (this.props.currentUser.id === usr_id) {
-        usr_following = "self";
       }
     });
+    if (this.props.currentUser.id === usr_id) {
+      usr_following = "self";
+    }
     this.setState({
       following: usr_following
     });
