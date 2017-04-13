@@ -22,7 +22,7 @@
 
 User.create(username: "dfwquotes", seed: "true", password: "password", avatar: "http://66.media.tumblr.com/tumblr_kofjefKx031qzyafoo1_500.png")
 User.create(username: "icelandwantstobeyourfriend", seed: "true", password: "password", avatar: "https://media1.britannica.com/eb-media/23/138923-004-AD1DF3AE.jpg")
-User.create(username: "dril", password: "password", seed: "true", avatar: "https://pbs.twimg.com/profile_images/707320204280373248/3PJZnNgG_400x400.jpg")
+User.create(username: "dril", password: "password", seed: "true", avatar: "https://pbs.twimg.com/profile_images/847818629840228354/VXyQHfn0.jpg")
 User.create(username: "lemondemon", password: "password", seed: "true", avatar: "http://lemonkle.com/store/img/BG169.jpg")
 User.create(username: "archiveofourown", password: "password", seed: "true", avatar: "https://pbs.twimg.com/profile_images/958203064/AO3logo3-02.png")
 User.create(username: "beautywithoutborders", password: "password", seed: "true", avatar: "http://s3.amazonaws.com/ramblr-pro/users/avatars/000/000/006/original/EquinoxEarthElektroL900.jpg")
